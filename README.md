@@ -1,9 +1,6 @@
-# studiegruppe-projekt
-<<<<<<< HEAD
-Her skal opgaven være
-=======
+# 50NE WEBSHOP
 
-Beskrivelse 
+##1. Beskrivelse 
 Vi ønsker, at vores system skal kunne håndtere lagring
 af brugeroplysninger med henblik på, at brugeren skal kunne lave
 en ordre/bestilling på vores webshops produkter.
@@ -28,11 +25,9 @@ gennemført-betalingsside, hvor ordren er blevet bekræftet. På denne side skal
 systemet oplyse brugerens ordrenummer, bestilte varer, samt opgive ordrens “alder”, 
 altså dato og tidspunkt for, hvornår ordren er blevet bekræftet og gennemført. 
 
-
->>>>>>> 1b9a3de75dbcb132300a93986454733af81f9b48
-
-2. Sketch af webshoppen
+##2. Sketch af webshoppen
 De 6 billeder nedenfor viser vores idé med webshoppen 
 
 Tekst skrevet med rødt er vejledende tekst, som ikke skal fremgå på webshoppen
+<img src="
 
