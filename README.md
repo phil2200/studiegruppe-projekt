@@ -24,24 +24,52 @@ Tekst skrevet med rødt er vejledende tekst, som ikke skal fremgå på webshoppe
 
 ## 3. Kravspecifikationer
 Vores første kravsspecifikation er oprettelse af bruger, som skal kunne lagre bruger-oplysninger til fremtidig login. Dette skal føre til en brugerprofil, som indeholder:
-•	Brugeroplysninger, som skal kunne redigeres
-•	Ordrestatus på den igangværende ordre
-•	Ordrehistorik, som indebærer tidligere ordrer
-•	Mulighed for at slette brugerprofil 
+<ul>
+Brugeroplysninger, som skal kunne redigeres
+</ul>
+<ul>
+Ordrestatus på den igangværende ordre
+</ul>
+<ul>
+Ordrehistorik, som indebærer tidligere ordrer
+</ul>
+<ul>
+Mulighed for at slette brugerprofil 
+</ul>
 
 Næst skal der være en navigationsoversigt, som skal give brugeren mulighed for at navigere rundt på siden. Nedenstående punkter er indholdet i navigationsoversigten
-•	”Home”, som er strartsiden
-•	”Produkter”, herunder ”T-shirts” og ”Hoodies”, som er de produkter, der forhandles på webshoppen
-•	”Help/FAQ”, som skal indeholde de mest stillede spørgsmål med svar, kunne fx være spørgsmål omkring returnering af produkter
-•	Ikoner i øvre-højre hjørne er genveje til ”brugerprofil” og ”indkøbskurv”
+<ul>
+”Home”, som er strartsiden
+</ul>
+<ul>
+”Produkter”, herunder ”T-shirts” og ”Hoodies”, som er de produkter, der forhandles på webshoppen
+</ul>
+<ul>
+”Help/FAQ”, som skal indeholde de mest stillede spørgsmål med svar, kunne fx være spørgsmål omkring returnering af produkter
+</ul>
+<ul>
+Ikoner i øvre-højre hjørne er genveje til ”brugerprofil” og ”indkøbskurv”
+</ul>
 
 Ovenstående fører til at indkøbskurven har følgende kravsspecifikationer
-•	Overblik over produkter
-•	Summering af priser
-•	Kontaktinformation på brugeren
-•	Leveringsinformation
-•	Forventet leveringstid
-•	Rabatkode
+<ul>
+Overblik over produkter
+</ul>
+<ul>
+Summering af priser
+</ul>
+<ul>
+Kontaktinformation på brugeren
+</ul>
+<ul>
+Leveringsinformation
+</ul>
+<ul>
+Forventet leveringstid
+</ul>
+<ul>
+Rabatkode
+</ul>
 
 Endvidere bliver man først til en betalingsside, hvor man kan få et overblik over varer i ”indkøbskurv”, igen en summering af priser og et betalingsvindue, hvor der kan betales med MobilePay 
 
