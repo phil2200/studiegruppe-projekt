@@ -17,6 +17,8 @@ Tekst skrevet med rødt er vejledende tekst, som ikke skal fremgå på webshoppe
 
 BILLEDER SKAL VÆRE HER 
 <img src="payment" alt=" " />
+![UML-diagram](https://github.com/phil2200/studiegruppe-projekt/blob/master/UML%20For%205One.%20drawio.jpg)
+
 
 ## 3. Kravspecifikationer
 Vores første kravsspecifikation er oprettelse af bruger, som skal kunne lagre bruger-oplysninger til fremtidig login. Dette skal føre til en brugerprofil, som indeholder:
