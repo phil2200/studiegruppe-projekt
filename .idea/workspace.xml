@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d7920f7-0ed3-4b99-9268-06cc00920bc8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,7 +51,7 @@
       <workItem from="1568374789410" duration="421000" />
       <workItem from="1568375221867" duration="1484000" />
       <workItem from="1570620121033" duration="848000" />
-      <workItem from="1570622246401" duration="131000" />
+      <workItem from="1570622246401" duration="343000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <created>1568374836253</created>
@@ -75,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570620716225</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Readme fil">
+      <created>1570622418788</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570622418788</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
