@@ -10,14 +10,15 @@ Vores system skal endvidere bestå af en betalingsside, hvor brugeren kan få et
 
 Når betalingen er gennemført skal vores system videreføre brugeren til en gennemført-betalingsside, hvor ordren er blevet bekræftet. På denne side skal systemet oplyse brugerens ordrenummer, bestilte varer, samt opgive ordrens “alder”, altså dato og tidspunkt for, hvornår ordren er blevet bekræftet og gennemført. 
 
-##2. Sketches
+## 2. Sketches
 De 6 billeder nedenfor viser vores idé med webshoppen 
 
 Tekst skrevet med rødt er vejledende tekst, som ikke skal fremgå på webshoppen
 
-Billeder skal være her 
+BILLEDER SKAL VÆRE HER 
+<img src="payment.ext" alt=" " />
 
-##3. Kravspecifikationer
+## 3. Kravspecifikationer
 Vores første kravsspecifikation er oprettelse af bruger, som skal kunne lagre bruger-oplysninger til fremtidig login. Dette skal føre til en brugerprofil, som indeholder:
 •	Brugeroplysninger, som skal kunne redigeres
 •	Ordrestatus på den igangværende ordre
@@ -42,6 +43,6 @@ Endvidere bliver man først til en betalingsside, hvor man kan få et overblik o
 
 Til sidst vil man komme frem til en gennemført-betalingsside, hvor man vil få oplyst ordrenummer, få en bekræftelse på bestillingen og hertil også en oversigt over de bestilte varer.
 
-##4. UML-diagram
+## 4. UML-diagram
 
 BILLEDE HER 
