@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d7920f7-0ed3-4b99-9268-06cc00920bc8" name="Default Changelist" comment="" />
+    <list default="true" id="7d7920f7-0ed3-4b99-9268-06cc00920bc8" name="Default Changelist" comment="Classes Created">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,9 +22,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1QmTUeQq5FCH4gpO0U6AzMnvL47" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -47,7 +54,9 @@
       <updated>1568374788322</updated>
       <workItem from="1568374789410" duration="421000" />
       <workItem from="1568375221867" duration="1484000" />
-      <workItem from="1570620121033" duration="848000" />
+      <workItem from="1570620121033" duration="1426000" />
+      <workItem from="1570621641232" duration="444000" />
+      <workItem from="1570622089232" duration="1574000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <created>1568374836253</created>
