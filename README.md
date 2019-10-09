@@ -15,10 +15,12 @@ De 6 billeder nedenfor viser vores idé med webshoppen
 
 Tekst skrevet med rødt er vejledende tekst, som ikke skal fremgå på webshoppen
 
-BILLEDER SKAL VÆRE HER 
-<img src="payment" alt=" " />
-![UML-diagram](https://github.com/phil2200/studiegruppe-projekt/blob/master/UML%20For%205One.%20drawio.jpg)
-
+![Products](https://github.com/phil2200/studiegruppe-projekt/blob/master/products.png)
+![product](https://github.com/phil2200/studiegruppe-projekt/blob/master/product.png)
+![shipping](https://github.com/phil2200/studiegruppe-projekt/blob/master/shipping.png)
+![payment](https://github.com/phil2200/studiegruppe-projekt/blob/master/payment.png)
+![user](https://github.com/phil2200/studiegruppe-projekt/blob/master/user.jpg)
+![userprofile](https://github.com/phil2200/studiegruppe-projekt/blob/master/user2.png)
 
 ## 3. Kravspecifikationer
 Vores første kravsspecifikation er oprettelse af bruger, som skal kunne lagre bruger-oplysninger til fremtidig login. Dette skal føre til en brugerprofil, som indeholder:
@@ -46,5 +48,4 @@ Endvidere bliver man først til en betalingsside, hvor man kan få et overblik o
 Til sidst vil man komme frem til en gennemført-betalingsside, hvor man vil få oplyst ordrenummer, få en bekræftelse på bestillingen og hertil også en oversigt over de bestilte varer.
 
 ## 4. UML-diagram
-
-BILLEDE HER 
+![UML-diagram](https://github.com/phil2200/studiegruppe-projekt/blob/master/UML%20For%205One.%20drawio.jpg)
