@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d7920f7-0ed3-4b99-9268-06cc00920bc8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,7 +52,7 @@
       <workItem from="1568375221867" duration="1484000" />
       <workItem from="1570620121033" duration="848000" />
       <workItem from="1570622246401" duration="375000" />
-      <workItem from="1570622690914" duration="90000" />
+      <workItem from="1570622690914" duration="152000" />
     </task>
     <task id="LOCAL-00001" summary="gg">
       <created>1568374836253</created>
@@ -90,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570622605412</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Readme fil - TEST PÅ BILLEDER">
+      <created>1570622803150</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1570622803150</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +120,7 @@
     <MESSAGE value="TestStudieG" />
     <MESSAGE value="Readme fil" />
     <MESSAGE value="Readme fil - mangler kun billeder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Readme fil - mangler kun billeder" />
+    <MESSAGE value="Readme fil - TEST PÅ BILLEDER" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme fil - TEST PÅ BILLEDER" />
   </component>
 </project>

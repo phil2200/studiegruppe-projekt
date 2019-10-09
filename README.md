@@ -16,7 +16,7 @@ De 6 billeder nedenfor viser vores idé med webshoppen
 Tekst skrevet med rødt er vejledende tekst, som ikke skal fremgå på webshoppen
 
 BILLEDER SKAL VÆRE HER 
-<img src="payment.ext" alt=" " />
+<img src="payment" alt=" " />
 
 ## 3. Kravspecifikationer
 Vores første kravsspecifikation er oprettelse af bruger, som skal kunne lagre bruger-oplysninger til fremtidig login. Dette skal føre til en brugerprofil, som indeholder:
