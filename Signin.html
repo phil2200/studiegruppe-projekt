@@ -1,10 +1,14 @@
-<!DOCTYPE html >
+<!DOCTYPE HTML>
+
 <html lang="en">
 
 <head>
 
     <meta charset="UTF-8">
     <title>"Webshop"</title>
+
+    <!-- linker siden til CSS -->
+    <link rel="stylesheet" type="text/css" href="flotheds.css">
 
 </head>
 <body>
@@ -19,17 +23,13 @@
     Sign-up below.
     </p>
 
-//sdvlknikns dvjn
-
-<form>
+<form register="sign-up.php">
+<div class="sign-up">
 
     Name
   <br/>
     <input type="text" id= "user_name" value ="" placeholder="your name"/>
 <br/>
-    <br/>
-    <button type="submit" style="cursor: pointer;" onclick="validateContactInformation" method="post"> Click to submit</button>
-
 
     <br/>
     Phone
@@ -38,20 +38,17 @@
     <input type="text" id="user_phone" value="" placeholder="Phone number"/>
     <br/>
     <br/>
-    <button type="submit" style="cursor: pointer;" onclick="validateContactInformation" method="post"> Click to submit</button>
 
-    <br/>
-
-    Organisation
+    Address
 <br/>
 
-    <input type="text" id="user_organisation" value="" placeholder="your organisation"/>
+    <input type="text" id="address" value="" placeholder="your address"/>
 <br/>
     <br/>
-    <button type="submit" style="cursor: pointer;" onclick="validateContactInformation" method="post"> Click to submit</button>
 
 
     <br/>
+
     E-Mail
 <br/>
 
@@ -59,7 +56,14 @@
 <br/>
     <br/>
     <button type="submit" style="cursor: pointer;" onclick="validateContactInformation" method="post"> Click to submit </button>
+</div>
 
+<!-- bruger allerede registreret, sign in istedet. -->
+
+    <div class="sign-in">
+        <p>Already have an account? <a href="#">Sign in</a>.</p>
+
+    </div>
 
 </form>
 
