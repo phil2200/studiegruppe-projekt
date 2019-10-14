@@ -23,6 +23,7 @@ input[type=text]:focus, input[type=password]:focus {
 h1{
     text-align: center;
 }
+
 /* Overwrite default styles of hr */
 hr {
     border: 1px solid #f1f1f1;
@@ -54,6 +55,7 @@ a {
 .signin {
     background-color: #f1f1f1;
     text-align: center;
+
 }
 /* tilføjer baggrundsfarve og centrerer */
 .topnav{
@@ -73,6 +75,10 @@ a {
 }
 
 /* når du holder musen over viser den */
+.topnav a:hover {
+    background-color: #dddddd;
+    color: black;
+}
 
 .topnav a:hover{
     background-color: #dddddd;
