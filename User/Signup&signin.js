@@ -26,7 +26,7 @@ function storeDetails() {
 
 //submit for log-in and sign-up, also amount of attempts allowed.
 var submit = document.getElementById("submit");
-var sign_up = document.getElementById("sign_up");
+var signup = document.getElementById("signup");
 var attempt = 3;
 
 // assigning existing user for test purposes
@@ -48,11 +48,14 @@ for (let i = 0; i <existingUser.length; i++) {
         var IDString = JSON.stringify(currentLogin);
         localStorage.setItem('currentUser', IDString);
 
-      /*  alert("you are logged in");
+
+        alert("you are logged in");
 
         else {
             alert("ERROR: Wrong details entered");
-        } */ //ved ikke om disse alerts skal placeres her eller hvor ??  SPØRG TIRSDAG OM HVORDAN
+        }
+        //ved ikke om disse alerts skal placeres her eller hvor ??  SPØRG TIRSDAG OM HVORDAN
+        //hvordan laver man redirect ved korrekt login til main/home page.
 
         return true ;
     }
@@ -61,12 +64,12 @@ for (let i = 0; i <existingUser.length; i++) {
 //if input doesnt match existing user, show to user also show amount of attempts left
     attempt--;
     alert("Username or Password invalid. You have" + attempt + "attempts left");
-    if (attempt==0) {
+    if (attempt == 0 ) {
         document.getElementById("username").disabled = true ;
         document.getElementById("password").disabled = true ;
         document.getElementById("submit").disabled = false;
 
-        alert("Access denied. Are you sure you registeres? Go to our sign up page and try again :) ");
+        alert("Access denied. Are you sure you registered? Go to our sign up page and try again :) ");
         return false;
 
     }
