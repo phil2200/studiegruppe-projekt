@@ -1,10 +1,35 @@
-body {background-color: antiquewhite;}
+body {background-color: white;}
 
-
-
-  h1 {
+h1{
   text-align: center;
 }
-  h2 {
-    text-align: center; font-size: 20px;
-  }
+
+/* tilføjer baggrundsfarve og centrerer */
+.topnav{
+  align-content: center;
+  text-align: center;
+  background-color: grey;
+  overflow: hidden;
+}
+
+/* ændrer selve knapperne */
+.topnav a{
+  float: center;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: aqua;
+  font-size: 17px;
+}
+
+/* når du holder musen over viser den */
+
+.topnav a:hover{
+  background-color: #dddddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: cornflowerblue;
+  color: white;
+}
