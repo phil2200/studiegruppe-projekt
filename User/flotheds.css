@@ -75,9 +75,10 @@ a {
 }
 
 /* når du holder musen over viser den */
-.topnav a:hover{
+.topnav a:hover {
     background-color: #dddddd;
-    color black;
+    color: black;
+}
 
 .topnav a:hover{
     background-color: #dddddd;
