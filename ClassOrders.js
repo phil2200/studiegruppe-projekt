@@ -8,4 +8,4 @@ constructor(cart_item_id, cart_session_id, product_id, quantity, age,) {
     this.quantity = quantity;
     this.purchase_amount = purchase_amount;
     this.age = age;
-}// sut
+}
