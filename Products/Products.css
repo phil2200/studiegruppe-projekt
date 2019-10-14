@@ -1,31 +1,81 @@
 body {
-    background-color: #dddddd;
+
+    font-family: "sans-serif"
 }
+
+
+{
+    box-sizing: border-box
+}
+
+
+
+
 
 h1 {
-    color: darkblue;
-    text-align: left;
-    font-size: 20px;
+    text-align: center;
+    font-size: 70px;
+    margin-top: 5%;
+    font-family: sans-serif;
 }
 
-
-p {
+h2 {
     color: darkblue;
     text-align: center;
-    font-size: 10px;
+    font-size: 40px;
+    margin-top: 6%;
+    font-family: sans-serif;
 }
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
+
+h3 {
+    color: green;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
 }
 
-.column {
+h4 {
+    color: black;
+    text-align: center;
+    font-size: 15px;
+
+
+}
+
+p {
+
+    color: indianred;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+
+
+}
+
+
+
+.product_img {
+    width: 25%;
+    display: inline-block;
     float: left;
-    width: 50%;
-    padding: 5px;
+    padding: 8%;
+    margin-left: 6%;
+    position: relative;
+    border-style: solid;
+    border-color: darkgrey;
+
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
