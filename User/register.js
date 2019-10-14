@@ -1,21 +1,3 @@
-
-//submit for log-in and sign-up, also amount of attempts allowed.
-var submit = document.getElementById("submit");
-var signup = document.getElementById("signup");
-var attempt = 3;
-
-// assigning existing user for test purposes
-var existingUser = JSON.parse(localStorage.getItem("user"));
-var currentLogin = [];
-
-// when clicking submit, retrieve input from username and password box.
-submit.onclick = function() {
-    var usernameInput = document.getElementById("username").value ;
-    var passwordInput = document.getElementById("password").value ;
-
-}
-
-
 //Get the entered details from HTML sign up page
 
 let username = document.getElementById("username");
@@ -40,6 +22,28 @@ function storeDetails() {
     localStorage.setItem("password", password.value);
 
 }
+
+
+//submit for log-in and sign-up, also amount of attempts allowed.
+var submit = document.getElementById("submit");
+var sign_up = document.getElementById("sign_up");
+var attempt = 3;
+
+// assigning existing user for test purposes
+var existingUser = JSON.parse(localStorage.getItem("user"));
+var currentLogin = [];
+
+// when clicking submit, retrieve input from username and password box.
+submit.onclick = function() {
+    var usernameInput = document.getElementById("username").value ;
+    var passwordInput = document.getElementById("password").value ;
+}
+
+//check if entered details match stored details.
+for (let i = 0; i <existingUser.length; i++) {
+
+}
+
 
 
 
