@@ -2,13 +2,13 @@
 
 class userLogin {
     constructor (username, password, address, phone, email, city, zip) {
-        this.username = username;
-        this.password = password;
-        this.address = address;
-        this.phone = phone;
-        this.email = email;
-        this.city = city;
-        this.zip = zip;
+        this._username = username;
+        this._password = password;
+        this._address = address;
+        this._phone = phone;
+        this._email = email;
+        this._city = city;
+        this._zip = zip;
     }
 
 
@@ -19,6 +19,5 @@ class userLogin {
     new userLogin()
 
 
-var username = document.getElementById("username")
-var password = document.getElementById("password")
-
+let username = document.getElementById("username")
+let password = document.getElementById("password")
