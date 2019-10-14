@@ -9,6 +9,17 @@ class ClassShoppingCart {
         this.color = color;
         this.age = age;
         this.shipping_info = shipping_info;
+
     }
 
 }
+
+
+
+
+}
+
+
+
+
+
