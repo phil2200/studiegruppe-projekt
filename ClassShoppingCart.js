@@ -12,3 +12,7 @@ class ClassShoppingCart {
     }
 
 }
+
+function saveShoppingCart() {
+
+}
