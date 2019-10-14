@@ -3,22 +3,23 @@
 
 var username = document.getElementById(elementid: username)
 
-var userphone = document.getElementById(elementid: userphone)
+var phone = document.getElementById(elementid: phone)
 
 var address = document.getElementById(elementid: address)
 
-var useremail = document.getElementById(elementid: useremail)
+var email = document.getElementById(elementid: email)
 
 var password = document.getElementById(elementid: password)
 
-retrieve value
+
 
 // store these entered values to be called for later
+
 function storeDetails() {
     localStorage.setItem("username", username.value)
-    localStorage.setItem("userphone", userphone.value)
-    localStorage.setItem("address", userphone.value)
-    localStorage.setItem("useremail", useremail.value)
+    localStorage.setItem("userphone", phone.value)
+    localStorage.setItem("address", address.value)
+    localStorage.setItem("useremail", email.value)
     localStorage.setItem("password", password.value)
 
 }
