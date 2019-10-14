@@ -24,4 +24,9 @@ function storeDetails() {
 
 }
 
-//
+// Show stored values
+function showDetails() {
+    console.log("show stored info")
+    console.log(localStorage)
+
+}

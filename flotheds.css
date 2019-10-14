@@ -76,7 +76,7 @@ a {
 
 .topnav a:hover{
     background-color: #dddddd;
-    color black;
+    color: black;
 }
 
 .topnav a.active {
