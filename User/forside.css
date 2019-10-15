@@ -4,6 +4,17 @@ h1{
   text-align: center;
 }
 
+body {
+  background-image: url(5ONElogo.png);
+  background-color: white;
+  margin: auto;
+  background-size: 100% ;
+}
+
+p {
+  text-align: center;
+}
+
 /* tilføjer baggrundsfarve og centrerer */
 .topnav{
   align-content: center;
