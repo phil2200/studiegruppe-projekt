@@ -9,10 +9,23 @@ class ClassShoppingCart {
         this.color = color;
         this.age = age;
         this.shipping_info = shipping_info;
+
     }
 
 }
 
+<<<<<<< HEAD:ClassShoppingCart.js
 function saveShoppingCart() {
 
 }
+=======
+
+
+
+}
+
+
+
+
+
+>>>>>>> 526fb6e38c9a381d2810521f3e6553a167bc86a3:ShoppingCart/ClassShoppingCart.js
