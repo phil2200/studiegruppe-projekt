@@ -51,12 +51,13 @@ class userProfile {
     //Angiver værdier til string typerne/laver string til objekter.
     //constructor contains prototype variables
 
-    constructor(fullName, address, phone, city, zip, orderhistory) {
-        this._fullName = fullName;
+    constructor(fullName, address, phone, city, zip, email, orderhistory) {
+        this._name = name;
         this._address = address;
-        this._phone= phone;
-        this._city= city;
-        this._zip= zip;
+        this._phone = phone;
+        this._city = city;
+        this._zip = zip;
+        this._email = email;
         this._orderhistory = orderhistory;
     }
 
