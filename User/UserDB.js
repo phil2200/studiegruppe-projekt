@@ -1,7 +1,7 @@
 // for database: check if user exists in localstorage otherwise create user and push to list
 if (localStorage.getItem("user")==null) {
     let userList: = [];
-        userList.push(new User( username:"username", password: "1234567"));
+        userList.push(new User (username:"username", password: "1234567"));
         userList.push(new User (username: "gnu", password: "afdanket"));
         userList.push(new user (username: "philipino", password:"lugter"));
 
@@ -13,3 +13,6 @@ if (localStorage.getItem("user")==null) {
     else {
         let userList = JSON.parse(localStorage.getItem("user"))
 }
+
+
+

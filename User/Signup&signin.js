@@ -24,7 +24,7 @@ function storeDetails() {
     window.location = ("SignIn.html");
 }
 
-/*
+
 //submit for log-in and sign-up, also amount of attempts allowed.
 var submit = document.getElementById("submit");
 var signup = document.getElementById("signup");
@@ -39,6 +39,7 @@ submit.onclick = function() {
     let usernameInput = document.getElementById("username").value ;
     let passwordInput = document.getElementById("password").value ;
 }
+
 
 //check if entered details match stored details. redirect to home page
 for (let i = 0; i <existingUser.length; i++) {
@@ -61,7 +62,7 @@ for (let i = 0; i <existingUser.length; i++) {
         return true;
     }
 
-
+/*
 //if input doesnt match existing user, show to user also show amount of attempts left
     attempt--;
     alert("Username or Password invalid. You have" + attempt + "attempts left");

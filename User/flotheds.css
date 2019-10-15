@@ -73,38 +73,43 @@ a {
     text-align: center;
 
 }
+body {background-color: white;}
+
+h1{
+    text-align: center;
+}
+
 /* tilføjer baggrundsfarve og centrerer */
 .topnav{
     align-content: center;
-    background-color: black;
+    text-align: center;
+    background-color: white;
     overflow: hidden;
 }
 
 /* ændrer selve knapperne */
 .topnav a{
-    float: left;
-    color: #f2f2f2;
+    float: center;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 10px;
     text-decoration: aqua;
     font-size: 17px;
+    color: black;
 }
 
 /* når du holder musen over viser den */
-.topnav a:hover {
-    background-color: #dddddd;
-    color: black;
-    text-align: center;
-}
-
 .topnav a:hover{
     background-color: #dddddd;
     color: black;
 }
 
+/* markerer den side, man er inde på med blå - denne skal derfor ændres til den side, css'en passer til */
 .topnav a.active {
     background-color: cornflowerblue;
     color: white;
 }
-
-.
+/* ændrer størrelsen på ikonerne i navbaren */
+img {
+    height: 40px;
+    width: 40px;
+}
