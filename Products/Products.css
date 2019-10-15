@@ -1,0 +1,83 @@
+body {
+
+    font-family: "sans-serif"
+}
+
+
+{
+    box-sizing: border-box
+}
+
+
+
+
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+    margin-top: 5%;
+    font-family: sans-serif;
+}
+
+h2 {
+    color: darkblue;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 6%;
+    font-family: sans-serif;
+    margin: unset;
+}
+
+
+h3 {
+    color: darkblue;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+h4 {
+    color: black;
+    text-align: center;
+    font-size: 15px;
+
+
+}
+
+p {
+
+    color: indianred;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+
+
+}
+
+
+
+.product_img {
+    width: 25%;
+    display: inline-block;
+    float: left;
+    padding: 8%;
+    margin-left: 6%;
+    position: relative;
+    border-style: solid;
+    border-color: darkgrey;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

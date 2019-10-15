@@ -14,6 +14,11 @@ class ClassShoppingCart {
 
 }
 
+<<<<<<< HEAD:ClassShoppingCart.js
+function saveShoppingCart() {
+
+}
+=======
 
 
 
@@ -23,3 +28,4 @@ class ClassShoppingCart {
 
 
 
+>>>>>>> 526fb6e38c9a381d2810521f3e6553a167bc86a3:ShoppingCart/ClassShoppingCart.js
