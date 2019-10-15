@@ -1,6 +1,8 @@
 //Get the entered details from HTML sign up page
 this.username = document.getElementById("username");
 this.phone = document.getElementById("phone");
+this.city = document.getElementById("city");
+this.city = document.getElementById("zip")
 this.address = document.getElementById("address");
 this.email = document.getElementById("email");
 this.password = document.getElementById( "password");
@@ -9,6 +11,8 @@ this.password = document.getElementById( "password");
 function storeDetails() {
     localStorage.setItem("username", username.value);
     localStorage.setItem("phone", phone.value);
+    localStorage.setItem("city",city.value);
+    localStorage.setItem("zip", zip.value);
     localStorage.setItem("address", address.value);
     localStorage.setItem("email", email.value);
     localStorage.setItem("password", password.value);
