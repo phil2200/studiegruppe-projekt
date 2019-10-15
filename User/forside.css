@@ -8,33 +8,34 @@ h1{
 .topnav{
   align-content: center;
   text-align: center;
-  background-color: grey;
+  background-color: white;
   overflow: hidden;
 }
 
 /* ændrer selve knapperne */
 .topnav a{
   float: center;
-  color: #f2f2f2;
   text-align: center;
   padding: 10px 10px;
   text-decoration: aqua;
   font-size: 17px;
+  color: black;
 }
 
 /* når du holder musen over viser den */
-
 .topnav a:hover{
   background-color: #dddddd;
   color: black;
 }
 
+/* markerer den side, man er inde på med blå - denne skal derfor ændres til den side, css'en passer til */
 .topnav a.active {
   background-color: cornflowerblue;
   color: white;
 }
-
-.ikon-1 {
-  size: ;
+/* ændrer størrelsen på ikonerne i navbaren */
+img {
+height: 40px;
+  width: 40px;
 }
 
