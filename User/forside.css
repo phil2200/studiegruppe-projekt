@@ -14,7 +14,6 @@ h1{
 
 /* ændrer selve knapperne */
 .topnav a{
-  float: center;
   text-align: center;
   padding: 10px 10px;
   text-decoration: aqua;
