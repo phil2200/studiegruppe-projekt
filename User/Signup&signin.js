@@ -1,14 +1,14 @@
 //Get the entered details from HTML sign up page
 
-var username = document.getElementById("username");
+this.username = document.getElementById("username");
 
-var phone = document.getElementById("phone");
+this.phone = document.getElementById("phone");
 
-var address = document.getElementById("address");
+this.address = document.getElementById("address");
 
-var email = document.getElementById("email");
+this.email = document.getElementById("email");
 
-var password = document.getElementById( "password");
+this.password = document.getElementById( "password");
 
 
 
@@ -16,14 +16,15 @@ var password = document.getElementById( "password");
 
 function storeDetails() {
     localStorage.setItem("username", username.value);
-    localStorage.setItem("userphone", phone.value);
+    localStorage.setItem("phone", phone.value);
     localStorage.setItem("address", address.value);
     localStorage.setItem("email", email.value);
     localStorage.setItem("password", password.value);
-
+    alert('new user has been created!');
+    window.location = ("SignIn.html");
 }
 
-
+/*
 //submit for log-in and sign-up, also amount of attempts allowed.
 var submit = document.getElementById("submit");
 var signup = document.getElementById("signup");
@@ -49,7 +50,7 @@ for (let i = 0; i <existingUser.length; i++) {
         localStorage.setItem('currentUser', IDString);
 
 
-        alert("you are logged in");
+        alert("you are logged in"); }
 
         else {
             alert("ERROR: Wrong details entered");
@@ -57,9 +58,9 @@ for (let i = 0; i <existingUser.length; i++) {
         //ved ikke om disse alerts skal placeres her eller hvor ??  SPØRG TIRSDAG OM HVORDAN
         //hvordan laver man redirect ved korrekt login til main/home page.
 
-        return true ;
+        return true;
     }
-}
+
 
 //if input doesnt match existing user, show to user also show amount of attempts left
     attempt--;
@@ -70,6 +71,7 @@ for (let i = 0; i <existingUser.length; i++) {
         document.getElementById("submit").disabled = false;
 
         alert("Access denied. Are you sure you registered? Go to our sign up page and try again :) ");
+
         return false;
 
     }
@@ -94,3 +96,5 @@ function checkLogin() {
     let enteredPassword = document.getElementById("enteredPassword");
 
 }
+
+ */

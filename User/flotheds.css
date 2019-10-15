@@ -22,12 +22,24 @@ input[type=text]:focus, input[type=password]:focus {
 
 h1{
     text-align: center;
+    color: black;
 }
 
 h2{
     text-align: center;
 }
 
+h3 {
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+}
 /* Overwrite default styles of hr */
 hr {
     border: 1px solid #f1f1f1;
@@ -36,9 +48,9 @@ hr {
 
 /* Set a style for the submit/register button */
 .registerbtn {
-    background-color: #4CAF50;
-    color: olive;
-    padding: 16px 20px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
@@ -82,6 +94,7 @@ a {
 .topnav a:hover {
     background-color: #dddddd;
     color: black;
+    text-align: center;
 }
 
 .topnav a:hover{
@@ -93,3 +106,5 @@ a {
     background-color: cornflowerblue;
     color: white;
 }
+
+.
