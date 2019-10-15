@@ -1,4 +1,4 @@
-class userProfile {
+class products {
     constructor(productId, productName, productDesc, productShortDesc, productPrice, colors, productType,
                 quantity, productImage, viewCount, dateAdded ) {
 
