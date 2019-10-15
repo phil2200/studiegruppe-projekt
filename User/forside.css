@@ -44,9 +44,13 @@ p {
   color: white;
 }
 /* ændrer størrelsen på ikonerne i navbaren */
-img {
-height: 40px;
+.ikon-1 {
+  height: 40px;
   width: 40px;
 }
 
+.ikon-2 {
+  height: 40px;
+  width: 40px;
+}
 

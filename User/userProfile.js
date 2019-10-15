@@ -1,15 +1,9 @@
-//Get the entered details from HTML sign up page
-this.username = document.getElementById("username");
-this.phone = document.getElementById("phone");
-this.address = document.getElementById("address");
-this.email = document.getElementById("email");
+document.getElementById("name").value = "Emma Marie Dalgaard Laursen";
+document.getElementById("phone").value = "+45 22 41 90 32";
+document.getElementById("city").value = "Frederiksberg C";
+document.getElementById("zip").value= "1954";
+document.getElementById("address").value = "Hostrups Have 30";
+document.getElementById("email").value = "emma.laursen.97@hotmail.com";
 
-// store these entered values to be called for later
-function storeDetails() {
-    localStorage.setItem("username", username.value);
-    localStorage.setItem("phone", phone.value);
-    localStorage.setItem("address", address.value);
-    localStorage.setItem("email", email.value);
-    alert('new user has been created!');
-    window.location = ("SignIn.html");
-}
+// Få den til at gemme disse informationer, når man logger ind med user: Hello, password: 1234567
+
