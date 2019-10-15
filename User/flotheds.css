@@ -24,6 +24,10 @@ h1{
     text-align: center;
 }
 
+h2{
+    text-align: center;
+}
+
 /* Overwrite default styles of hr */
 hr {
     border: 1px solid #f1f1f1;
