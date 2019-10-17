@@ -12,23 +12,23 @@
 <br/>
 
 <!-- nav bar -->
-<div class="topnav">
-<h2>
-    <a href="forside.html">Home</a>
-    <a href="/Products/Products.html"> Products</a>
-    <a href="#XXX">Help/FAQ</a>
-    <a class="active" href="Signin.html"> <img src="bruger.png" class="ikon-1" > </a>
-    <a href="#XXX"> <img src="kurv.png" class ="ikon-2"> </a>
-    <!-- billede af shoppingcart og bruger -->
-</h2>
-</div>
+    <div class="topnav">
+        <h2>
+            <a href="forside.html">Home</a>
+            <a href="/Products/Products.html"> Products</a>
+            <a href="#XXX">Help/FAQ</a>
+            <a class="active" href="Signin.html"> <img src="bruger.png" class="ikon-1" > </a>
+            <a href="#XXX"> <img src="kurv.png" class ="ikon-2"> </a>
+            <!-- billede af shoppingcart og bruger -->
+        </h2>
+    </div>
 
-<br/>
+    <br/>
 
 <!-- log in form, to fill out password and username -->
 
 <form register="sign-in.php">
-    <div class="sign-in">
+    <div id="sign-in">
 
         Name
         <br/>
@@ -41,14 +41,22 @@
 
         <input type="text" id="password" value="" placeholder="Your password"/>
         <br/>
+        <input type="checkbox" checked onclick="showPassword()"> Show Password
         <br/>
-        <button type="button" style="cursor: pointer;" class="registerbtn" onclick="" method="post"> Log-in </button>
+        <input type="button" value="logIn" style="cursor:pointer" class="registerbtn" id="signIn"/>
     </div>
     <div class="sign-up">
         <p>Don't have an account? <a href="SignUp.html">Sign up now</a>.</p>
 
     </div>
 
+        </form>
 
-</body>
+        <script src="UserDB.js"></script>
+        <script src="Signup&signin.js"></script>
+        <script src="Showpassword.js"></script>
+
+
+     </body>
+
 </html>

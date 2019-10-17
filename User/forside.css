@@ -4,6 +4,17 @@ h1{
   text-align: center;
 }
 
+body {
+  background-image: url(5ONElogo.png);
+  background-color: white;
+  margin: auto;
+  background-size: 100% ;
+}
+
+p {
+  text-align: center;
+}
+
 /* tilføjer baggrundsfarve og centrerer */
 .topnav{
   align-content: center;
@@ -14,7 +25,6 @@ h1{
 
 /* ændrer selve knapperne */
 .topnav a{
-  float: center;
   text-align: center;
   padding: 10px 10px;
   text-decoration: aqua;
@@ -34,9 +44,13 @@ h1{
   color: white;
 }
 /* ændrer størrelsen på ikonerne i navbaren */
-img {
-height: 40px;
+.ikon-1 {
+  height: 40px;
   width: 40px;
 }
 
+.ikon-2 {
+  height: 40px;
+  width: 40px;
+}
 

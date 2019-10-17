@@ -12,12 +12,21 @@ input[type=text], input[type=password] {
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
-    background: #f1f1f1;
+    background: lightgray;
+
+}
+#sign-up{
+    text-align: center;
 }
 
+#sign-in{
+    text-align: center;
+}
+
+
 input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
     outline: none;
+    background: lightgray;
 }
 
 h1{
@@ -40,10 +49,20 @@ h4{
 h5 {
     text-align: center;
 }
+
+p {
+    text-align: center;
+}
 /* Overwrite default styles of hr */
 hr {
     border: 1px solid #f1f1f1;
     margin-bottom: 25px;
+}
+
+body {
+    background-color: white;
+    margin: auto;
+    background-size: 100% ;
 }
 
 /* Set a style for the submit/register button */
