@@ -78,11 +78,11 @@ function showDetails() {
 
 function checkLogin() {
     //get stored values
-    let storedName = localStorage.getItem( "username");
-    let storedPassword = localStorage.getItem( "password");
+    var storedName = localStorage.getItem( "username");
+    var storedPassword = localStorage.getItem( "password");
 
-    let enteredName = document.getElementById( "enteredName");
-    let enteredPassword = document.getElementById("enteredPassword");
+    var enteredName = document.getElementById( "enteredName");
+    var enteredPassword = document.getElementById("enteredPassword");
 
 }
 

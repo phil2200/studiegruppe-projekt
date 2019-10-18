@@ -81,6 +81,23 @@ body {
     opacity:1;
 }
 
+#signUpButton {
+    width: 30%;
+    height: 25%;
+    margin: auto;
+}
+
+#signInButton {
+    width: 30%;
+    height: 25%;
+    margin: auto;
+}
+
+#loggedInLogo {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
 /* Add a blue text color to links */
 a {
     color: dodgerblue;
