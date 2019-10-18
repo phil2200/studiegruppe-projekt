@@ -75,9 +75,9 @@ h4 {
 .product{
     display: inline-block;
     float: left;
-    width: 30%;
+    width: 40%;
     margin-left: 5%;
-    border: 1px solid black;
+    border: 0.5px solid grey;
     text-align: center;
  }
 .product_img {
