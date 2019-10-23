@@ -12,20 +12,50 @@ input[type=text], input[type=password] {
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
-    background: #f1f1f1;
+    background: lightgray;
+
+}
+#sign-up{
+    text-align: center;
 }
 
+#sign-in{
+    text-align: center;
+}
+
+
 input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
     outline: none;
+    background: lightgray;
 }
 
 h1{
     text-align: center;
+    color: black;
 }
 
 h2{
     text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+h8 {
+    float: left;
 }
 
 /* Overwrite default styles of hr */
@@ -34,11 +64,17 @@ hr {
     margin-bottom: 25px;
 }
 
+body {
+    background-color: white;
+    margin: auto;
+    background-size: 100% ;
+}
+
 /* Set a style for the submit/register button */
 .registerbtn {
-    background-color: #4CAF50;
-    color: olive;
-    padding: 16px 20px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
     margin: 8px 0;
     border: none;
     cursor: pointer;
@@ -50,9 +86,40 @@ hr {
     opacity:1;
 }
 
+#signUpButton {
+    width: 30%;
+    height: 25%;
+    margin: auto;
+}
+
+#signInButton {
+    width: 30%;
+    height: 25%;
+    margin: auto;
+}
+
 /* Add a blue text color to links */
 a {
     color: dodgerblue;
+}
+
+/* changes footer styling
+ */
+
+.main-footer {
+    background-color: black;
+    color: white;
+
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
 }
 
 /* Set a grey background color and center the text of the "sign in" section */
@@ -61,34 +128,37 @@ a {
     text-align: center;
 
 }
+body {background-color: white;}
+
+h1{
+    text-align: center;
+}
+
 /* tilføjer baggrundsfarve og centrerer */
 .topnav{
     align-content: center;
-    background-color: black;
+    text-align: center;
+    background-color: white;
     overflow: hidden;
 }
 
 /* ændrer selve knapperne */
 .topnav a{
-    float: left;
-    color: #f2f2f2;
+    float: center;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 10px;
     text-decoration: aqua;
     font-size: 17px;
-}
-
-/* når du holder musen over viser den */
-.topnav a:hover {
-    background-color: #dddddd;
     color: black;
 }
 
+/* når du holder musen over viser den */
 .topnav a:hover{
     background-color: #dddddd;
     color: black;
 }
 
+/* markerer den side, man er inde på med blå - denne skal derfor ændres til den side, css'en passer til */
 .topnav a.active {
     background-color: cornflowerblue;
     color: white;

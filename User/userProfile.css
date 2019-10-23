@@ -1,0 +1,54 @@
+body {background-color: white;}
+
+h1{
+    text-align: center;
+}
+
+/* tilføjer baggrundsfarve og centrerer */
+.topnav{
+    align-content: center;
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* ændrer selve knapperne */
+.topnav a{
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: aqua;
+    font-size: 17px;
+    color: black;
+}
+
+/* når du holder musen over viser den */
+.topnav a:hover{
+    background-color: #dddddd;
+    color: black;
+}
+
+/* markerer den side, man er inde på med blå - denne skal derfor ændres til den side, css'en passer til */
+.topnav a.active {
+    background-color: cornflowerblue;
+    color: white;
+}
+/* ændrer størrelsen på ikonerne i navbaren */
+.ikon-1 {
+    height: 40px;
+    width: 40px;
+}
+
+.ikon-2 {
+    height: 40px;
+    width: 40px;
+}
+
+/* Full-width input fields */
+input[type=text] {
+    width: 25%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}

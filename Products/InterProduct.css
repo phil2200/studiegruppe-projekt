@@ -1,0 +1,171 @@
+h1 {
+    font-family: sans-serif;
+    font-size: 100px;
+    text-align: center;
+    margin-top: unset;
+}
+
+
+
+
+
+.container {
+    display: block;
+    float: left;
+    padding: 100px 5%;
+}
+
+
+.product_img {
+    width: 25%;
+    height: 35%;
+    float: left;
+    display: inline-block;
+}
+
+.productName {
+    width:100%;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 20px;
+    
+}
+
+.productColor {
+    width:100%;
+    display: inline-block;
+    margin-top: 100px;
+    font-family: sans-serif;
+}
+
+.productSize {
+    width: 100%;
+    display: inline-block;
+    margin-top: 50px;
+    font-family: sans-serif;
+}
+
+.productPrice {
+   width: 100%;
+   display: inline-block;
+   margin-top: 150px;
+   font-family: sans-serif;
+
+
+  }
+
+.productDesc {
+    width: 100%;
+    display: inline-block;
+    border-style: solid;
+    margin-top: 100px;
+    font-family: sans-serif;
+   
+}
+.topnav{
+    align-content: center;
+    text-align: center;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* ændrer selve knapperne */
+.topnav a{
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: aqua;
+    font-size: 17px;
+    color: black;
+}
+
+/* når du holder musen over viser den */
+.topnav a:hover{
+    background-color: #dddddd;
+    color: black;
+}
+
+/* markerer den side, man er inde på med blå - denne skal derfor ændres til den side, css'en passer til */
+.topnav a.active {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
