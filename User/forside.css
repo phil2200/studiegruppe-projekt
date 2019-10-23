@@ -1,28 +1,38 @@
 body {background-color: white;}
 /* headeren for alle sider */
-h1{
-    /* ændrer på boxen for titlen */
-  text-align: center;
-    display: inline;
-    margin-left: 45%;
+.logo {
+  margin-left: 544px;
 }
 
-/* tilføjer baggrundsfarve og centrerer */
+/* tilføjer baggrundsfarve og sætter højde og bredde på navbaren */
 .topnav{
-  align-content: center;
-  text-align: center;
   background-color: lightblue;
-    padding-top: 1px;
-    padding-bottom: 5px;
+  width: auto;
+  height: 41px;
+}
+
+/* placerer knapperne */
+.home{
+  float: left;
+
+}
+.products{
+  float: left;
+  margin-left: 70px;
+
+}
+.help{
+ float: left;
+  margin-left: 640px;
 }
 
 /* ændrer selve knapperne */
 .topnav a{
-  text-align: center;
-  padding: 19px 20px;
+  padding: 10px 20px;
   text-decoration: aqua;
   font-size: 17px;
   color: black;
+  font-family: "inherit";
 }
 
 /* når du holder musen over viser den */
@@ -32,14 +42,22 @@ h1{
 }
 
 /* markerer den side, man er inde på med blå - denne skal derfor ændres til den side, css'en passer til */
+/* active skal tilpasses alt efter, hvilken side, man er inde på */
 .topnav a.active {
   background-color: lightskyblue;
-    padding: 19px
+    padding: 10px;
+  float:left;
+  margin-left: 40px;
 }
 /* ændrer størrelsen på ikonerne i navbaren */
+.icons{
+  float: left;
+
+}
 .ikon-1 {
   height: 20px;
   width: 20px;
+  margin-top: 7px;
 }
 
 .ikon-2 {
