@@ -1,81 +1,62 @@
 body {background-color: white;}
-/* headeren for alle sider */
-.logo {
-  margin-left: 544px;
-}
-
-
-body {
-  background-image: url(5ONElogo.png);
-  background-color: white;
-  margin: auto;
-  background-size: 100% ;
-}
-
-p {
+/* navbar */
+.logo{
   text-align: center;
 }
 
-/* tilføjer baggrundsfarve og centrerer */
-
-/* tilføjer baggrundsfarve og sætter højde og bredde på navbaren */
-.topnav{
-  background-color: lightblue;
-  width: auto;
-  height: 41px;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-/* placerer knapperne */
-.home{
+li {
   float: left;
-
-}
-.products{
-  float: left;
-  margin-left: 70px;
-
-}
-.help{
- float: left;
-  margin-left: 640px;
+  display: inline;
+  height: 2.5em;
+  flex: 1;
+  text-align: center;
+  line-height: 2.5em;
 }
 
-/* ændrer selve knapperne */
-.topnav a{
-  padding: 10px 20px;
-  text-decoration: aqua;
-  font-size: 17px;
+.nav img {
+  height: 50%;
+  margin: auto;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.nav {
+  background-color: dimgrey;
+}
+
+.nav a{
+  font-size: 16px;
   color: black;
+  font-family: "inherit";
+  /* fjerner underline */
+  text-decoration: none;
+  /* den den tjekker efter line-hight nede fra og op og sætter til samme værdi som den første, den finder = 2.5 em */
+  line-height: inherit;
+}
+/* ændrer på placering af knapperne */
+li.nav-space {
+  flex-grow:3;
+}
+
+li.nav-sign-in {
+  text-align: right;
+}
+
+li.nav-spacer {
+  flex-grow:3;
 }
 
 /* når du holder musen over viser den */
-.topnav a:hover{
-  background-color: lightskyblue;
+.nav a:hover {
+  background-color: grey;
   color: black;
+  padding: 10px;
 }
-
-/* markerer den side, man er inde på med blå - denne skal derfor ændres til den side, css'en passer til */
-/* active skal tilpasses alt efter, hvilken side, man er inde på */
-.topnav a.active {
-  background-color: lightskyblue;
-    padding: 10px;
-  float:left;
-  margin-left: 40px;
-}
-/* ændrer størrelsen på ikonerne i navbaren */
-.icons{
-  float: left;
-
-}
-.ikon-1 {
-  height: 20px;
-  width: 20px;
-  margin-top: 7px;
-}
-
-.ikon-2 {
-  height: 20px;
-  width: 20px;
-}
-
-/* header slut */
+/* navbar slut */

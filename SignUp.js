@@ -10,6 +10,24 @@ var address = document.getElementById("address");
 var email = document.getElementById("email");
 var password = document.getElementById( "password");
 
+
+
+function ValidateEmail(inputText)
+{
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(inputText.value.match(mailformat))
+    {
+        document.form1.text1.focus();
+        return true;
+    }
+    else
+    {
+        alert("You have entered an invalid email address!");
+        document.form1.text1.focus();
+        return false;
+    }
+}
+
 // store these entered values to be called for later
 function storeDetails() {
     localStorage.setItem("username", username.value);
@@ -30,6 +48,10 @@ function storeDetails() {
 let signedUpButton = document.getElementById("SignedUp")
 let existingUser = JSON.parse(localStorage.getItem("User"));
 let currentLogIn = [];
+
+
+
+
 
 
 /*
