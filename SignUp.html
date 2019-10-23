@@ -96,9 +96,8 @@
 
     <p>E-mail</p>
     <!-- validerer emailen ved submit-->
-       <div class="Email" onload="document.form1.email1.focus()">
-           <form name="form1" action="#">
-        <input type="text" name="email1" id="email" value="" placeholder="Your e-mail" ">
+       <div class="Email">
+        <input type="text" name="email1" id="email" value="" placeholder="Your e-mail" />
         <br/>
            </form>
              </div>
@@ -112,7 +111,7 @@
 
     <br/>
    <div id="signUpButton">
-    <button id="SignedUp" type="button" class="registerbtn" style="cursor: pointer;" onclick="storeDetails(); ValidateEmail()";> Click to submit </button>
+    <button id="SignedUp" type="button" class="registerbtn" style="cursor: pointer;" onclick= "storeDetails()" > Click to submit </button>
     </div>
 
 
@@ -138,6 +137,7 @@
 <script src="ClassUserProfile.js"> </script> -->
     <script src="SignUp.js"> </script>
     <script src="Showpassword.js"></script>
+    <script src="ValidateEmail.js"></script>
 
 </form>
 
