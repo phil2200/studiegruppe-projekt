@@ -10,8 +10,9 @@ function login() {
     for (let i = 0; i < existingUser.length; i++) {
         if (usernameInput == existingUser[i].username && passwordInput == existingUser[i].password) {
             location.href = "loggedIn.html"
+
             //push username to current local storage
-            //currentLogIn.push({username: usernameInput});
+            currentLogIn.push({username: usernameInput});
 
 
             //window.open('/loggedln.html');

@@ -4,29 +4,33 @@
 //Get the entered details from HTML sign up page
 var username = document.getElementById("username").value;
 var phone = document.getElementById("phone").value;
-var city = document.getElementById("city");
-var zip = document.getElementById("zip");
-var address = document.getElementById("address");
-var email = document.getElementById("email");
-var password = document.getElementById( "password");
+var city = document.getElementById("city").value;
+var zip = document.getElementById("zip").value;
+var address = document.getElementById("address").value ;
+var email = document.getElementById("email").value ;
+var password = document.getElementById( "password").value ;
 
 
 
 // store these entered values to be called for later
 function storeDetails() {
-    alert("hei");
+    alert("OOPS! Look's like you made a mistake");
     if(validateUser() == false){
-        alert("du har en feil")
-
+        alert("Your username is too short")
     }
+    /*
+    else if(validatePhone() == false) {
+        alert("Your phone number is not correct")
+        }*/
+
     else {
         localStorage.setItem("username", username);
         localStorage.setItem("phone", phone);
-        localStorage.setItem("city", city.value);
-        localStorage.setItem("zip", zip.value);
-        localStorage.setItem("address", address.value);
-        localStorage.setItem("email", email.value);
-        localStorage.setItem("password", password.value);
+        localStorage.setItem("city", city);
+        localStorage.setItem("zip", zip);
+        localStorage.setItem("address", address);
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
         alert('new user has been created!');
         window.location = ("SignIn.html");
     }
@@ -46,37 +50,24 @@ let currentLogIn = [];
 
 
 
-/*
-signUpButton.onclick = function() {
-
-    window.location.href="/SignIn.html"
-
-}
-
-    validateInfo()
-
-}
-
-//valider form
-
-function validateInfo() {
-
-
-    var form_valid = true;
-    var validation_message = "";
-
-*/
 // Valider username
 function validateUser() {
     if(username.length<8) {
         return false;
-        // Tilføjer en besked
 
     }
 
-
 }
 
+
+ /*
+// valider tlf
+function validatePhone() {
+    if(phone.isNaN) {
+        return false;
+    }
+}
+/*
     /*
     // Valider Telefonnummer
 
