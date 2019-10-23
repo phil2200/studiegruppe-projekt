@@ -2,8 +2,8 @@
 
 
 //Get the entered details from HTML sign up page
-var username = document.getElementById("username");
-var phone = document.getElementById("phone");
+var username = document.getElementById("username").value;
+var phone = document.getElementById("phone").value;
 var city = document.getElementById("city");
 var zip = document.getElementById("zip");
 var address = document.getElementById("address");
@@ -12,33 +12,25 @@ var password = document.getElementById( "password");
 
 
 
-function ValidateEmail(inputText)
-{
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if(inputText.value.match(mailformat))
-    {
-        document.form1.text1.focus();
-        return true;
-    }
-    else
-    {
-        alert("You have entered an invalid email address!");
-        document.form1.text1.focus();
-        return false;
-    }
-}
-
 // store these entered values to be called for later
 function storeDetails() {
-    localStorage.setItem("username", username.value);
-    localStorage.setItem("phone", phone.value);
-    localStorage.setItem("city",city.value);
-    localStorage.setItem("zip", zip.value);
-    localStorage.setItem("address", address.value);
-    localStorage.setItem("email", email.value);
-    localStorage.setItem("password", password.value);
-    alert('new user has been created!');
-    window.location = ("SignIn.html");
+    alert("hei");
+    if(validateUser() == false){
+        alert("du har en feil")
+
+    }
+    else {
+        localStorage.setItem("username", username);
+        localStorage.setItem("phone", phone);
+        localStorage.setItem("city", city.value);
+        localStorage.setItem("zip", zip.value);
+        localStorage.setItem("address", address.value);
+        localStorage.setItem("email", email.value);
+        localStorage.setItem("password", password.value);
+        alert('new user has been created!');
+        window.location = ("SignIn.html");
+    }
+
 }
 
 //submit for log-in and sign-up, also amount of attempts allowed.
@@ -60,7 +52,7 @@ signUpButton.onclick = function() {
     window.location.href="/SignIn.html"
 
 }
- /*
+
     validateInfo()
 
 }
@@ -73,18 +65,19 @@ function validateInfo() {
     var form_valid = true;
     var validation_message = "";
 
-
+*/
 // Valider username
-
-    if(username == null || username == "") {
+function validateUser() {
+    if(username.length<8) {
+        return false;
         // Tilføjer en besked
-        document.getElementById("username").innerHTML = "You must fill in your name ";
 
-        // sætter formen til false
-
-        form_valid = false;
     }
 
+
+}
+
+    /*
     // Valider Telefonnummer
 
     if (isNaN(phone)) {
