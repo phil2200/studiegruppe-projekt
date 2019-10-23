@@ -7,6 +7,7 @@ document.getElementById("zip").value = currentUser.zip;
 document.getElementById("address").value = currentUser.address;
 document.getElementById("email").value = currentUser.email;
 
+
 // Få den til at gemme disse informationer, når man logger ind med user: Hello, password: 1234567
 // skal den have en klasse? eller hvordan kan jeg referere til den?
 
