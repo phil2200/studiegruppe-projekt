@@ -40,6 +40,21 @@
 <form register="sign-up.php">
 <div id="sign-up">
 
+
+    <p id="validationUserName" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+
+    <p id="validationPhone" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+
+    <p id="validationCity" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+
+    <p id="validationZip" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+
+    <p id="validationAddress" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+
+    <p id="validationEmail" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+
+    <p id="validationPassword" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
+
    <p>Name</p>
 
     <input type="text" id= "username" value ="" placeholder="Your name">
@@ -86,11 +101,18 @@
 </div>
 
     <br/>
-    <div id="signUpButton">
+   <div id="signUpButton">
     <button id="SignedUp" type="button" class="registerbtn" style="cursor: pointer;" onclick="storeDetails()"> Click to submit </button>
     </div>
 
-<!-- bruger allerede registreret, sign in istedet. -->
+
+    <!--
+    <div>
+    <button type="submit" class="registerbtn" style="cursor: pointer;"> Click to submit </button>
+    </div>
+-->
+
+    <!-- bruger allerede registreret, sign in istedet. -->
     <!-- ja tak -->
 
     <div class="sign-in">
@@ -105,7 +127,7 @@
 <script src="../ShoppingCart/ClassShoppingCart.js"> </script>
 <script src="ClassUser.js"> </script>
 <script src="ClassUserProfile.js"> </script> -->
-    <script src="Signup&signin.js"> </script>
+    <script src="SignUp.js"> </script>
     <script src="Showpassword.js"></script>
 
 </form>

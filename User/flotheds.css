@@ -53,6 +53,11 @@ h5 {
 p {
     text-align: center;
 }
+
+h8 {
+    float: left;
+}
+
 /* Overwrite default styles of hr */
 hr {
     border: 1px solid #f1f1f1;
@@ -96,6 +101,25 @@ body {
 /* Add a blue text color to links */
 a {
     color: dodgerblue;
+}
+
+/* changes footer styling
+ */
+
+.main-footer {
+    background-color: black;
+    color: white;
+
+}
+
+.main-footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul {
+    flex-grow: 1;
+    text-align: end;
 }
 
 /* Set a grey background color and center the text of the "sign in" section */
