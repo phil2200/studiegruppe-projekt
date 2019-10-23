@@ -1,4 +1,3 @@
-
 var signIn = document.getElementById('signIn');
 var existingUser = JSON.parse(localStorage.getItem('User'))
 // when clicking submit, retrieve input from username and password box.
@@ -17,6 +16,10 @@ function login() {
             //window.open('/loggedln.html');
             var IDString = JSON.stringify(currentLogIn);
             localStorage.setItem('currentUser', IDString);
+
+            // laver en currentUser2 for ikke at ødelægge noget i den oprindelige (kan blive slettet, hvis det hele kører)
+            // JSON.stringify converts a JavaScript object or value to JSON string (JavaScript Object Notation)
+            localStorage.setItem('currentUser2', JSON.stringify(existingUser[i]));
 
             alert("you are logged in");
             return true;
