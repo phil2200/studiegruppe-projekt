@@ -134,32 +134,64 @@ h1{
     text-align: center;
 }
 
-/* tilføjer baggrundsfarve og centrerer */
-.topnav{
-    align-content: center;
+/* navbar */
+.logo{
     text-align: center;
-    background-color: white;
-    overflow: hidden;
 }
 
-/* ændrer selve knapperne */
-.topnav a{
-    float: center;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    float: left;
+    display: inline;
+    height: 2.5em;
+    flex: 1;
     text-align: center;
-    padding: 10px 10px;
-    text-decoration: aqua;
-    font-size: 17px;
+    line-height: 2.5em;
+}
+
+.nav img {
+    height: 50%;
+    margin: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.nav {
+    background-color: dimgrey;
+}
+
+.nav a{
+    font-size: 16px;
     color: black;
+    font-family: "inherit";
+    /* fjerner underline */
+    text-decoration: none;
+    /* den den tjekker efter line-hight nede fra og op og sætter til samme værdi som den første, den finder = 2.5 em */
+    line-height: inherit;
+}
+/* ændrer på placering af knapperne */
+li.nav-space {
+    flex-grow:3;
+}
+
+li.nav-sign-in {
+    text-align: right;
+}
+
+li.nav-spacer {
+    flex-grow:3;
 }
 
 /* når du holder musen over viser den */
-.topnav a:hover{
-    background-color: #dddddd;
+.nav a:hover {
+    background-color: grey;
     color: black;
+    padding: 10px;
 }
-
-/* markerer den side, man er inde på med blå - denne skal derfor ændres til den side, css'en passer til */
-.topnav a.active {
-    background-color: cornflowerblue;
-    color: white;
-}
+/* navbar slut */
