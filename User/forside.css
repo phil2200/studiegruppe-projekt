@@ -1,8 +1,9 @@
 body {background-color: white;}
-
-h1{
-  text-align: center;
+/* headeren for alle sider */
+.logo {
+  margin-left: 544px;
 }
+
 
 body {
   background-image: url(5ONElogo.png);
@@ -16,17 +17,32 @@ p {
 }
 
 /* tilføjer baggrundsfarve og centrerer */
+
+/* tilføjer baggrundsfarve og sætter højde og bredde på navbaren */
 .topnav{
-  align-content: center;
-  text-align: center;
-  background-color: white;
-  overflow: hidden;
+  background-color: lightblue;
+  width: auto;
+  height: 41px;
+}
+
+/* placerer knapperne */
+.home{
+  float: left;
+
+}
+.products{
+  float: left;
+  margin-left: 70px;
+
+}
+.help{
+ float: left;
+  margin-left: 640px;
 }
 
 /* ændrer selve knapperne */
 .topnav a{
-  text-align: center;
-  padding: 10px 10px;
+  padding: 10px 20px;
   text-decoration: aqua;
   font-size: 17px;
   color: black;
@@ -34,23 +50,32 @@ p {
 
 /* når du holder musen over viser den */
 .topnav a:hover{
-  background-color: #dddddd;
+  background-color: lightskyblue;
   color: black;
 }
 
 /* markerer den side, man er inde på med blå - denne skal derfor ændres til den side, css'en passer til */
+/* active skal tilpasses alt efter, hvilken side, man er inde på */
 .topnav a.active {
-  background-color: cornflowerblue;
-  color: white;
+  background-color: lightskyblue;
+    padding: 10px;
+  float:left;
+  margin-left: 40px;
 }
 /* ændrer størrelsen på ikonerne i navbaren */
+.icons{
+  float: left;
+
+}
 .ikon-1 {
-  height: 40px;
-  width: 40px;
+  height: 20px;
+  width: 20px;
+  margin-top: 7px;
 }
 
 .ikon-2 {
-  height: 40px;
-  width: 40px;
+  height: 20px;
+  width: 20px;
 }
 
+/* header slut */
