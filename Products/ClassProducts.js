@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 class userProfile {
+=======
+class Product {
+>>>>>>> Stashed changes
     constructor(productId, productName, productDesc, productShortDesc, productPrice, colors, productType,
                 quantity, productImage, viewCount, dateAdded ) {
 
