@@ -1,4 +1,3 @@
-
 // for database: check if user exists in localstorage otherwise create user and push to list
 if (localStorage.getItem("User") == null) {
     var userList = []; // den vil automatisk tage informationen i rækkefølgen som ovenfor
