@@ -10,20 +10,14 @@ var address = document.getElementById("address").value ;
 var email = document.getElementById("email").value ;
 var password = document.getElementById( "password").value ;
 
-
+//laver usernameInput som kan bruges i functionen.
+var usernameInput = String(username);
+console.log(usernameInput);
 
 // store these entered values to be called for later
 function storeDetails() {
-    alert("OOPS! Look's like you made a mistake");
-    if(validateUser() == false){
-        alert("Your username is too short")
-    }
-    /*
-    else if(validatePhone() == false) {
-        alert("Your phone number is not correct")
-        }*/
 
-    else {
+    if (usernameInput.length > 1) {
         localStorage.setItem("username", username);
         localStorage.setItem("phone", phone);
         localStorage.setItem("city", city);
@@ -34,6 +28,13 @@ function storeDetails() {
         alert('new user has been created!');
         window.location = ("SignIn.html");
     }
+    else (usernameInput.length < 1 ); {
+        alert("Your username is too short");
+    }
+    /*
+    else if(validatePhone() == false) {
+        alert("Your phone number is not correct")
+        }*/
 
 }
 
@@ -49,8 +50,9 @@ let currentLogIn = [];
 
 
 
-
+/*
 // Valider username
+
 function validateUser() {
     if(username.length<8) {
         return false;
@@ -58,9 +60,8 @@ function validateUser() {
     }
 
 }
-
-
- /*
+ */
+/*
 // valider tlf
 function validatePhone() {
     if(phone.isNaN) {
@@ -134,7 +135,7 @@ function validatePhone() {
 
         //Alert hvis alt er indtastet korrekt
 
-        // Vi slutter funktionen af med at lave en alert besked for at se om alle de varible er blevet hentet ordenligt fra html dokumentet
+        // Vi slutter funktionen af med at lave en alert besked for at se om alle de varible er blevet hentet ordentligt fra html dokumentet
         alert("Hi " + name
             + "\nphone: " + phone
             + "\ncity: " + city
