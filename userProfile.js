@@ -19,3 +19,7 @@ document.getElementById("email").value = currentUser.email;
        //  userList.push(new User ("hello","1234567"));
       //   userList.push(new User ("gnu","afdanket"));
       //   userList.push(new User ("philipino","lugter"));
+
+ function changeDetails() {
+
+ }

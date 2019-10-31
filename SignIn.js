@@ -1,3 +1,4 @@
+
 var signIn = document.getElementById('signIn');
 var existingUser = JSON.parse(localStorage.getItem('User'))
 // when clicking submit, retrieve input from username and password box.
@@ -8,7 +9,6 @@ function login() {
     //check if entered details match stored details. redirect to home page
     for (let i = 0; i < existingUser.length; i++) {
         if (usernameInput == existingUser[i].username && passwordInput == existingUser[i].password) {
-            //location.href = "loggedIn.html";
 
             //push username to current local storage
             //currentLogIn.push({username: usernameInput});
@@ -35,7 +35,7 @@ function login() {
 }
 
     //if input doesnt match existing user, show to user also show amount of attempts left
-    /*attempt--;
+ /*   attempt--;
     alert("Username or Password invalid. You have" + attempt + "attempts left");
     if (attempt == 0) {
         document.getElementById("username").disabled = true;

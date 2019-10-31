@@ -10,7 +10,7 @@ var address = document.getElementById("address").value ;
 var email = document.getElementById("email").value ;
 var password = document.getElementById( "password").value ;
 
-//laver usernameInput som kan bruges i functionen.
+//laver usernameInput som kan bruges i functionen storeDetails til validering.
 var usernameInput = String(username);
 console.log(usernameInput);
 
@@ -31,10 +31,6 @@ function storeDetails() {
     else (usernameInput.length < 1 ); {
         alert("Your username is too short");
     }
-    /*
-    else if(validatePhone() == false) {
-        alert("Your phone number is not correct")
-        }*/
 
 }
 
