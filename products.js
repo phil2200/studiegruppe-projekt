@@ -29,6 +29,3 @@ for(var i=0; i<products.length; i++){
    product.innerHTML += '<div class="productPrice"> Price: ' + products[i]._productPrice + ' kr </div>';
    productsContainer.appendChild(product);
 }
-
-
-
