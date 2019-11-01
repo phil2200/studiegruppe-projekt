@@ -1,14 +1,14 @@
+
 var signIn = document.getElementById('signIn');
 var existingUser = JSON.parse(localStorage.getItem('User'))
 // when clicking submit, retrieve input from username and password box.
-function login() {
-    var usernameInput = document.getElementById("username").value;
-    var passwordInput = document.getElementById("password").value;
+ function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
 
     //check if entered details match stored details. redirect to home page
     for (let i = 0; i < existingUser.length; i++) {
-        if (usernameInput == existingUser[i].username && passwordInput == existingUser[i].password) {
-            //location.href = "loggedIn.html";
+        if (username == existingUser[i].username && password == existingUser[i].password) {
 
             //push username to current local storage
             //currentLogIn.push({username: usernameInput});
@@ -33,9 +33,34 @@ function login() {
     }
     alert("Wrong username or password")
 }
+/*
+// funktion der tjekker om detaljer i localstorage passer, herefter logger ind.
+    function checkUserLogin() {
+
+        // henter gemte info fra localstorage.
+        var storedName = localStorage.getItem(username);
+        var storedPassword = localStorage.getItem(password);
+
+        //henter indtastet info
+        var enteredUsername = document.getElementById("username");
+        var enteredPassword = document.getElementById("password");
+
+        //checker om de passer. og hvis de gør redirect.
+        if (enteredUsername.value !== storedName || enteredPassword.value !== storedPassword)
+        {
+            alert ('Wrong details entered')
+        }
+            else {
+                alert('you are logged in');
+           location.href = "loggedIn.html";
+        }
+
+    }
+
+ */
 
     //if input doesnt match existing user, show to user also show amount of attempts left
-    /*attempt--;
+ /*   attempt--;
     alert("Username or Password invalid. You have" + attempt + "attempts left");
     if (attempt == 0) {
         document.getElementById("username").disabled = true;

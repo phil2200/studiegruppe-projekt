@@ -1,29 +1,13 @@
 // lav variables nednfor, remove else null, seperate sign up and sign in javascript.
 
-
-//Get the entered details from HTML sign up page
-var username = document.getElementById("username").value;
-var phone = document.getElementById("phone").value;
-var city = document.getElementById("city").value;
-var zip = document.getElementById("zip").value;
-var address = document.getElementById("address").value ;
-var email = document.getElementById("email").value ;
-var password = document.getElementById( "password").value ;
-
-
+//laver usernameInput som kan bruges i functionen storeDetails til validering.
+var usernameInput = String(username);
+console.log(usernameInput);
 
 // store these entered values to be called for later
 function storeDetails() {
-    alert("OOPS! Look's like you made a mistake");
-    if(validateUser() == false){
-        alert("Your username is too short")
-    }
-    /*
-    else if(validatePhone() == false) {
-        alert("Your phone number is not correct")
-        }*/
 
-    else {
+  if (usernameInput.length > 2) {
         localStorage.setItem("username", username);
         localStorage.setItem("phone", phone);
         localStorage.setItem("city", city);
@@ -35,7 +19,12 @@ function storeDetails() {
         window.location = ("SignIn.html");
     }
 
+   else (usernameInput.length < 2 ); {
+        alert("Your username is too short");
+    }
+
 }
+
 
 //submit for log-in and sign-up, also amount of attempts allowed.
 //var attempt = 3;
@@ -47,10 +36,19 @@ let currentLogIn = [];
 
 
 
+//Get the entered details from HTML sign up page
+var username = document.getElementById("username").value;
+var phone = document.getElementById("phone").value;
+var city = document.getElementById("city").value;
+var zip = document.getElementById("zip").value;
+var address = document.getElementById("address").value ;
+var email = document.getElementById("email").value ;
+var password = document.getElementById( "password").value ;
 
 
-
+/*
 // Valider username
+
 function validateUser() {
     if(username.length<8) {
         return false;
@@ -58,9 +56,8 @@ function validateUser() {
     }
 
 }
-
-
- /*
+ */
+/*
 // valider tlf
 function validatePhone() {
     if(phone.isNaN) {
@@ -134,7 +131,7 @@ function validatePhone() {
 
         //Alert hvis alt er indtastet korrekt
 
-        // Vi slutter funktionen af med at lave en alert besked for at se om alle de varible er blevet hentet ordenligt fra html dokumentet
+        // Vi slutter funktionen af med at lave en alert besked for at se om alle de varible er blevet hentet ordentligt fra html dokumentet
         alert("Hi " + name
             + "\nphone: " + phone
             + "\ncity: " + city
