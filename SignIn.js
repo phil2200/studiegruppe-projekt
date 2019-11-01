@@ -27,11 +27,11 @@ function login() {
 
             location.href = "loggedIn.html";
 
-            alert("you are logged in");
+            alert("You are logged in");
             return true;
         }
     }
-    alert("wrong!")
+    alert("Wrong username or password")
 }
 
     //if input doesnt match existing user, show to user also show amount of attempts left
