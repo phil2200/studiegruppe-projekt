@@ -98,27 +98,6 @@ h4 {
     overflow: hidden;
 }
 
-/* ændrer selve knapperne */
-.topnav a{
-    text-align: center;
-    padding: 10px 10px;
-    text-decoration: aqua;
-    font-size: 17px;
-    color: black;
-}
-
-/* når du holder musen over viser den */
-.topnav a:hover{
-    background-color: #dddddd;
-    color: black;
-}
-
-/* markerer den side, man er inde på med blå - denne skal derfor ændres til den side, css'en passer til */
-.topnav a.active {
-    background-color: cornflowerblue;
-    color: white;
-}
-
 
 
 
