@@ -1,15 +1,5 @@
 // lav variables nednfor, remove else null, seperate sign up and sign in javascript.
 
-
-//Get the entered details from HTML sign up page
-var username = document.getElementById("username").value;
-var phone = document.getElementById("phone").value;
-var city = document.getElementById("city").value;
-var zip = document.getElementById("zip").value;
-var address = document.getElementById("address").value ;
-var email = document.getElementById("email").value ;
-var password = document.getElementById( "password").value ;
-
 //laver usernameInput som kan bruges i functionen storeDetails til validering.
 var usernameInput = String(username);
 console.log(usernameInput);
@@ -17,7 +7,7 @@ console.log(usernameInput);
 // store these entered values to be called for later
 function storeDetails() {
 
-    if (usernameInput.length > 1) {
+  if (usernameInput.length > 2) {
         localStorage.setItem("username", username);
         localStorage.setItem("phone", phone);
         localStorage.setItem("city", city);
@@ -28,11 +18,13 @@ function storeDetails() {
         alert('new user has been created!');
         window.location = ("SignIn.html");
     }
-    else (usernameInput.length < 1 ); {
+
+   else (usernameInput.length < 2 ); {
         alert("Your username is too short");
     }
 
 }
+
 
 //submit for log-in and sign-up, also amount of attempts allowed.
 //var attempt = 3;
@@ -44,6 +36,14 @@ let currentLogIn = [];
 
 
 
+//Get the entered details from HTML sign up page
+var username = document.getElementById("username").value;
+var phone = document.getElementById("phone").value;
+var city = document.getElementById("city").value;
+var zip = document.getElementById("zip").value;
+var address = document.getElementById("address").value ;
+var email = document.getElementById("email").value ;
+var password = document.getElementById( "password").value ;
 
 
 /*
