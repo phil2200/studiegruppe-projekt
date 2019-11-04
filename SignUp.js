@@ -18,7 +18,7 @@ function storeDetails() {
         localStorage.setItem("address", address);
         localStorage.setItem("email", email);
         localStorage.setItem("password", password);
-  //     alert('new user has been created!');
+          alert('new user has been created!');
         window.location = ("SignIn.html");
     //}
 
