@@ -27,11 +27,11 @@ var existingUser = JSON.parse(localStorage.getItem('User'))
 
             location.href = "loggedIn.html";
 
-            alert("you are logged in");
+            alert("You are logged in");
             return true;
         }
     }
-    alert("wrong!")
+    alert("Wrong username or password")
 }
 /*
 // funktion der tjekker om detaljer i localstorage passer, herefter logger ind.
