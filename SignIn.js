@@ -1,6 +1,6 @@
-
 var signIn = document.getElementById('signIn');
 var existingUser = JSON.parse(localStorage.getItem('User'))
+
 // when clicking submit, retrieve input from username and password box.
  function login() {
     var username = document.getElementById("username").value;
@@ -10,28 +10,18 @@ var existingUser = JSON.parse(localStorage.getItem('User'))
     for (let i = 0; i < existingUser.length; i++) {
         if (username == existingUser[i].username && password == existingUser[i].password) {
 
-            //push username to current local storage
-            //currentLogIn.push({username: usernameInput});
-            // udkommenteret fordi currentLogin ikke findes.
-
-
-            //window.open('/loggedln.html');
-            // var IDString = JSON.stringify(currentLogIn);
-            //udkommenteret fordi currentLogin stadig ikke findes
-            //localStorage.setItem('currentUser', IDString);
-            //udkommenteret
-
-            // laver en currentUser2 for ikke at ødelægge noget i den oprindelige (kan blive slettet, hvis det hele kører)
-            // JSON.stringify converts a JavaScript object or value to JSON string (JavaScript Object Notation)
+            // EMDL: laver en currentUser2 for ikke at ødelægge noget i den oprindelige (kan blive slettet, hvis det hele kører)
+            // EMDL: JSON.stringify converts a JavaScript object or value to JSON string (JavaScript Object Notation)
             localStorage.setItem('currentUser2', JSON.stringify(existingUser[i]));
 
             location.href = "loggedIn.html";
 
-            alert("you are logged in");
+            // EMDL: alert "you are loggen in", hvis oplysninger er korrekte og allers aleret "Wrong username or password"
+            alert("You are logged in");
             return true;
         }
     }
-    alert("wrong!")
+    alert("Wrong username or password")
 }
 /*
 // funktion der tjekker om detaljer i localstorage passer, herefter logger ind.

@@ -7,7 +7,10 @@ console.log(usernameInput);
 // store these entered values to be called for later
 function storeDetails() {
 
-  if (usernameInput.length > 2) {
+
+    //udkommenteret fordi alerten ikke virker, validerings formen laves om længere nede.
+
+  // if (usernameInput.length > 2) {
         localStorage.setItem("username", username);
         localStorage.setItem("phone", phone);
         localStorage.setItem("city", city);
@@ -15,13 +18,13 @@ function storeDetails() {
         localStorage.setItem("address", address);
         localStorage.setItem("email", email);
         localStorage.setItem("password", password);
-        alert('new user has been created!');
+          alert('new user has been created!');
         window.location = ("SignIn.html");
-    }
+    //}
 
-   else (usernameInput.length < 2 ); {
-        alert("Your username is too short");
-    }
+  // else (usernameInput.length < 2 ); {
+    //    alert("Your username is too short");
+   // }
 
 }
 
