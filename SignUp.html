@@ -46,23 +46,9 @@
 <div id="sign-up">
 
 
-    <p id="validationUserName" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
-
-    <p id="validationPhone" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
-
-    <p id="validationCity" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
-
-    <p id="validationZip" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
-
-    <p id="validationAddress" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
-
-    <p id="validationEmail" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
-
-    <p id="validationPassword" style="color: red; margin-top: 1px; margin-bottom: 1px;"></p>
-
    <p>Name</p>
 
-    <input type="text" id= "username" value ="" placeholder="Your name">
+    <input type="text" id="username" value="" placeholder="Your name">
 <br/>
 
     <br/>
@@ -96,23 +82,22 @@
 
     <p>E-mail</p>
     <!-- validerer emailen ved submit-->
-       <div class="Email" onload="document.form1.email1.focus()">
-           <form name="form1" action="#">
-        <input type="text" name="email1" id="email" value="" placeholder="Your e-mail" ">
-        <br/>
+    <input type="text" name="email1" id="email" value="" placeholder="Your e-mail" />
+    <br/>
            </form>
-             </div>
+
+
 
     <p>Password</p>
     <input type="text" id="password" value="" placeholder="Your password">
 </br>
     <input type="checkbox" checked onclick="showPassword()"> Show Password
     <br/>
-</div>
 
+    <div/>
     <br/>
    <div id="signUpButton">
-    <button id="SignedUp" type="button" class="registerbtn" style="cursor: pointer;" onclick="storeDetails(); ValidateEmail()";> Click to submit </button>
+    <button id="SignedUp" type="button" class="registerbtn" style="cursor: pointer;" onclick="storeDetails()" > Click to submit </button>
     </div>
 
 
@@ -130,6 +115,8 @@
 
     </div>
 
+</div>
+
 <!--
 <script src="../Orders/ClassOrders.js"> </script>
 <script src="../Products/ClassProducts.js"> </script>
@@ -138,6 +125,7 @@
 <script src="ClassUserProfile.js"> </script> -->
     <script src="SignUp.js"> </script>
     <script src="Showpassword.js"></script>
+
 
 </form>
 

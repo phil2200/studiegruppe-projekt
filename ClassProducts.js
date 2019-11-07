@@ -1,7 +1,7 @@
 
 class Product {
     constructor(productId, productName, productDesc, productShortDesc, productPrice, colors, productType,
-                quantity, productImage, viewCount, dateAdded ) {
+                quantity, productImage, viewCount, dateAdded, status ) {
 
         this._productId = productId;
         this._productName = productName;
@@ -14,6 +14,7 @@ class Product {
         this._productImage = productImage;
         this._viewCount = viewCount;
         this._dateAdded = dateAdded;
+        this.status = status;
 
     }
 

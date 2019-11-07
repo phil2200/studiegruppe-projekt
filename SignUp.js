@@ -1,45 +1,30 @@
 // lav variables nednfor, remove else null, seperate sign up and sign in javascript.
 
-
-//Get the entered details from HTML sign up page
-var username = document.getElementById("username");
-var phone = document.getElementById("phone");
-var city = document.getElementById("city");
-var zip = document.getElementById("zip");
-var address = document.getElementById("address");
-var email = document.getElementById("email");
-var password = document.getElementById( "password");
-
-
-
-function ValidateEmail(inputText)
-{
-    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    if(inputText.value.match(mailformat))
-    {
-        document.form1.text1.focus();
-        return true;
-    }
-    else
-    {
-        alert("You have entered an invalid email address!");
-        document.form1.text1.focus();
-        return false;
-    }
-}
+//laver usernameInput som kan bruges i functionen storeDetails til validering.
+var usernameInput = String(username);
+console.log(usernameInput);
 
 // store these entered values to be called for later
 function storeDetails() {
-    localStorage.setItem("username", username.value);
-    localStorage.setItem("phone", phone.value);
-    localStorage.setItem("city",city.value);
-    localStorage.setItem("zip", zip.value);
-    localStorage.setItem("address", address.value);
-    localStorage.setItem("email", email.value);
-    localStorage.setItem("password", password.value);
-    alert('new user has been created!');
-    window.location = ("SignIn.html");
+
+  if (usernameInput.length > 2) {
+        localStorage.setItem("username", username);
+        localStorage.setItem("phone", phone);
+        localStorage.setItem("city", city);
+        localStorage.setItem("zip", zip);
+        localStorage.setItem("address", address);
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
+        alert('new user has been created!');
+        window.location = ("SignIn.html");
+    }
+
+   else (usernameInput.length < 2 ); {
+        alert("Your username is too short");
+    }
+
 }
+
 
 //submit for log-in and sign-up, also amount of attempts allowed.
 //var attempt = 3;
@@ -51,40 +36,36 @@ let currentLogIn = [];
 
 
 
-
+//Get the entered details from HTML sign up page
+var username = document.getElementById("username").value;
+var phone = document.getElementById("phone").value;
+var city = document.getElementById("city").value;
+var zip = document.getElementById("zip").value;
+var address = document.getElementById("address").value ;
+var email = document.getElementById("email").value ;
+var password = document.getElementById( "password").value ;
 
 
 /*
-signUpButton.onclick = function() {
-
-    window.location.href="/SignIn.html"
-
-}
- /*
-    validateInfo()
-
-}
-
-//valider form
-
-function validateInfo() {
-
-
-    var form_valid = true;
-    var validation_message = "";
-
-
 // Valider username
 
-    if(username == null || username == "") {
-        // Tilføjer en besked
-        document.getElementById("username").innerHTML = "You must fill in your name ";
+function validateUser() {
+    if(username.length<8) {
+        return false;
 
-        // sætter formen til false
-
-        form_valid = false;
     }
 
+}
+ */
+/*
+// valider tlf
+function validatePhone() {
+    if(phone.isNaN) {
+        return false;
+    }
+}
+/*
+    /*
     // Valider Telefonnummer
 
     if (isNaN(phone)) {
@@ -150,7 +131,7 @@ function validateInfo() {
 
         //Alert hvis alt er indtastet korrekt
 
-        // Vi slutter funktionen af med at lave en alert besked for at se om alle de varible er blevet hentet ordenligt fra html dokumentet
+        // Vi slutter funktionen af med at lave en alert besked for at se om alle de varible er blevet hentet ordentligt fra html dokumentet
         alert("Hi " + name
             + "\nphone: " + phone
             + "\ncity: " + city

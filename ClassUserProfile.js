@@ -3,47 +3,47 @@
 
 class userProfile {
    /* get orderhistory() {
-        return this._orderhistory;
+        return this.orderhistory;
     }
 
     set orderhistory(value) {
-        this._orderhistory = value;
+        this.orderhistory = value;
     }
     get zip() {
-        return this._zip;
+        return this.zip;
     }
 
     set zip(value) {
-        this._zip = value;
+        this.zip = value;
     }
     get city() {
-        return this._city;
+        return this.city;
     }
 
     set city(value) {
-        this._city = value;
+        this.city = value;
     }
     get phone() {
-        return this._phone;
+        return this.phone;
     }
 
     set phone(value) {
-        this._phone = value;
+        this.phone = value;
     }
 
     get address() {
-        return this._address;
+        return this.address;
     }
 
     set address(value) {
-        this._address = value;
+        this.address = value;
     }
     get fullName() {
-        return this._fullName;
+        return this.fullName;
     }
 
     set fullName(value) {
-        this._fullName = value;
+        this.fullName = value;
     }
 
     */
@@ -68,26 +68,26 @@ class userProfile {
 
 //when creating new user, to assign new values to variables which are names etc.
 
-new userProfile(fullName, address, phone, city, zip)
+new userProfile (fullName, address, phone, city, zip);
 
-//  function changeDetails() {
+function changeDetails () {
     // Henter fullname string
 
-    var fullName = document.getElementById( "fullname")
+    var fullName = document.getElementById( "fullname");
 
     // henter address string
-    var address = document.getElementById ("address")
+    var address = document.getElementById ("address");
 
     // henter phone string
-    var phone = document.getElementById("phone")
+    var phone = document.getElementById("phone");
 
     //henter city string
-    var city = document.getElementById("city")
+    var city = document.getElementById("city");
 
     //henter zip string
-    var zip =document.getElementById( "zip")
+    var zip =document.getElementById( "zip");
 
 
-//}
+}
 
 console.log(fullName);
