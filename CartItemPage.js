@@ -63,7 +63,7 @@ function addToCartClicked(event) {
     var price = product.getElementsByClassName('productPrice')[0].innerText
     var imageSrc = product.getElementsByClassName('productImage')[0].src
 
-
+// de tre values under variablen productDetails bliver pushet op i locale storage
     productDetails.prodName = title;
     productDetails.price = price;
     productDetails.imgName = imageSrc;
@@ -75,6 +75,7 @@ function addToCartClicked(event) {
     updateCartTotal()
 }
 
+// denne funktion gør, at man via "add to cart" knappen, kan tilføje
 function addItemToCart(title, price, imageSrc) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
