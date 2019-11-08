@@ -22,4 +22,5 @@ for(var i=0; i<products.length; i++){
 
 function interProduct(productId) {
    window.location.replace('interProduct.html?productId='+productId);
+   window.history.go(-1)
 }
