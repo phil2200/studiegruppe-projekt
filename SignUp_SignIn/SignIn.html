@@ -32,7 +32,7 @@
 <br/>
 
 <!-- log in form, to fill out password and username -->
-
+<!-- dette er kopieret, lav om i det :)) -->
 <form register="sign-in.php">
     <div id="sign-in">
 
@@ -50,7 +50,7 @@
         <input type="checkbox" checked onclick="showPassword()"> Show Password
         <br/>
 
-        <button type="button" value="login"  class="registerbtn" id="signIn" onclick="login()">Login</button>
+        <button type="submit" value="login" class="registerbtn" id="signIn">Login</button>
     </div>
 
     <div class="sign-up">
@@ -58,15 +58,23 @@
 
     </div>
 
-        </form>
+</form>
 
-
-
-     </body>
+</body>
 
 <script src="../User/UserDB.js"></script>
 <script src="SignIn.js"></script>
 <script src="Showpassword.js"></script>
 <script src="../User/ClassUser.js"></script>
+
+<!-- EMDL: klik enter for at logge ind, henter signin ID'et og bruger en EventListener til at indikere eventet ved klik -->
+<!-- EMDL: laver en default for at den ikke står og refresher, men den kommer videre og til sidst kaldes funktionen -->
+<script>
+    document.getElementById('signIn').addEventListener('click', function (event) {
+        event.preventDefault();
+        login();
+    });
+</script>
+
 
 </html>
