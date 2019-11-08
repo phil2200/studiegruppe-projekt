@@ -1,4 +1,5 @@
-let currentUser = JSON.parse(localStorage.getItem("currentUser2"));
+
+let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 //EMDL: henter info fra USERDB, hvor oplysninger på name, phone osv.. er givet
 document.getElementById("name").value = currentUser.name;
 document.getElementById("phone").value = currentUser.phone;

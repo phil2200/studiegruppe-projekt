@@ -1,6 +1,5 @@
-
 //class itself is prototype of object and every class contains prototype properties.
-
+/*
 class userProfile {
    /* get orderhistory() {
         return this.orderhistory;
@@ -46,7 +45,6 @@ class userProfile {
         this.fullName = value;
     }
 
-    */
 
     //Angiver værdier til string typerne/laver string til objekter.
     //constructor contains prototype variables
@@ -91,3 +89,4 @@ function changeDetails () {
 }
 
 console.log(fullName);
+*/
