@@ -10,13 +10,17 @@ var existingUser = JSON.parse(localStorage.getItem('User'))
     for (let i = 0; i < existingUser.length; i++) {
         if (username == existingUser[i].username && password == existingUser[i].password) {
 
-            // EMDL: laver en currentUser2 for ikke at ødelægge noget i den oprindelige (kan blive slettet, hvis det hele kører)
+            // EMDL: laver en currentUser, som skal vise brugeroplysninger på den bruger, der logger ind
             // EMDL: JSON.stringify converts a JavaScript object or value to JSON string (JavaScript Object Notation)
-            localStorage.setItem('currentUser2', JSON.stringify(existingUser[i]));
+            localStorage.setItem('currentUser', JSON.stringify(existingUser[i]));
 
             location.href = "loggedIn.html";
+            
+            // klik enter for at logge ind
 
-            // EMDL: alert "you are loggen in", hvis oplysninger er korrekte og allers aleret "Wrong username or password"
+
+
+            // EMDL: alert "you are logged in", hvis oplysninger er korrekte og allers aleret "Wrong username or password"
             alert("You are logged in");
             return true;
         }
