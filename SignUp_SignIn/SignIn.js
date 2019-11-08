@@ -15,10 +15,6 @@ var existingUser = JSON.parse(localStorage.getItem('User'))
             localStorage.setItem('currentUser', JSON.stringify(existingUser[i]));
 
             location.href = "loggedIn.html";
-            
-            // klik enter for at logge ind
-
-
 
             // EMDL: alert "you are logged in", hvis oplysninger er korrekte og allers aleret "Wrong username or password"
             alert("You are logged in");
