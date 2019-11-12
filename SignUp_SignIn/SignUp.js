@@ -6,11 +6,6 @@ console.log(usernameInput);
 
 // store these entered values to be called for later
 function storeDetails() {
-
-
-    //udkommenteret fordi alerten ikke virker, validerings formen laves om længere nede.
-
-  // if (usernameInput.length > 2) {
         localStorage.setItem("username", username);
         localStorage.setItem("phone", phone);
         localStorage.setItem("city", city);
@@ -20,17 +15,9 @@ function storeDetails() {
         localStorage.setItem("password", password);
           alert('new user has been created!');
         window.location = ("SignIn.html");
-    //}
-
-  // else (usernameInput.length < 2 ); {
-    //    alert("Your username is too short");
-   // }
 
 }
 
-
-//submit for log-in and sign-up, also amount of attempts allowed.
-//var attempt = 3;
 
 // assigning existing user for test purposes
 let signedUpButton = document.getElementById("SignedUp")
@@ -47,6 +34,21 @@ var zip = document.getElementById("zip").value;
 var address = document.getElementById("address").value ;
 var email = document.getElementById("email").value ;
 var password = document.getElementById( "password").value ;
+
+
+
+// validering af samtlige felter
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
