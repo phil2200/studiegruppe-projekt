@@ -60,3 +60,22 @@ li.nav-spacer {
   padding: 10px;
 }
 /* navbar slut */
+
+/* Grid */
+/* bruger flex, så det bliver fleksibelt - uden flex, ville billederne bare stå under hinanden */
+.row {
+  display: flex;
+  padding: 4px;
+}
+
+/* ændrer på kolonnerne */
+.column {
+  max-width: 25%;
+  padding: 2px; /* hvor lang afstand, der i mellem bilelder */
+}
+
+/* tilpasser billederne i kolonnerne */
+.column img {
+  width: 100%;
+  align-content: center;
+}
