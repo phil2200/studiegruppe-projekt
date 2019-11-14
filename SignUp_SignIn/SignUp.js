@@ -37,7 +37,9 @@ var password = document.getElementById( "password").value ;
 
 
 
-// validering af samtlige felter
+// validering af samtlige felter - inspiration fra tutorialrepublic.com
+
+
 
 
 
