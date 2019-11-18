@@ -27,21 +27,44 @@ let currentLogIn = [];
 
 
 //Get the entered details from HTML sign up page
-var username = document.getElementById("username").value;
-var phone = document.getElementById("phone").value;
-var city = document.getElementById("city").value;
-var zip = document.getElementById("zip").value;
-var address = document.getElementById("address").value ;
-var email = document.getElementById("email").value ;
-var password = document.getElementById( "password").value ;
+        var username = document.getElementById("username").value;
+        var phone = document.getElementById("phone").value;
+        var city = document.getElementById("city").value;
+        var zip = document.getElementById("zip").value;
+        var address = document.getElementById("address").value ;
+        var email = document.getElementById("email").value ;
+        var password = document.getElementById( "password").value ;
 
 
 
 // validering af samtlige felter - inspiration fra tutorialrepublic.com
 
+// definerer fejl eller error besked
+function printError(elemId, hintMsg) {
+        document.getElementById(elemId).innerHTML = hintMsg;
+}
 
+// her defineres validationForm funktionen
+function validationForm() {
+        var username = document.signUpForm.username.value;
+        var phone = document.signUpForm.phone.value;
+        var city = document.signUpForm.city.value;
+        var zip = document.signUpForm.zip.value;
+        var address = document.signUpForm.address.value;
+        var email = document.signUpForm.email.value;
+        var password = document.signUpForm.password.value;
+        }
 
+// angiver error variable til de ovenstående
+        var usernameErr = phoneErr = cityErr = zipErr = addressErr = emailErr = passwordErr = true;
 
+// validerer username
+        if (username= "")  {
+                printError("usernameErr", "Type in a username");
+        } else {
+                var regex = /^[a-zA-Z\s]+$/;
+                
+        }
 
 
 
