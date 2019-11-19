@@ -1,73 +1,39 @@
 // lav variables nednfor, remove else null, seperate sign up and sign in javascript.
 
-//laver usernameInput som kan bruges i functionen storeDetails til validering.
-var usernameInput = String(username);
-console.log(usernameInput);
+//laver usernameInput som kan bruges i functionen storeDetails til at gemme i lpocal storage og yderligere validering.
+        var usernameInput = String(username);
+                console.log(usernameInput);
 
 // store these entered values to be called for later
 function storeDetails() {
         localStorage.setItem("username", username);
-        localStorage.setItem("phone", phone);
-        localStorage.setItem("city", city);
-        localStorage.setItem("zip", zip);
-        localStorage.setItem("address", address);
-        localStorage.setItem("email", email);
-        localStorage.setItem("password", password);
-          alert('new user has been created!');
-        window.location = ("SignIn.html");
+          localStorage.setItem("phone", phone);
+                localStorage.setItem("city", city);
+                    localStorage.setItem("zip", zip);
+                         localStorage.setItem("address", address);
+                                localStorage.setItem("email", email);
+                                        localStorage.setItem("password", password);
 
-}
+                                                     alert('new user has been created!');
+                                                     window.location = ("SignIn.html");
+                                                        }
 
 
 // assigning existing user for test purposes
 let signedUpButton = document.getElementById("SignedUp")
-let existingUser = JSON.parse(localStorage.getItem("User"));
-let currentLogIn = [];
+        let existingUser = JSON.parse(localStorage.getItem("User"));
+                let currentLogIn = [];
 
 
 
 //Get the entered details from HTML sign up page
-        var username = document.getElementById("username").value;
+var username = document.getElementById("username").value;
         var phone = document.getElementById("phone").value;
-        var city = document.getElementById("city").value;
-        var zip = document.getElementById("zip").value;
-        var address = document.getElementById("address").value ;
-        var email = document.getElementById("email").value ;
-        var password = document.getElementById( "password").value ;
-
-
-
-// validering af samtlige felter - inspiration fra tutorialrepublic.com
-
-// definerer fejl eller error besked
-function printError(elemId, hintMsg) {
-        document.getElementById(elemId).innerHTML = hintMsg;
-}
-
-// her defineres validationForm funktionen
-function validationForm() {
-        var username = document.signUpForm.username.value;
-        var phone = document.signUpForm.phone.value;
-        var city = document.signUpForm.city.value;
-        var zip = document.signUpForm.zip.value;
-        var address = document.signUpForm.address.value;
-        var email = document.signUpForm.email.value;
-        var password = document.signUpForm.password.value;
-        }
-
-// angiver error variable til de ovenstående
-        var usernameErr = phoneErr = cityErr = zipErr = addressErr = emailErr = passwordErr = true;
-
-// validerer username
-        if (username= "")  {
-                printError("usernameErr", "Type in a username");
-        } else {
-                var regex = /^[a-zA-Z\s]+$/;
-
-        }
-
-
-
+                var city = document.getElementById("city").value;
+                        var zip = document.getElementById("zip").value;
+                                var address = document.getElementById("address").value ;
+                                   var email = document.getElementById("email").value ;
+                                          var password = document.getElementById( "password").value ;
 
 
 
