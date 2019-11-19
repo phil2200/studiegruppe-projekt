@@ -63,7 +63,7 @@ function validationForm() {
                 printError("usernameErr", "Type in a username");
         } else {
                 var regex = /^[a-zA-Z\s]+$/;
-                
+
         }
 
 

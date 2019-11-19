@@ -1,3 +1,8 @@
+//dette dokument gør det muligt at gemme indtastet sign-up data i local storage og sammenligne dette med det -
+// der er indtastet ved log-in. Denne fil bliver ikke brugt, da vores "pre-defined users" er foretrukket
+// til demonstration af webshoppens endelige produkt.
+
+
 // Username and Password for the registration form
 var username = document.getElementById('username');
 var password = document.getElementById('password');
