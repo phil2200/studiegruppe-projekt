@@ -104,3 +104,44 @@ function validationForm() {
                                       printError("zipErr","you have to enter a ZIP code");
                                 }
                                     //indsætter bare "maxlength" property i <input> tag i html fremfor at overkomplicere det
+
+
+
+                              //validering af addresse
+                                    if (address == "")
+                                        {
+                                            //angiver error besked hvis der ikke indtastes noget
+                                         printError("addressErr","You must type an address, otherwise you cant receive your clothes");
+                                         }
+                                            else {
+                                                //igen hvilke characters det kan indeholde
+                                                var regexAddress = /^[a-zA-Z\s]+$/;
+                                                    if (regexAddress.test(address)===false) {
+                                                        printError("addressErr","You have to type in a valid address");
+                                                                                             }
+                                                            else {
+                                                                printError("addressErr","");
+                                                                    addressErr = false;
+                                                                  }
+                                                    }
+
+
+
+                                            // validerer password
+                                                    if (username == " ")  {
+                                                           printError("passwordErr", "Type in a password");
+                                                                    }
+                                                                //angiver hvilke tegn password kan/skal indeholde
+                                                                   else {
+                                                                     var regexPassword = /^[a-zA-Z\s]+$/;
+
+                                                                        //Hvilken error den skal printe og i hvilke situationer, defineres med if/else metode.
+
+                                                                             if(regexPassword.test(password) === false){
+                                                                                printError("passwordErr","Enter a password using standard characters");
+                                                                                                                         }
+                                                                                    else {
+                                                                                       printError("passwordErr", "");
+                                                                                            passwordErr = false;
+                                                                                           }
+                                                                            }
