@@ -25,7 +25,7 @@ function validationForm() {
     if ( username == " " )  {
        printError("usernameErr", "Type in a username");
                           }
-        //angiver hvilke tegn username kan indeholde
+        //angiver hvilke tegn username kan indeholde (tegn fundet på nettet)
         else {
             var regex = /^[a-zA-Z\s]+$/;
 
@@ -42,4 +42,18 @@ function validationForm() {
 
 
       // validering af email
-        
+        if (email == "") {
+            printError("emailErr","We would like you to enter an email-address")
+                            }
+                //definerer hvilke tegn emailen skal indeholde (tegn fundet på nettet)
+                        else {
+                            var regexMail = /^\S+@\S+\.\S+$/;
+                                if (regexMail.test(email) === false){
+                                    printError("emailErr","Check your email, it seems there is something wrong");
+                                                                      }
+                                        else {
+                                            printError("emailErr","");
+                                            emailErr = false;
+                                    }
+                               }
+
