@@ -145,3 +145,26 @@ function validationForm() {
                                                                                             passwordErr = false;
                                                                                            }
                                                                             }
+
+
+
+                                                                   //forhindrer formen og storeDetails funktion i at blive kørt hvis der er en fejl
+                                                                        if ((usernameErr||phoneErr||cityErr||zipErr||addressErr||emailErr||passwordErr) == true ) {
+                                                                            return false;
+                                                                                //HVORFOR DIGER DEN FEJL HER  ?+????????
+                                                                                } else {
+
+                                                                                    //laver ny string der viser hvad man har indtastet.
+
+                                                                                            var dataPreview = "you have entered all the following details: \n" +
+                                                                                                "Full name: " + username + "\n" +
+                                                                                                 "Email address: " + email + "\n" +
+                                                                                                    "Mobile number: " + phone + "\n" +
+                                                                                                        "City: " + city + "\n" +
+                                                                                                            "ZIP: " + zip + "\n" +
+                                                                                                                "Address: " + address + "\n" +
+                                                                                                                    "Password: We won't show this to anyone :)"
+                                                                                                                        alert(dataPreview);
+                                                                                          }
+
+
