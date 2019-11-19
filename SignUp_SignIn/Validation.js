@@ -83,17 +83,24 @@ function validationForm() {
 
 
                 //Validering af city, bruger tegn fra username
-                if (city == "")
-                    {
-                        printError("cityErr","Please enter a city");
-                    }
-                        else {
-                            var regexCity = /^[a-zA-Z\s]+$/;
-                                if (regexCity.test(city) === false)
-                                   {    printError("cityErr","It seems your city is non-existent");
+                 if (city == "")
+                       {
+                           printError("cityErr","Please enter a city");
+                        }
+                            else {
+                              var regexCity = /^[a-zA-Z\s]+$/;
+                                    if (regexCity.test(city) === false)
+                                      {    printError("cityErr","It seems your city is non-existent");
 
-                                    }   else {
-                                            printError("cityErr","");
-                                                cityErr = false;
-                                                }
-                              }
+                                          }   else {
+                                               printError("cityErr","");
+                                                    cityErr = false;
+                                                   }
+                                 }
+
+                            //Validering af ZIP, da vi er i DK og umiddelbart går ud fra den kun skal være max 4 cifre sætter vi den til max 4 cifre.
+                                if (zip == "")
+                                    {
+                                      printError("zipErr","you have to enter a ZIP code");
+                                }
+                                    //indsætter bare "maxlength" property i <input> tag i html fremfor at overkomplicere det
