@@ -22,7 +22,7 @@ function validationForm() {
     var usernameErr = phoneErr = cityErr = zipErr = addressErr = emailErr = passwordErr = true;
 
 // validerer username
-    if ( username == " " )  {
+    if (username == " ")  {
        printError("usernameErr", "Type in a username");
                           }
         //angiver hvilke tegn username kan indeholde (tegn fundet på nettet)
@@ -31,29 +31,69 @@ function validationForm() {
 
                     //Hvilken error den skal printe og i hvilke situationer, defineres med if/else metode.
 
-                if(regex.test(username)===false){
+                if(regex.test(username) === false){
                         printError("usernameErr","Enter a username using the permitted letters");
                                                    }
                     else {
                          printError("usernameErr", "");
-                          usernameErr = false
+                          usernameErr = false;
                             }
                 }
 
 
       // validering af email
-        if (email == "") {
+        if (email == " ") {
             printError("emailErr","We would like you to enter an email-address")
                             }
                 //definerer hvilke tegn emailen skal indeholde (tegn fundet på nettet)
                         else {
                             var regexMail = /^\S+@\S+\.\S+$/;
-                                if (regexMail.test(email) === false){
+                                if (regexMail.test(email) === false)
+
+                                //angiver besked der skal fremkomme ved forkert email indtastning
+                                    {
                                     printError("emailErr","Check your email, it seems there is something wrong");
-                                                                      }
+                                        }
                                         else {
                                             printError("emailErr","");
-                                            emailErr = false;
-                                    }
+                                                emailErr = false;
+                                              }
                                }
 
+
+             //validering af tlf. nummer
+                if (phone == " ")
+
+                //angiver besked ved forkert/manglende tlf. nummer
+                    {
+                    printError("phoneErr","Enter your phone number, so that we can call you ;)");
+                        }
+                            else {
+                                 var regexPhone = /^[1-9]\d{9}$/;
+                                    if (regexPhone.test(mobile) === false) {
+                                        printError("phoneErr","Something is severely wrong with your phone number, please check it! (it should only contain numbers between 1 & 9)");
+                                                                            }
+                                            else {
+                                                printError("phoneErr","");
+                                                    phoneErr = false;
+                                                    }
+
+                                  }
+
+
+
+                //Validering af city, bruger tegn fra username
+                if (city == "")
+                    {
+                        printError("cityErr","Please enter a city");
+                    }
+                        else {
+                            var regexCity = /^[a-zA-Z\s]+$/;
+                                if (regexCity.test(city) === false)
+                                   {    printError("cityErr","It seems your city is non-existent");
+
+                                    }   else {
+                                            printError("cityErr","");
+                                                cityErr = false;
+                                                }
+                              }
