@@ -4,7 +4,7 @@
         var usernameInput = String(username);
                 console.log(usernameInput);
 
-// store these entered values to be called for later
+// gemmer indtastede detaljer i localstorage
 function storeDetails() {
         localStorage.setItem("username", username);
           localStorage.setItem("phone", phone);
@@ -19,7 +19,8 @@ function storeDetails() {
                                                         }
 
 
-// assigning existing user for test purposes
+// angiver test user og laver string fra indtastet om til objekt med json.parse.
+
 let signedUpButton = document.getElementById("SignedUp")
         let existingUser = JSON.parse(localStorage.getItem("User"));
                 let currentLogIn = [];
