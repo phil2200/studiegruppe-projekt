@@ -78,8 +78,8 @@ function validationForm() {
                         }
                             else {
                                  var regexPhone = /^[1-9]\d{9}$/;
-                                    if (regexPhone.test(mobile) === false) {
-                                        printError("phoneErr","Something is severely wrong with your phone number, please check it! (it should only contain numbers between 1 & 9)");
+                                    if (regexPhone.test(phone) === false) {
+                                        printError("phoneErr","Something is wrong with your phone number, please check it! (it should only contain numbers between 1 & 9)");
                                                                             }
                                             else {
                                                 printError("phoneErr","");
@@ -172,7 +172,9 @@ function validationForm() {
                                                                                                         "City: " + city + "\n" +
                                                                                                             "ZIP: " + zip + "\n" +
                                                                                                                 "Address: " + address + "\n" +
-                                                                                                                    "Password: We won't show this to anyone :)"
+                                                                                                                    "Password: We won't show this to anyone :)";
+
+                                                                                                                    // alerter hvad bruger har indtastet.
                                                                                                                         alert(dataPreview);
                                                                                           }
 
