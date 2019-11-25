@@ -18,8 +18,16 @@ function validationForm() {
                             var password = document.signUpForm.password.value;
 }
 
-// angiver error variable til de ovenstående
-    var usernameErr = phoneErr = cityErr = zipErr = addressErr = emailErr = passwordErr = true;
+// angiver error variable til de ovenstående med en standard værdi
+    var usernameErr = true;
+         var phoneErr = true;
+           var  cityErr = true;
+               var zipErr = true;
+                  var addressErr = true;
+                      var emailErr = true;
+                          var passwordErr = true;
+
+
 
 // validerer username
     if (username == " ")  {
@@ -31,7 +39,7 @@ function validationForm() {
 
                     //Hvilken error den skal printe og i hvilke situationer, defineres med if/else metode.
 
-                if(regex.test(username) === false){
+                if(regex.test(username) === false) {
                         printError("usernameErr","Enter a username using the permitted letters");
                                                    }
                     else {
