@@ -37,7 +37,7 @@ function demoGenerateData(){
      "whitetshirt.jpg","0", "0");
  productList.push(product1, product2);
 
- var order1 = new Order("test1", "9876490", "08/11/19 13.03", productList, "398")
+ var order1 = new Order("test1", "9876490", "08/11/19 15.00", productList, "500")
  orderList.push(order1);
  var order2 = new Order("test1", "00000000", "08/11/19 13.03", productList, "398")
  orderList.push(order2);
@@ -63,13 +63,21 @@ function showOrders() {
   // Create a <p> element
   var para = document.createElement("P");
   // Insætter tekst - læs mere op på dette
-  para.innerHTML = "Order Number: " + order.orderNumber + "Order Date: " + order.orderTimeStamp + "Total amount of order: " + order.orderTotal;
-  para.innerHTML = "Order Date: " + order.orderTimeStamp;
+  para.innerHTML = "Order Number: " + order.orderNumber;
+  para.innerHTML = "Order Time Stamp: " + order.orderTimeStamp;
   para.innerHTML = "Total amount of order: " + order.orderTotal;
   document.getElementById("orderHistory").appendChild(para);
 
+  var order1 = html.createElement("H3");
+  order1.innerhtml = "order 1" + i
+  document.getelementbyid("orderHistory").append(order1)
+
+  var order2 = html.createElement("H3");
+  order2.innerhtml = "order 1" + i
+  document.getelementbyid("orderHistory").append(order2)
 }
 }
+
 
 
 
