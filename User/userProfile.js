@@ -46,6 +46,7 @@ function demoGenerateData(){
  var orderListString = JSON.stringify(orderList);
  localStorage.setItem("orderList", orderListString)
 }
+
 // laver en ny funktion, henter dataen fra ordrerne og henter fra Local Storgage - bruger JSON.parse, som er en metode, der tager et parameter
 function showOrders() {
  var orders = JSON.parse(localStorage.getItem("orderList"));
@@ -55,16 +56,25 @@ function showOrders() {
 
  // laver et loop for at løbe alle ordrer igennem
  for (var i=0; i < orders.length; i++){
+
+  // Lavet med inspiration fra: https://www.w3schools.com/jsref/met_document_createelement.asp
   //[ ] for at få fat i et element i en liste
   var order = orders[i];
-  let el = document.createElement("P");
-  el.innerText = order.orderNumber;
-  orderHistory.appendChild(el);
- }
-
-
+  // Create a <p> element
+  var para = document.createElement("P");
+  // Insætter tekst - læs mere op på dette
+  para.innerHTML = "Order Number: " + order.orderNumber + "Order Date: " + order.orderTimeStamp + "Total amount of order: " + order.orderTotal;
+  para.innerHTML = "Order Date: " + order.orderTimeStamp;
+  para.innerHTML = "Total amount of order: " + order.orderTotal;
+  document.getElementById("orderHistory").appendChild(para);
 
 }
+}
+
+
+
+
+
 
 
 

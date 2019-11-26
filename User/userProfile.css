@@ -62,24 +62,49 @@ li.nav-spacer {
 }
 /* navbar slut */
 
-/* ændrer på header 3 */
+/* ændrer på header 1 og 2 */
 h1 {
     text-align: center;
     font-size: 17px;
 }
 
 h2 {
-    font-size: 15px;
-
+    font-size: 16px;
+    text-align: center;
 }
-/* Full-width input fields */
+
+h3 {
+    font-size: 16px;
+    text-align: center;
+}
+
+/* deler siden op i to - det står på samme linje */
+.userandorder{
+    display: flex;
+}
+
+/* Input fields */
 input[type=text] {
-    width: 25%;
+    width: 80%;
     padding: 15px;
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
     background: #f1f1f1;
 }
+
+/* user information */
+.userinformation{
+    flex: 1;
+    display: inline-block;
+    width: 50%;
+}
+
+/*ordrerdata */
+#orderHistory{
+    flex: 1;
+}
+
+
 
 

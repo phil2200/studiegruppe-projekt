@@ -32,48 +32,73 @@
 
 <!-- bruger oplysninger -->
 <h1> My Account </h1>
-<br/>
 
-<h2> Order History </h2>
+<div class = "userandorder">
+    <div class="userinformation">
+        <h2> User Information</h2>
+        <br/>
+        <br/>
+        Name
+        <br/>
+        <input  type="text" id="name" value="" readonly >
+        <br/>
 
-Name
-<br/>
-<input  type="text" id="name" value="" readonly >
-<br/>
+        <br/>
+        Phone
+        <br/>
+        <input type="text" id="phone" value="" readonly >
+        <br/>
+        <br/>
 
-<br/>
-Phone
-<br/>
-<input type="text" id="phone" value="" readonly >
-<br/>
-<br/>
+        City
+        <br/>
+        <input type="text" id="city" value="" readonly >
+        <br/>
+        <br/>
 
-City
-<br/>
-<input type="text" id="city" value="" readonly >
-<br/>
-<br/>
+        Zip
+        <br/>
+        <input type="text" id="zip" value="" readonly >
+        <br/>
+        <br/>
 
-Zip
-<br/>
-<input type="text" id="zip" value="" readonly >
-<br/>
-<br/>
+        Address
+        <br/>
+        <input type="text" id="address" value="" readonly >
+        <br/>
+        <br/>
 
-Address
-<br/>
-<input type="text" id="address" value="" readonly >
-<br/>
-<br/>
-
-E-Mail
-<br/>
-<input type="text" id="email" value="" readonly >
-<br/>
-</div>
+        E-Mail
+        <br/>
+        <input type="text" id="email" value="" readonly >
+        <br/>
+    </div>
 
 <!-- ordredata -->
-<div id="orderHistory"></div>
+    <div id="orderHistory">
+        <h3> Order History </h3>
+        <br/>
+        <br/>
+        Order Number
+        <br/>
+        <input  type="text" id="orderNumber" value="" readonly >
+        <br/>
+
+        <br/>
+        Order Date
+        <br/>
+        <input type="text" id="orderTimeStamp" value="" readonly >
+        <br/>
+        <br/>
+
+        <br/>
+        Total amount of order
+        <br/>
+        <input type="text" id="orderTotal" value="" readonly >
+        <br/>
+        <br/>
+    </div>
+</div>
 
 <!-- linker til JavaScript filen -->
 <script src="../Products/ClassProducts.js"></script>
