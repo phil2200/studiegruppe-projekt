@@ -157,7 +157,7 @@ function validationForm() {
 
 
                                                                    //forhindrer formen og storeDetails funktion i at blive kørt hvis der er en fejl
-                                                                        if ((usernameErr||phoneErr||cityErr||zipErr||addressErr||emailErr||passwordErr) == true ) {
+                                                                        if ((usernameErr||phoneErr||cityErr||zipErr||addressErr||emailErr||passwordErr) === true ) {
                                                                             return false;
                                                                                 //hvorfor siger den out of
                                                                             
