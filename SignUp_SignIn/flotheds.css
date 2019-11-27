@@ -106,9 +106,15 @@ a {
 /* changes footer styling
  */
 
+#footerImage{
+    float: left;
+    margin: auto;
+}
+
 .main-footer {
     background-color: black;
     color: white;
+    margin: auto;
 
 }
 

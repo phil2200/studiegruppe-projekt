@@ -1,30 +1,35 @@
 var signIn = document.getElementById('signIn');
-var existingUser = JSON.parse(localStorage.getItem('User'))
+    var existingUser = JSON.parse(localStorage.getItem('User'))
 
 // when clicking submit, retrieve input from username and password box.
- function login() {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+    function login() {
+      var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
 
     //check if entered details match stored details. redirect to home page
-    for (let i = 0; i < existingUser.length; i++) {
-        if (username == existingUser[i].username && password == existingUser[i].password) {
+         for (let i = 0; i < existingUser.length; i++) {
+              if (username === existingUser[i].username && password === existingUser[i].password) {
 
             // EMDL: laver en currentUser, som skal vise brugeroplysninger på den bruger, der logger ind
             // EMDL: JSON.stringify converts a JavaScript object or value to JSON string (JavaScript Object Notation)
-            localStorage.setItem('currentUser', JSON.stringify(existingUser[i]));
+                 localStorage.setItem('currentUser', JSON.stringify(existingUser[i]));
 
-            location.href = "loggedIn.html";
+                    location.href = "loggedIn.html";
 
             // EMDL: alert "you are logged in", hvis oplysninger er korrekte og allers aleret "Wrong username or password"
-            alert("You are logged in");
-            return true;
+                    alert("You are logged in");
+                       return true;
+                    }
+                  }
+                  alert("Wrong username or password")
         }
-    }
-    alert("Wrong username or password")
-}
+
+
 /*
+
 // funktion der tjekker om detaljer i localstorage passer, herefter logger ind.
+// dvs. når vi senere vil gøre det muligt at oprette egne brugere, bliver den godkendt/afvist ved log in.
+
     function checkUserLogin() {
 
         // henter gemte info fra localstorage.
