@@ -26,7 +26,10 @@ var signIn = document.getElementById('signIn');
 
 
 /*
+
 // funktion der tjekker om detaljer i localstorage passer, herefter logger ind.
+// dvs. når vi senere vil gøre det muligt at oprette egne brugere, bliver den godkendt/afvist ved log in.
+
     function checkUserLogin() {
 
         // henter gemte info fra localstorage.
