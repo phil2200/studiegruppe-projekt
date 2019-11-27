@@ -61,11 +61,12 @@ function showOrders() {
   //[ ] for at få fat i et element i en liste
   var order = orders[i];
 
+  //H4 for at det bliver en header
   var order1 = document.createElement("H4");
   order1.innerHTML = "order " + order.orderNumber;
   document.getElementById("orderHistory").append(order1);
 
-  // Create a <p> element
+  // Laver et <p> element, som er en paragraf
   var para = document.createElement("P");
   // Insætter tekst - læs mere op på dette
   para.innerHTML = "Order Time Stamp: " + order.orderTimeStamp;
