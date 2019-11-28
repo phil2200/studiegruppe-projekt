@@ -8,24 +8,24 @@ function printError(elemId, hintMsg) {
 }
 
 // her defineres validationForm funktionen
-function validationForm() {
+    function validationForm() {
      var userName = document.signUpForm.username.value;
-        var phone = document.signUpForm.phone.value;
-            var city = document.signUpForm.city.value;
-                var zip = document.signUpForm.zip.value;
-                    var address = document.signUpForm.address.value;
-                        var email = document.signUpForm.email.value;
-                            var password = document.signUpForm.password.value;
+     var phone = document.signUpForm.phone.value;
+     var city = document.signUpForm.city.value;
+     var zip = document.signUpForm.zip.value;
+     var address = document.signUpForm.address.value;
+     var email = document.signUpForm.email.value;
+     var password = document.signUpForm.password.value;
 }
 
 // angiver error variable til de ovenstående med en standard værdi
     var usernameErr = true;
-         var phoneErr = true;
-           var  cityErr = true;
-               var zipErr = true;
-                  var addressErr = true;
-                      var emailErr = true;
-                          var passwordErr = true;
+    var phoneErr = true;
+    var  cityErr = true;
+    var zipErr = true;
+    var addressErr = true;
+    var emailErr = true;
+    var passwordErr = true;
 
 
 
@@ -39,8 +39,8 @@ function validationForm() {
 
                     //Hvilken error den skal printe og i hvilke situationer, defineres med if/else metode.
 
-                if(regex.test(username) === false) {
-                        printError("usernameErr","Enter a username using the permitted letters");
+            if(regex.test(username) === false) {
+                printError("usernameErr","Enter a username using the permitted letters");
                                                    }
                     else {
                          printError("usernameErr", "");
@@ -56,10 +56,11 @@ function validationForm() {
                 //definerer hvilke tegn emailen skal indeholde (tegn fundet på nettet)
                         else {
                             var regexMail = /^\S+@\S+\.\S+$/;
-                                if (regexMail.test(email) === false)
+
+                            if (regexMail.test(email) === false)
 
                                 //angiver besked der skal fremkomme ved forkert email indtastning
-                                    {
+                                {
                                     printError("emailErr","Check your email, it seems there is something wrong");
                                         }
                                         else {
@@ -167,15 +168,15 @@ function validationForm() {
 
                                                                                             var dataPreview = "you have entered all the following details: \n" +
                                                                                                 "Full name: " + username + "\n" +
-                                                                                                 "Email address: " + email + "\n" +
-                                                                                                    "Mobile number: " + phone + "\n" +
-                                                                                                        "City: " + city + "\n" +
-                                                                                                            "ZIP: " + zip + "\n" +
-                                                                                                                "Address: " + address + "\n" +
-                                                                                                                    "Password: We won't show this to anyone :)";
+                                                                                                "Email address: " + email + "\n" +
+                                                                                                "Mobile number: " + phone + "\n" +
+                                                                                                "City: " + city + "\n" +
+                                                                                                "ZIP: " + zip + "\n" +
+                                                                                                "Address: " + address + "\n" +
+                                                                                                "Password: We won't show this to anyone :)";
 
-                                                                                                                    // alerter hvad bruger har indtastet.
-                                                                                                                        alert(dataPreview);
+                                                                                            // alerter hvad bruger har indtastet.
+                                                                                                alert(dataPreview);
                                                                                           }
 
 
