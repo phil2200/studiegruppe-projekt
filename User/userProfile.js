@@ -1,4 +1,5 @@
-// laver en variabel og gemmer det i den variabel
+
+// EMDL: laver en variabel og gemmer det i den variabel
 var currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
 //EMDL: henter info fra USERDB, hvor oplysninger på name, phone osv.. er givet
@@ -10,15 +11,15 @@ document.getElementById("zip").value = currentUser.zip;
 document.getElementById("address").value = currentUser.address;
 document.getElementById("email").value = currentUser.email;
 
-//kalder funktionen
+// EMDL: kalder funktionen
 demoGenerateData();
 showOrders();
 
-// laver en demo order history
+// EMDL: laver en demo order history
 function demoGenerateData(){
  var orderList = []; // EMDL: den vil automatisk tage informationen i rækkefølgen som i klassen
 
- // laver en liste med vores 4 produkter, og bruger produkt 1 og 2
+ // EMDL: laver en liste med vores 4 produkter, og bruger produkt 1 og 2
  var productList = [];
  var product1 = new Product(1, "Black Hoodie",
      "This hoodie is made from 100% cotton. Can used for formal or daily wear. Featuring the unique 50NE logo. Limited edition",
@@ -46,35 +47,35 @@ function demoGenerateData(){
  var order2 = new Order("test2", "1234567", "26/11/19 17.13", "White Hoodie","800 DKK")
  orderList.push(order2);
 
- // Jeg sætter dataen i Local Storage - orderListString betyder at den laver det om til en string
+ // EMDL: Jeg sætter dataen i Local Storage - orderListString betyder at den laver det om til en string
  var orderListString = JSON.stringify(orderList);
  localStorage.setItem("orderList", orderListString)
 }
 
- // laver en ny funktion, henter dataen fra ordrerne og henter fra Local Storgage - bruger JSON.parse, som er en metode, der tager et parameter
+ // EMDL: laver en ny funktion, henter dataen fra ordrerne og henter fra Local Storgage - bruger JSON.parse, som er en metode, der tager et parameter
  function showOrders() {
  var orders = JSON.parse(localStorage.getItem("orderList"));
 
- // Henter mine HTML elementer
+ // EMDL: Henter mine HTML elementer
  var orderHistory = document.getElementById("orderHistory");
 
- // laver et loop for at løbe alle ordrer igennem
+ // EMDL: laver et loop for at løbe alle ordrer igennem
  for (var i=0; i < orders.length; i++){
 
-  // Lavet med inspiration fra: https://www.w3schools.com/jsref/met_document_createelement.asp
+  // EMDL: Lavet med inspiration fra: https://www.w3schools.com/jsref/met_document_createelement.asp
   //[ ] for at få fat i et element i en liste
   var order = orders[i];
 
-  //SKAL kun vises ved test 1
+  //EMDL: SKAL kun vises ved test 1
 
-  //H4 for at det bliver en header
+  //EMDL: H4 for at det bliver en header
   var order1 = document.createElement("H4");
   order1.innerHTML = "order " + order.orderNumber;
   document.getElementById("orderHistory").append(order1);
 
-  // Laver et <p> element, som er en paragraf
+  //EMDL: Laver et <p> element, som er en paragraf
   var para = document.createElement("P");
-  // Insætter tekst - læs mere op på dette
+  //EMDL: Insætter tekst og appender det - orderTimeStamp er et felt - når jeg hiver værdien ud af mit felt, skriver jeg objekt.FeltNavn
   para.innerHTML = "Order Time Stamp: " + order.orderTimeStamp;
   document.getElementById("orderHistory").appendChild(para);
 
@@ -87,13 +88,3 @@ function demoGenerateData(){
   document.getElementById("orderHistory").appendChild(para);
 }
 }
-
-
-
-
-
-
-
-
-
-

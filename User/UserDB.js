@@ -1,4 +1,4 @@
-// for database: check if user exists in localstorage otherwise create user and push to list
+
 // EMDL: Objekterne hentes fra ClassUser.js så man vil kunne se information hos de forskellige bruger under UserProfilde
 var userList = []; // EMDL: den vil automatisk tage informationen i rækkefølgen som i klassen
     userList.push(new User("test1","1234567", "Emma Marie Dalgaard Laursen", "+45 22 41 90 32", "Frederiksberg C", "1954", "Hostrups Have 30, 4tv", "emma.laursen.97@hotmail.com"));

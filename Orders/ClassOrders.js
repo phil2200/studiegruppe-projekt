@@ -1,4 +1,4 @@
-// constructor angiver properties
+// EMDL constructor angiver properties
 class Order {
     username;
     orderNumber;
