@@ -54,37 +54,37 @@ function demoGenerateData(){
 
  // EMDL: laver en ny funktion, henter dataen fra ordrerne og henter fra Local Storgage - bruger JSON.parse, som er en metode, der tager et parameter
  function showOrders() {
- var orders = JSON.parse(localStorage.getItem("orderList"));
+  var orders = JSON.parse(localStorage.getItem("orderList"));
 
- // EMDL: Henter mine HTML elementer
- var orderHistory = document.getElementById("orderHistory");
+  // EMDL: Henter mine HTML elementer
+  var orderHistory = document.getElementById("orderHistory");
 
- // EMDL: laver et loop for at løbe alle ordrer igennem
- for (var i=0; i < orders.length; i++){
+  // EMDL: laver et loop for at løbe alle ordrer igennem
+  for (var i=0; i < orders.length; i++){
 
-  // EMDL: Lavet med inspiration fra: https://www.w3schools.com/jsref/met_document_createelement.asp
-  //[ ] for at få fat i et element i en liste
-  var order = orders[i];
+   // EMDL: Lavet med inspiration fra: https://www.w3schools.com/jsref/met_document_createelement.asp
+   //[ ] for at få fat i et element i en liste
+   var order = orders[i];
 
-  //EMDL: SKAL kun vises ved test 1
+   //EMDL: SKAL kun vises ved test 1
 
-  //EMDL: H4 for at det bliver en header
-  var order1 = document.createElement("H4");
-  order1.innerHTML = "order " + order.orderNumber;
-  document.getElementById("orderHistory").append(order1);
+   //EMDL: H4 for at det bliver en header
+   var order1 = document.createElement("H4");
+   order1.innerHTML = "order " + order.orderNumber;
+   document.getElementById("orderHistory").append(order1);
 
-  //EMDL: Laver et <p> element, som er en paragraf
-  var para = document.createElement("P");
-  //EMDL: Insætter tekst og appender det - orderTimeStamp er et felt - når jeg hiver værdien ud af mit felt, skriver jeg objekt.FeltNavn
-  para.innerHTML = "Order Time Stamp: " + order.orderTimeStamp;
-  document.getElementById("orderHistory").appendChild(para);
+   //EMDL: Laver et <p> element, som er en paragraf
+   var para = document.createElement("P");
+   //EMDL: Insætter tekst og appender det - orderTimeStamp er et felt - når jeg hiver værdien ud af mit felt, skriver jeg objekt.FeltNavn
+   para.innerHTML = "Order Time Stamp: " + order.orderTimeStamp;
+   document.getElementById("orderHistory").appendChild(para);
 
-  var para = document.createElement("P");
-  para.innerHTML = "Product: " + order.orderProduct;
-  document.getElementById("orderHistory").appendChild(para);
+   var para = document.createElement("P");
+   para.innerHTML = "Product: " + order.orderProduct;
+   document.getElementById("orderHistory").appendChild(para);
 
-  var para = document.createElement("P");
-  para.innerHTML = "Total amount of order: " + order.orderTotal;
-  document.getElementById("orderHistory").appendChild(para);
-}
+   var para = document.createElement("P");
+   para.innerHTML = "Total amount of order: " + order.orderTotal;
+   document.getElementById("orderHistory").appendChild(para);
+ }
 }
