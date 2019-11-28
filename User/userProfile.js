@@ -10,6 +10,7 @@ document.getElementById("city").value = currentUser.city;
 document.getElementById("zip").value = currentUser.zip;
 document.getElementById("address").value = currentUser.address;
 document.getElementById("email").value = currentUser.email;
+//test!!!!
 
 // EMDL: kalder funktionen
 demoGenerateData();
