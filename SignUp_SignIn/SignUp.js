@@ -15,7 +15,7 @@ function storeDetails() {
                                         localStorage.setItem("password", password);
 
                                                      alert('new user has been created!');
-                                                     window.location = ("SignIn.html");
+                                                         window.location = ("SignIn.html");
                                                         }
 
 
