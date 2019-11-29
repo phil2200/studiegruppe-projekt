@@ -75,7 +75,10 @@ function showOrders() {
 
   //EMDL: Laver et <p> element, som er en paragraf
   var para = document.createElement("P");
-  //EMDL: Insætter tekst og appender det - orderTimeStamp er et felt - når jeg hiver værdien ud af mit felt, skriver jeg objekt.FeltNavn
+  /*EMDL: Insætter tekst og appender det - orderTimeStamp er et felt - når jeg hiver værdien ud af mit felt, skriver jeg objekt.FeltNavn
+  Lavet med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+  createElement
+  */
   para.innerHTML = "Order Time Stamp: " + order.orderTimeStamp;
   document.getElementById("orderHistory").appendChild(para);
 
