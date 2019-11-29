@@ -21,7 +21,7 @@ function ready() {
 
     //Check i localStorage om der er gemt "valgte" produkter, og hvis det er tilfældet tilføj dem så til Cart
         var m = JSON.parse(localStorage.getItem("productList"));
-        m.forEach(function (key) {    // forEach løber igennem index for m-arrayet - function(key)  udføres for hvert index og ved at have key som indput, bliver det tilgængeligt i funktionsdefinitionen
+        m.forEach(function (key) {    // forEach løber igennem index for m-arrayet - function(key)  udføres for hvert index og ved at have key som indput,// bliver det tilgængeligt i funktionsdefinitionen
              addItemToCart(key.prodName, key.price, key.imgName);
             updateCartTotal();
             //console.log(key.prodName);
@@ -30,6 +30,7 @@ function ready() {
         })
 }
 
+//
 function addItemToCart(title, price, imageSrc) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')

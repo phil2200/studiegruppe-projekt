@@ -43,63 +43,70 @@
 
 <!--onSubmit  gør det muligt i formen at køre både validerings form og storeDetails ved click/submit på knap -->
 
-<form name = "signUpForm" >
-<div id = "sign-up">
+    <form name="signUpForm" onsubmit="return validationForm()" method="post">
+    <div id = "sign-up">
 
 
-   <p>Name</p>
+        <p>Name</p>
 
-    <input type="text" id="username" value="" placeholder="Your name">
-<br/>
+        <div id="usernameErr" > </div>
+        <div id="emailErr"></div>
+        <div id="phoneErr"></div>
+        <div id="cityErr"></div>
+        <div id="zipErr"></div>
+        <div id="addressErr"></div>
+        <div id="passwordErr" ></div>
 
-    <br/>
-    <p>Phone</p>
+        <input type="text" id="username" value="" placeholder="Your name">
+        <br/>
 
-
-    <input type="text" id="phone" value="" placeholder="Phone number">
-    <br/>
-    <br/>
-
-    <p>City</p>
-
-
-    <input type="text" id="city" value="" placeholder="Your city">
-    <br/>
-    <br/>
-
-    <p>Zip</p>
-
-    <input type="text" id="zip" maxlength="4" value="" placeholder="Your zip code">
-    <br/>
-    <br/>
+        <br/>
+        <p>Phone</p>
 
 
+        <input type="text" id="phone" value="" placeholder="Phone number">
+        <br/>
+        <br/>
 
-    <p>Address</p>
-    <input type="text" id="address" value="" placeholder="Your address">
-<br/>
-    <br/>
+        <p>City</p>
 
 
-    <p>E-mail</p>
-    <!-- validerer emailen ved submit-->
-    <input type="text" name="email1" id="email" value="" placeholder="Your e-mail" />
-    <br/>
-           </form>
+        <input type="text" id="city" value="" placeholder="Your city">
+        <br/>
+        <br/>
+
+        <p>Zip</p>
+
+        <input type="text" id="zip" maxlength="4" value="" placeholder="Your zip code">
+        <br/>
+        <br/>
 
 
 
-    <p>Password</p>
+        <p>Address</p>
+        <input type="text" id="address" value="" placeholder="Your address">
+        <br/>
+        <br/>
+
+
+        <p>E-mail</p>
+        <!-- validerer emailen ved submit-->
+        <input type="text" name="email1" id="email" value="" placeholder="Your e-mail" />
+        <br/>
+
+
+
+        <p>Password</p>
     <input type="text" id="password" value="" placeholder="Your password">
 </br>
     <input type="checkbox" checked onclick="showPassword()"> Show Password
     <br/>
+        <div/>
 
-    <div/>
     <br/>
     <!-- kører nu funktionen signUpCaller ved onclick, som er en funktion der eksekverer de funktioner vi ønsker at bruge -->
    <div id="signUpButton">
-    <button id="SignedUp" type="button" class="registerbtn" style= "cursor:pointer;" onclick="signUpCaller()"> Click to submit </button>
+    <button id="SignedUp" type="button" class="registerbtn" style= "cursor:pointer;" onclick= "signUpCaller()" > Click to submit </button>
     </div>
 
 
@@ -125,10 +132,8 @@
 <script src="../ShoppingCart/ClassShoppingCart.js"> </script>
 <script src="ClassUser.js"> </script>
 <script src="ClassUserProfile.js"> </script> -->
-    <script src="SignUp.js"> </script>
-    <script src="Showpassword.js"></script>
-    <script src="Validation.js"></script>
-    <script src="signUpCaller.js"></script>
+
+
 
 
 </form>
@@ -136,6 +141,10 @@
 
 
 </body>
-
+<script src="SignUp.js"> </script>
+<script src="Showpassword.js"></script>
+<script src="Validation.js"></script>
+<script src="signUpCaller.js"></script>
+<script src="../User/ClassUser.js"></script>
 
 </html>
