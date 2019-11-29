@@ -54,4 +54,3 @@ class Order {
         this._orderTotal = value;
     }
 }
-

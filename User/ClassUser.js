@@ -1,5 +1,8 @@
+
 /*let username = document.getElementById("username");
 let password = document.getElementById("password");*/
+// let username = document.getElementById("username");
+// let password = document.getElementById("password");
 
 class User {
     constructor (username, password, name, phone, city, zip, address, email) {
@@ -13,5 +16,3 @@ class User {
     this.email = email;
     }
 }
-
-
