@@ -19,9 +19,9 @@ for(var i=0; i<products.length; i++){
    /* tager Child af productsContainer */
    productsContainer.appendChild(product);
 }
-function interProduct(productId) {
+
+function interProduct (productId) {
    window.location.replace('interProduct.html?productId='+productId);
-   window.history.go(-1)
 }
 
 
