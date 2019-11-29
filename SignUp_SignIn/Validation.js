@@ -156,9 +156,11 @@ else {
 }
 
 
-
+// Jeg ville nok blot have en enkelt variable, som angiver om der er fejl - da I alligevel ikke bruge den specifikke fejl. 
 //forhindrer formen og storeDetails funktion i at blive kørt hvis der er en fejl
 if ((usernameErr||phoneErr||cityErr||zipErr||addressErr||emailErr||passwordErr) === true ) {
+
+	// Hvorfor har I en funktion her? 
     function abc() {
         return false;
     }
