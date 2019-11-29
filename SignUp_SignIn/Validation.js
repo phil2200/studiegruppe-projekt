@@ -51,7 +51,7 @@ else {
 
 // validering af email
 if (email === " ") {
-    printError("emailErr","We would like you to enter an email-address")
+    printError("emailErr","We would like you to enter an email-address");
 }
 //definerer hvilke tegn emailen skal indeholde (tegn fundet på nettet)
 else {
