@@ -43,12 +43,14 @@
 
 <!--onSubmit  gør det muligt i formen at køre både validerings form og storeDetails ved click/submit på knap -->
 
+    <form name="signUpForm" onsubmit="return validationForm()" method="post">
     <div id = "sign-up">
 
 
         <p>Name</p>
 
         <div id="usernameErr" > </div>
+        <div id="emailErr"></div>
         <div id="phoneErr"></div>
         <div id="cityErr"></div>
         <div id="zipErr"></div>
@@ -104,7 +106,7 @@
     <br/>
     <!-- kører nu funktionen signUpCaller ved onclick, som er en funktion der eksekverer de funktioner vi ønsker at bruge -->
    <div id="signUpButton">
-    <button id="SignedUp" type="button" class="registerbtn" style= "cursor:pointer;" onclick="signUpCaller()"> Click to submit </button>
+    <button id="SignedUp" type="button" class="registerbtn" style= "cursor:pointer;" onclick= "signUpCaller()" > Click to submit </button>
     </div>
 
 
