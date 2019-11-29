@@ -1,10 +1,15 @@
-var signIn = document.getElementById('signIn');
+ //henter detaljerne fra html
+    var signIn = document.getElementById('signIn');
     var existingUser = JSON.parse(localStorage.getItem('User'))
 
 // when clicking submit, retrieve input from username and password box.
 function login() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
+
+    function login() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
 
     //check if entered details match stored details. redirect to home page
     for (let i = 0; i < existingUser.length; i++) {

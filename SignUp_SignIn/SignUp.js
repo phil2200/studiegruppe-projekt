@@ -7,34 +7,34 @@
 // gemmer indtastede detaljer i localstorage
 function storeDetails() {
         localStorage.setItem("username", username);
-          localStorage.setItem("phone", phone);
-                localStorage.setItem("city", city);
-                    localStorage.setItem("zip", zip);
-                         localStorage.setItem("address", address);
-                                localStorage.setItem("email", email);
-                                        localStorage.setItem("password", password);
+        localStorage.setItem("phone", phone);
+        localStorage.setItem("city", city);
+        localStorage.setItem("zip", zip);
+        localStorage.setItem("address", address);
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
 
-                                                     alert('new user has been created!');
-                                                         window.location = ("SignIn.html");
+            alert('new user has been created!');
+                window.location = ("SignIn.html");
                                                         }
 
 
 // angiver test user og laver string fra indtastet om til objekt med json.parse.
 
-let signedUpButton = document.getElementById("SignedUp")
-        let existingUser = JSON.parse(localStorage.getItem("User"));
-                let currentLogIn = [];
+    let signedUpButton = document.getElementById("SignedUp")
+    let existingUser = JSON.parse(localStorage.getItem("User"));
+    let currentLogIn = [];
 
 
 
 //Get the entered details from HTML sign up page
-var username = document.getElementById("username").value;
-        var phone = document.getElementById("phone").value;
-                var city = document.getElementById("city").value;
-                        var zip = document.getElementById("zip").value;
-                                var address = document.getElementById("address").value ;
-                                   var email = document.getElementById("email").value ;
-                                          var password = document.getElementById( "password").value ;
+    var username = document.getElementById("username").value;
+    var phone = document.getElementById("phone").value;
+    var city = document.getElementById("city").value;
+    var zip = document.getElementById("zip").value;
+    var address = document.getElementById("address").value ;
+    var email = document.getElementById("email").value ;
+    var password = document.getElementById( "password").value ;
 
 
 
