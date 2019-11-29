@@ -41,7 +41,7 @@ function validationForm() {
 
         if (regex.test(username) === false) {
             printError("usernameErr", "Enter a username using the permitted letters");
-            console.log('hi');
+
         } else {
             printError("usernameErr", "");
             usernameErr = false;
@@ -61,7 +61,7 @@ function validationForm() {
 
         //angiver besked der skal fremkomme ved forkert email indtastning
         {
-            printError("emailErr", "Check your email, it seems there is something wrong");
+            printError ("emailErr", "Check your email, it seems there is something wrong");
         } else {
             printError("emailErr", "");
             emailErr = false;
@@ -149,7 +149,6 @@ function validationForm() {
             return false;
         }
 
-        console.log("function runs")
         // return false;
         //hvorfor siger den out of
 
