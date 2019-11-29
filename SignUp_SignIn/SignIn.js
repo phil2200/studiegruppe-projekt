@@ -29,31 +29,6 @@ function login() {
 
 /*
 
-// funktion der tjekker om detaljer i localstorage passer, herefter logger ind.
-// dvs. når vi senere vil gøre det muligt at oprette egne brugere, bliver den godkendt/afvist ved log in.
-
-    function checkUserLogin() {
-
-        // henter gemte info fra localstorage.
-        var storedName = localStorage.getItem(username);
-        var storedPassword = localStorage.getItem(password);
-
-        //henter indtastet info
-        var enteredUsername = document.getElementById("username");
-        var enteredPassword = document.getElementById("password");
-
-        //checker om de passer. og hvis de gør redirect.
-        if (enteredUsername.value !== storedName || enteredPassword.value !== storedPassword)
-        {
-            alert ('Wrong details entered')
-        }
-            else {
-                alert('you are logged in');
-           location.href = "loggedIn.html";
-        }
-
-    }
-
  */
 
 //if input doesnt match existing user, show to user also show amount of attempts left
