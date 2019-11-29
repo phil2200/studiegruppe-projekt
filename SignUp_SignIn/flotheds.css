@@ -202,7 +202,7 @@ li.nav-spacer {
 }
 /* navbar slut */
 
-.error {
+#errorMessages {
     color: #ff0000;
     font-size: 90%;
 }
