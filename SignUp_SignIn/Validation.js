@@ -7,6 +7,7 @@ function printError(elemId, hintMsg) {
     document.getElementById(elemId).innerHTML = hintMsg;
 }
 
+
 // her defineres validationForm funktionen
 function validationForm() {
     var username = document.signUpForm.username.value;
