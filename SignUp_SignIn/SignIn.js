@@ -5,6 +5,7 @@
     var existingUser = JSON.parse(localStorage.getItem('User'))
 
 // when clicking submit, retrieve input from username and password box.
+
     function login() {
       var username = document.getElementById("username").value;
       var password = document.getElementById("password").value;
