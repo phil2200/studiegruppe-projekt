@@ -3,14 +3,14 @@ class Order {
     username;
     orderNumber;
     orderTimeStamp;
-    orderProduct;
+    orderProducts;
     orderTotal;
 
     constructor(username, orderNumber, orderTimeStamp, orderProducts, orderTotal) {
         this.username = username;
         this.orderNumber = orderNumber;
         this.orderTimeStamp = orderTimeStamp;
-        this.orderProduct = orderProducts;
+        this.orderProducts = orderProducts;
         this.orderTotal = orderTotal;
     }
 
@@ -38,12 +38,12 @@ class Order {
         this._orderTimeStamp = value;
     }
 
-    get orderProduct() {
-        return this._orderProduct;
+    get orderProducts() {
+        return this._orderProducts;
     }
 
-    set orderProduct(value) {
-        this._orderProduct = value;
+    set orderProducts(value) {
+        this._orderProducts = value;
     }
 
     get orderTotal() {
