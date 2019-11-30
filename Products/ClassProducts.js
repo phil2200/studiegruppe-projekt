@@ -18,6 +18,7 @@ class Product {
 }
 
 /* Her oprettes de forskellige produkter med deres properties, som derefter kan hentes inde i HTML og CSS-filerne*/
+
 var product1 = new Product(1, "Black Hoodie",
     "This hoodie is made from 100% cotton. Can used for formal or daily wear. Featuring the unique 50NE logo. Limited edition",
     800, "Black", "Hoodie", 1,
@@ -26,7 +27,7 @@ var product1 = new Product(1, "Black Hoodie",
 var product2 = new Product(2, "White Hoodie",
     "This hoodie is made from 100% cotton. Can used for formal or daily wear. Featuring the unique 50NE logo. Limited edition",
     800, "White", "Hoodie", 1,
-    "whitehoodie.jpg","In Stock", ["Small", "Medium", "Largee"]);
+    "whitehoodie.jpg","In Stock", ["Small", "Medium", "Large"]);
 
 var product3 = new Product(3, "Black T-shirt",
     "This t-shirt is made from 100% cotton. Can used for formal or daily wear. Featuring the unique 50NE logo. Limited edition",

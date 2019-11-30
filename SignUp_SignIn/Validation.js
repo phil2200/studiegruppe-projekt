@@ -7,16 +7,16 @@ function printError(elemId, hintMsg) {
     document.getElementById(elemId).innerHTML = hintMsg;
 }
 
-
+//console.log()
 // her defineres validationForm funktionen
 function validationForm() {
-    var username = document.signUpForm.username.value;
-    var phone = document.signUpForm.phone.value;
-    var city = document.signUpForm.city.value;
-    var zip = document.signUpForm.zip.value;
-    var address = document.signUpForm.address.value;
-    var email = document.signUpForm.email.value;
-    var password = document.signUpForm.password.value;
+    var username = document.getElementById("username").value;
+    var phone = document.getElementById("phone").value;
+    var city = document.getElementById("city").value;
+    var zip = document.getElementById("zip").value;
+    var address = document.getElementById("address").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
 
 
 // angiver error variable til de ovenstående med en standard værdi
@@ -30,7 +30,7 @@ function validationForm() {
 
 
 // validerer username
-    if (username === " ") {
+    if (username == "") {
         printError("usernameErr", "Type in a username");
     }
 //angiver hvilke tegn username kan indeholde (tegn fundet på nettet)
@@ -50,7 +50,7 @@ function validationForm() {
 
 
 // validering af email
-    if (email === " ") {
+    if (email == "") {
         printError("emailErr", "We would like you to enter an email-address");
     }
 //definerer hvilke tegn emailen skal indeholde (tegn fundet på nettet)
@@ -70,15 +70,15 @@ function validationForm() {
 
 
 //validering af tlf. nummer
-    if (phone === " ")
+    if (phone == "")
 
 //angiver besked ved forkert/manglende tlf. nummer
     {
         printError("phoneErr", "Enter your phone number, so that we can call you ;)");
     } else {
-        var regexPhone = /^[1-9]\d{9}$/;
-        if (regexPhone.test(phone) === false) {
-            printError("phoneErr", "Something is wrong with your phone number, please check it! (it should only contain numbers between 1 & 9)");
+        var regexPhone = /^[0-9]{8}$/;
+        if (regexPhone.test(phone) === false){
+            printError("phoneErr", "Something is wrong with your phone number, please check it! (it has to be 10 Digits");
         } else {
             printError("phoneErr", "");
             phoneErr = false;
@@ -88,7 +88,7 @@ function validationForm() {
 
 
 //Validering af city, bruger tegn fra username
-    if (city === "") {
+    if (city == "") {
         printError("cityErr", "Please enter a city");
     } else {
         var regexCity = /^[a-zA-Z\s]+$/;
@@ -102,14 +102,17 @@ function validationForm() {
     }
 
 //Validering af ZIP, da vi er i DK og umiddelbart går ud fra den kun skal være max 4 cifre sætter vi den til max 4 cifre.
-    if (zip === "") {
+    if (zip == "") {
         printError("zipErr", "you have to enter a ZIP code");
+    } else {
+        printError("zipErr", "");
+        zipErr = false;
     }
 //indsætter bare "maxlength" property i <input> tag i html fremfor at overkomplicere det
 
 
 //validering af addresse
-    if (address === "") {
+    if (address == "") {
         //angiver error besked hvis der ikke indtastes noget
         printError("addressErr", "You must type an address, otherwise you cant receive your clothes");
     } else {
@@ -125,7 +128,7 @@ function validationForm() {
 
 
 // validerer password
-    if (username === " ") {
+    if (password == "") {
         printError("passwordErr", "Type in a password");
     }
 //angiver hvilke tegn password kan/skal indeholde
@@ -144,10 +147,13 @@ function validationForm() {
 
 
 //forhindrer formen og storeDetails funktion i at blive kørt hvis der er en fejl
-    if ((usernameErr || phoneErr || cityErr || zipErr || addressErr || emailErr || passwordErr) === true) {
-        function abc() {
+    if ((usernameErr || phoneErr || cityErr || zipErr || addressErr || emailErr || passwordErr) == true) {
+        console.log("Test")
+       console.log( phoneErr, cityErr, zipErr, addressErr, emailErr, passwordErr)
+
+       // function abc() {
             return false;
-        }
+        //}
 
         // return false;
         //hvorfor siger den out of
@@ -167,6 +173,7 @@ function validationForm() {
 
         // alerter hvad bruger har indtastet.
         alert(dataPreview);
+        storeDetails()
     }
 
 }

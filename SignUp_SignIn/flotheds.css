@@ -201,3 +201,8 @@ li.nav-spacer {
     padding: 10px;
 }
 /* navbar slut */
+
+#errorMessages {
+    color: #ff0000;
+    font-size: 90%;
+}

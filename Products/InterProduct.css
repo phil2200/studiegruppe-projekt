@@ -31,13 +31,6 @@
     margin-left: 5%;
 }
 
-.productSize {
-    width: 50%;
-    display: inline-block;
-    margin-top: 50px;
-    font-family: sans-serif;
-    margin-left: 5%;
-}
 
 .productPrice {
    width: 50%;
@@ -47,7 +40,14 @@
     margin-left: 5%;
 
 
-  }
+}
+
+.addToCartBtn {
+    float: left;
+    display: inline-block;
+    margin-left: 5%;
+    margin-top: 100px;
+}
 
 .productDesc {
     width: 50%;
@@ -68,9 +68,10 @@
 
 .productSizeSelect {
     display: inline-block;
-    margin-top: 100px;
     font-family: sans-serif;
+    margin-top: 100px;
     margin-left: 5%;
+    float: left;
 }
 
 /* navbar */
