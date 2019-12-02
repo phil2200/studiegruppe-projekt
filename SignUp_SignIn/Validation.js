@@ -117,7 +117,7 @@ function validationForm() {
         printError("addressErr", "You must type an address, otherwise you cant receive your clothes");
     } else {
         //igen hvilke characters det kan indeholde
-        var regexAddress = /^[a-zA-Z\s]+$/;
+        var regexAddress = /^[a-zA-Z0-9\s,.'-]{3,}$/;
         if (regexAddress.test(address) === false) {
             printError("addressErr", "You have to type in a valid address");
         } else {
