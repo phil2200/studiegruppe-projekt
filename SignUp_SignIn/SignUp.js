@@ -14,6 +14,8 @@ function storeDetails() {
     localStorage.setItem("email", email);
     localStorage.setItem("password", password);
 
+    console.log(username, phone, city, zip, address, email);
+
     alert('new user has been created!');
     window.location = ("SignIn.html");
 }
