@@ -5,7 +5,7 @@
 
         validationForm();
 
-        storeDetails();
+        //storeDetails();
 
 
 

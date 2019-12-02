@@ -1,4 +1,3 @@
-
 /* Sørg for at html siden er loadet, så de html elementer, som javascript koden benytter faktisk eksisterer.
 Sålænge document.readystate er "loading", så venter vi på at det er færdigt med at loade,
 og når eventen DOMContentLoaded indtræffer, så udfør funktionen ready. Såfremt siden allerede er loadet skal vi
@@ -17,37 +16,50 @@ if (document.readyState == 'loading') {
 
 function ready() {
 
-   // document.getElementById('list').onclick =function () {
+    // document.getElementById('list').onclick =function () {
 
     //Check i localStorage om der er gemt "valgte" produkter, og hvis det er tilfældet tilføj dem så til Cart
-        var m = JSON.parse(localStorage.getItem("productList"));
-        m.forEach(function (key) {    // forEach løber igennem index for m-arrayet - function(key)  udføres for hvert index og ved at have key som indput,// bliver det tilgængeligt i funktionsdefinitionen
-             addItemToCart(key.prodName, key.price, key.imgName);
-            updateCartTotal();
-            //console.log(key.prodName);
-            //console.log(key.price);
-            //console.log(key.imgName);
-        })
+    var chosenProducts = JSON.parse(localStorage.getItem("cart"));
+
+    chosenProducts.forEach(function (key) {    // forEach løkken løber igennem index for m-arrayet og function(key)  udføres for hvert index.
+        addItemToCart(key._productName, key._productPrice, key._productImage, key._productSize);
+
+
+        updateCartTotal();
+        //console.log(key.prodName);
+        //console.log(key.price);
+        //console.log(key.imgName);
+    })
 }
 
-//
-function addItemToCart(title, price, imageSrc) {
+
+
+
+
+function addItemToCart(title, price, imageSrc, size) {
     var cartRow = document.createElement('div')
-    cartRow.classList.add('cart-row') //Use the CSS style of cart-row
-    var cartItems = document.getElementsByClassName('cart-items')[0] //vi vil senere tilføje en række til denne sektion
+    cartRow.classList.add('cart-row') //vi bruger CSS stilen 'cart-row'for div elementet carRow
+    var cartItems = document.getElementsByClassName('cart-items')[0] //vi vil senere tilføje en række til  div sektionen 'cart-items'
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for (var i = 0; i < cartItemNames.length; i++) {
         if (cartItemNames[i].innerText == title) {
             //alert('This item is already added to the cart')
-            return
+            //return
         }
     }
-    var cartRowContents = `   
+
+
+    let cartRowContents = `   
         <div class="cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
             <span class="cart-item-title">${title}</span>
+                   
+        </div>
+        <div class="cart-size cart-column">
+            <span class="cart-item-size">${size}</span>
         </div>
         <span class="cart-price cart-column">${price}</span>
+        
         <div class="cart-quantity cart-column">
             <input class="cart-quantity-input" type="number" value="1">
             <button class="btn btn-danger" type="button">REMOVE</button>
@@ -63,19 +75,33 @@ function removeCartItem(event) {
     var  pickedCartRow = buttonClicked.parentElement.parentElement
     var titleElement = pickedCartRow.getElementsByClassName('cart-item')[0];
     var title = titleElement.innerText;
+    var sizeElement = pickedCartRow.getElementsByClassName('cart-size')[0];
+    var size = sizeElement.innerText;
     buttonClicked.parentElement.parentElement.remove();
 
 
-        var m = JSON.parse(localStorage.getItem("productList"));
-        m.forEach(function (key,index) {
-            if (key.prodName === title){
-                m.splice(index,1)
-                localStorage.setItem("productList", JSON.stringify(m));
+    var chosenProducts = JSON.parse(localStorage.getItem("cart"));
+   /*chosenProducts.forEach(function (key,index) {  // Ved at have 'index' som input i funktionshovedet bliver index tilgængeligt i if statement-et
+    if (key._productName === title && key._productSize === size ){
+        chosenProducts.splice(index,1) //der slettes et element ved position index i chosenProducts arrayet
+        localStorage.setItem("cart", JSON.stringify(chosenProducts));
+        return
+    }
+*/
 
-            }
-            })
 
-     updateCartTotal()
+    var i;
+    for (i = 0; i < chosenProducts.length; i++) {
+        if (chosenProducts[i]._productName === title && chosenProducts[i]._productSize === size ){
+            chosenProducts.splice(i,1) //der slettes et element ved position index i chosenProducts arrayet
+            localStorage.setItem("cart", JSON.stringify(chosenProducts));
+            break
+
+        }
+
+    }
+
+    updateCartTotal()
 }
 
 
