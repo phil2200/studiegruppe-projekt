@@ -4,7 +4,8 @@
 //var usernameInput = String(username);
 //console.log(usernameInput);
 
-// gemmer indtastede detaljer i localstorage
+// gemmer indtastede detaljer i localstorage bruger properties fra ClassUser.js
+
 function storeDetails() {
     localStorage.setItem("username", username);
     localStorage.setItem("phone", phone);
