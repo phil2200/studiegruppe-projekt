@@ -134,12 +134,12 @@ function validationForm() {
     }
 //angiver hvilke tegn password kan/skal indeholde (Regex fundet på stackoverflow)
     else {
-        var regexPassword = /^[a-zA-Z\s]+$/;
+        var regexPassword = /^[a-zA-Z0-9\s,.'-]{3,}$/;
 
         //Hvilken error den skal printe og i hvilke situationer, defineres med if/else metode.
 
         if (regexPassword.test(password) === false) {
-            printError("passwordErr", "Enter a password using standard characters");
+            printError("passwordErr", "Enter a secure password");
         } else {
             printError("passwordErr", "");
             passwordErr = false;
@@ -152,7 +152,7 @@ function validationForm() {
     if ((usernameErr || phoneErr || cityErr || zipErr || addressErr || emailErr || passwordErr) == true) {
 
             return false;
-            
+
 
     } else {
 
