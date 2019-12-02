@@ -40,7 +40,7 @@ function validationForm() {
         //Hvilken error den skal printe og i hvilke situationer, defineres med if/else metode.
 
         if (regex.test(username) === false) {
-            printError("usernameErr", "Enter a username using the permitted letters");
+            printError("usernameErr", "Enter a username using the standard alphabet");
 
         } else {
             printError("usernameErr", "");
@@ -61,7 +61,7 @@ function validationForm() {
 
         //angiver besked der skal fremkomme ved forkert email indtastning
         {
-            printError ("emailErr", "Check your email, it seems there is something wrong");
+            printError ("emailErr", "Check your email, it seems there is something wrong.");
         } else {
             printError("emailErr", "");
             emailErr = false;
@@ -78,7 +78,7 @@ function validationForm() {
     } else {
         var regexPhone = /^[0-9]{8}$/;
         if (regexPhone.test(phone) === false){
-            printError("phoneErr", "Something is wrong with your phone number, please check it! (it has to be 10 Digits");
+            printError("phoneErr", "Something is wrong with your phone number, please check it! (it has to be 8 Digits");
         } else {
             printError("phoneErr", "");
             phoneErr = false;
@@ -93,7 +93,7 @@ function validationForm() {
     } else {
         var regexCity = /^[a-zA-Z\s]+$/;
         if (regexCity.test(city) === false) {
-            printError("cityErr", "It seems your city is non-existent");
+            printError("cityErr", "It seems your city is non-existent, it should only contain letters from A-Z.");
 
         } else {
             printError("cityErr", "");
