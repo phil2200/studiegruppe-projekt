@@ -7,7 +7,7 @@ var product = findProduct(productId);
 
 /* variabel som indhenter productsContainer i HTMLfilen */
 var productContainer = document.getElementById('product');
-
+// der laves enn container , hvori det valgte produkt bliver vist med tilhørende information
 var container = document.createElement('container');
 
 /* Her bliver de forskellige properties fra klassen udvalgt og kan displayes på siden */
