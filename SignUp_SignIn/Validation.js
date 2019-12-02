@@ -162,7 +162,7 @@ function validationForm() {
 
         //laver ny string der viser hvad man har indtastet.
 
-        var dataPreview = "you have entered all the following details: \n" +
+        var dataPreview = "You have entered the following details: \n" +
             "Full name: " + username + "\n" +
             "Email address: " + email + "\n" +
             "Mobile number: " + phone + "\n" +
