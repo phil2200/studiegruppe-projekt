@@ -21,12 +21,10 @@ container.innerHTML += '<div class="productName">' + product._productName + '</d
 container.innerHTML += '<div class="productPrice"> Price: ' + product._productPrice + ' kr </div>';
 /* displayer farven */
 container.innerHTML += '<div class="productColor"> Color: ' + product._colors + '</div>';
-/* displayer størrelsen */
-container.innerHTML += '<div class="productSize">';
 
 
 // Valg af størrelse, her gøres der brug af en selector, samt bliver de forskellige sizes loopet
-var select = '<select class="productSizeSelect">';
+var select = '<select class="productSizeSelect"> Select a size';
 
 var sizes = product._productSize;
 for (var i = 0; i < sizes.length; i++) {
