@@ -53,7 +53,7 @@ function validationForm() {
     if (email == "") {
         printError("emailErr", "We would like you to enter an email-address");
     }
-//definerer hvilke tegn emailen skal indeholde (tegn fundet på nettet)
+//definerer hvilke tegn emailen skal indeholde (Regex tegn fundet på nettet)
     else {
         var regexMail = /^\S+@\S+\.\S+$/;
 
@@ -72,7 +72,7 @@ function validationForm() {
 //validering af tlf. nummer
     if (phone == "")
 
-//angiver besked ved forkert/manglende tlf. nummer
+//angiver besked ved forkert/manglende tlf. nummer (Regex fundet på stackoverflow)
     {
         printError("phoneErr", "Enter your phone number, so that we can call you ;)");
     } else {
@@ -91,6 +91,7 @@ function validationForm() {
     if (city == "") {
         printError("cityErr", "Please enter a city");
     } else {
+        // (Regex fundet på stackoverflow)
         var regexCity = /^[a-zA-Z\s]+$/;
         if (regexCity.test(city) === false) {
             printError("cityErr", "It seems your city is non-existent, it should only contain letters from A-Z.");
@@ -116,7 +117,7 @@ function validationForm() {
         //angiver error besked hvis der ikke indtastes noget
         printError("addressErr", "You must type an address, otherwise you cant receive your clothes");
     } else {
-        //igen hvilke characters det kan indeholde
+        //igen hvilke characters det kan indeholde (Regex fundet på stackoverflow)
         var regexAddress = /^[a-zA-Z0-9\s,.'-]{3,}$/;
         if (regexAddress.test(address) === false) {
             printError("addressErr", "You have to type in a valid address");
@@ -131,7 +132,7 @@ function validationForm() {
     if (password == "") {
         printError("passwordErr", "Type in a password");
     }
-//angiver hvilke tegn password kan/skal indeholde
+//angiver hvilke tegn password kan/skal indeholde (Regex fundet på stackoverflow)
     else {
         var regexPassword = /^[a-zA-Z\s]+$/;
 
@@ -146,17 +147,12 @@ function validationForm() {
     }
 
 
-//forhindrer formen og storeDetails funktion i at blive kørt hvis der er en fejl
+//forhindrer formen og storeDetails funktion i at blive kørt hvis der er en fejl i en af de førnævnte errors
+
     if ((usernameErr || phoneErr || cityErr || zipErr || addressErr || emailErr || passwordErr) == true) {
-        console.log("Test")
-       console.log( phoneErr, cityErr, zipErr, addressErr, emailErr, passwordErr)
 
-       // function abc() {
             return false;
-        //}
-
-        // return false;
-        //hvorfor siger den out of
+            
 
     } else {
 
