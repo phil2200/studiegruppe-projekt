@@ -11,6 +11,7 @@ class User {
     }
 }
 
+
 // EMDL: Objekterne hentes fra ClassUser.js så man vil kunne se information hos de forskellige bruger under UserProfilde
 var userList = []; // EMDL: den vil automatisk tage informationen i rækkefølgen som i klassen
 // EMDL: jeg pusher new User op i det tomme array
