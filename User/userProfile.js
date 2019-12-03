@@ -4,12 +4,13 @@ var currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
 //EMDL: henter info fra USERDB, hvor oplysninger på name, phone osv.. er givet
 // EMDL: Koden skal opnå, at når man logger ind med en af vores tre test-users, vil den vise forskellige brugeroplysninger til de forskellige brugere
-document.getElementById("name").value = currentUser.name;
+document.getElementById("username").value = currentUser.username;
 document.getElementById("phone").value = currentUser.phone;
 document.getElementById("city").value = currentUser.city;
 document.getElementById("zip").value = currentUser.zip;
 document.getElementById("address").value = currentUser.address;
 document.getElementById("email").value = currentUser.email;
+document.getElementById("password").value = currentUser.password;
 
 // EMDL: kalder funktionen
 demoGenerateData();
