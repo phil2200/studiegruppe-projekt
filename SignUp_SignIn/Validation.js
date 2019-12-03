@@ -1,3 +1,4 @@
+//tager klassen fra userdb og bruger her 
 class User {
     constructor(username, password, name, phone, city, zip, address, email) {
         this.username = username;
