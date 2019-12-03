@@ -9,3 +9,4 @@ var userList = []; // EMDL: den vil automatisk tage informationen i rækkefølge
     // EMDL: jeg laver mit array til en string med JSON.stringify og gemmer det i Local Storage
     var userListString = JSON.stringify(userList);
     localStorage.setItem("User", userListString)
+

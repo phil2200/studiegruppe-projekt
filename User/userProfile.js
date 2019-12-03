@@ -9,7 +9,6 @@ document.getElementById("city").value = currentUser.city;
 document.getElementById("zip").value = currentUser.zip;
 document.getElementById("address").value = currentUser.address;
 document.getElementById("email").value = currentUser.email;
-//test!!!!
 
 // EMDL: kalder funktionen
 demoGenerateData();
@@ -42,9 +41,9 @@ function demoGenerateData(){
      "whitetshirt.jpg","In Stock", ["Small", "Medium", "Large"]);
  // productList.push(product1, product2);
 
- var order1 = new Order("test1", "9876490", "08/11/19 15.27", "Black Hoodie", "800 DKK")
+ var order1 = new Order("test1", "9876490", "08/11/19 15.27", "Black Hoodie", "800 DKK");
  orderList.push(order1);
- var order2 = new Order("test2", "1234567", "26/11/19 17.13", "White Hoodie","800 DKK")
+ var order2 = new Order("test2", "1234567", "26/11/19 17.13", "White Hoodie",  "800 DKK");
  orderList.push(order2);
 
  // EMDL: Jeg sætter dataen i Local Storage - orderListString betyder at den laver det om til en string
@@ -59,12 +58,17 @@ function showOrders() {
  // EMDL: Henter mine HTML elementer
  var orderHistory = document.getElementById("orderHistory");
 
- // EMDL: laver et loop for at løbe alle ordrer igennem
- for (var i=0; i < orders.length; i++){
+ // EMDL: laver et loop for at løbe alle ordrer igennem - Filter tager en funktion som parameter
+ // EMDL: laver en filterfunktion, som laver et nyt loop(array?) - med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+ let fOrders = orders.filter((o) => {
+  return o.username == currentUser;
+ })
+
+ for (var i=0; i < fOrders.length; i++){
 
   // EMDL: Lavet med inspiration fra: https://www.w3schools.com/jsref/met_document_createelement.asp
   //[ ] for at få fat i et element i en liste
-  var order = orders[i];
+  var order = fOrders[i];
 
   //EMDL: MANGLER: Skal kun vises ved test 1
 
