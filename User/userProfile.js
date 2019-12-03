@@ -1,6 +1,6 @@
 // EMDL: laver en variabel og gemmer det i den variabel
 var currentUser = JSON.parse(localStorage.getItem("currentUser"));
-console.log(currentUser);
+// console.log(currentUser);
 
 //EMDL: henter info fra USERDB, hvor oplysninger på name, phone osv.. er givet
 // EMDL: Koden skal opnå, at når man logger ind med en af vores tre test-users, vil den vise forskellige brugeroplysninger til de forskellige brugere
@@ -64,11 +64,12 @@ function showOrders() {
  var orderHistory = document.getElementById("orderHistory");
 
  /* EMDL: laver en filterfunktion, som løber alle ordrer igennem og gemmer en ordre som o, så jeg kan kalde o.username på den.
- sammenligner username string fra ordren med username strung fra currentUser på linje 66, så ordren kun vises ved den bruger, der står i objektet
+ sammenligner username string fra ordren med username string fra currentUser på linje 66, så ordren kun vises ved den bruger, der står i objektet
 lavet med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter */
  let fOrders = orders.filter((o) => {
   return o.username == currentUser.username;
  })
+// tester console.log(fOrders); for at teste, om mit array indeholder noget
 
  for (var i=0; i < fOrders.length; i++){
 
@@ -76,18 +77,16 @@ lavet med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/JavaScri
   //[ ] for at få fat i et element i en liste
   var order = fOrders[i];
 
-  //EMDL: MANGLER: Skal kun vises ved test 1
-
   //EMDL: H4 for at det bliver en header
   var order1 = document.createElement("H4");
-  order1.innerHTML = "order " + order.orderNumber;
+  order1.innerHTML = "Order " + order.orderNumber;
   document.getElementById("orderHistory").append(order1);
 
   //EMDL: Laver et <p> element, som er en paragraf
   /*EMDL: Insætter tekst og appender det - orderTimeStamp er et felt - når jeg hiver værdien ud af mit felt, skriver jeg objekt.FeltNavn
-Lavet med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
-createElement ....
-*/
+  Lavet med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+ createElement ....
+  */
   var para = document.createElement("P");
   para.innerHTML = "Order Time Stamp: " + order.orderTimeStamp;
   document.getElementById("orderHistory").appendChild(para);
