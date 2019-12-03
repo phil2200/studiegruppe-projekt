@@ -6,7 +6,30 @@
 
 // gemmer indtastede detaljer i localstorage bruger properties fra ClassUser.js
 
+//let existingUser = JSON.parse(localStorage.getItem("User"));
+//console.log(existingUser);
+
+// existingUser.push(new User("testHEJ","1234567", "Emma Marie Dalgaard Laursen", "+45 22 41 90 32", "Frederiksberg C", "1954", "Hostrups Have 30, 4tv", "emma.laursen.97@hotmail.com"));
+
+//console.log(existingUser);
+
+
+//Get the entered details from HTML sign up page
+var username = document.getElementById("username").value;
+var phone = document.getElementById("phone").value;
+var city = document.getElementById("city").value;
+var zip = document.getElementById("zip").value;
+var address = document.getElementById("address").value ;
+var email = document.getElementById("email").value ;
+var password = document.getElementById( "password").value ;
+
+
+
+/*
 function storeDetails() {
+  //  localStorage.setItem(JSON.stringify (createdUser());
+    //skal lave et objekt af den kreerede profil
+
     localStorage.setItem("username", username);
     localStorage.setItem("phone", phone);
     localStorage.setItem("city", city);
@@ -18,24 +41,12 @@ function storeDetails() {
     alert('new user has been created!');
     window.location = ("SignIn.html");
 }
-
+*/
 
 // angiver test user og laver string fra indtastet om til objekt med json.parse.
 
 let signedUpButton = document.getElementById("SignedUp")
-let existingUser = JSON.parse(localStorage.getItem("User"));
 let currentLogIn = [];
-
-
-
-//Get the entered details from HTML sign up page
-var username = document.getElementById("username").value;
-var phone = document.getElementById("phone").value;
-var city = document.getElementById("city").value;
-var zip = document.getElementById("zip").value;
-var address = document.getElementById("address").value ;
-var email = document.getElementById("email").value ;
-var password = document.getElementById( "password").value ;
 
 
 

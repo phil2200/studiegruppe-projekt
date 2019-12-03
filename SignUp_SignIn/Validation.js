@@ -1,3 +1,27 @@
+class User {
+    constructor(username, password, name, phone, city, zip, address, email) {
+        this.username = username;
+        this.password = password;
+        this.name = name;
+        this.phone = phone;
+        this.city = city;
+        this.zip = zip;
+        this.address = address;
+        this.email = email;
+    }
+}
+
+// EMDL: Objekterne hentes fra ClassUser.js så man vil kunne se information hos de forskellige bruger under UserProfilde
+var userList = []; // EMDL: den vil automatisk tage informationen i rækkefølgen som i klassen
+// EMDL: jeg pusher new User op i det tomme array
+userList.push(new User("test1","1234567", "Emma Marie Dalgaard Laursen", "+45 22 41 90 32", "Frederiksberg C", "1954", "Hostrups Have 30, 4tv", "emma.laursen.97@hotmail.com"));
+userList.push(new User("test2","2345678", "Alexander Hellowell", "+45 20 61 38 44", "Dubai", "1234", "Al Barsha 2", "Alexander123@hgmail.com"));
+userList.push(new User("test3","3456789", "Philip Martini Ravn Jørgensen", "+45 30 27 44 93", "Jyllinge", "4040", "Korskildevej 12", "joergensen.philip@gmail.com"));
+
+// EMDL: jeg laver mit array til en string med JSON.stringify og gemmer det i Local Storage
+var userListString = JSON.stringify(userList);
+localStorage.setItem("User", userListString);
+
 
 // validering af samtlige felter ved sign up - inspiration fra tutorialrepublic.com
 
@@ -78,7 +102,7 @@ function validationForm() {
     } else {
         var regexPhone = /^[0-9]{8}$/;
         if (regexPhone.test(phone) === false){
-            printError("phoneErr", "Something is wrong with your phone number, please check it! (it has to be 8 Digits");
+            printError("phoneErr", "Something is wrong with your phone number, please check it! (it has to be 8 Digits)");
         } else {
             printError("phoneErr", "");
             phoneErr = false;
@@ -167,9 +191,30 @@ function validationForm() {
             "Address: " + address + "\n" +
             "Password: We won't show this to anyone :)";
 
+        // laver ny variable og parser det fra localstorage
+        let createdUser = JSON.parse(localStorage.getItem("User"));
+        console.log(createdUser);
+
+        //createdUser.push(username, password, phone, city, zip, address, email);
+        //pusher ny user ind i array
+        createdUser.push(new User(username, password, phone, city, zip, address, email));
+
+        //adder en user mere i array
+        console.log(createdUser);
+
+        // her laver vi den til en string
+        let newUserAdded = JSON.stringify(createdUser);
+
+        //tilføjer den til localstorage
+        localStorage.setItem("User", newUserAdded);
+
         // alerter hvad bruger har indtastet.
         alert(dataPreview);
-        storeDetails()
+        alert('new user has been created!');
+
+        console.log(newUserAdded);
+        window.location = ("SignIn.html");
     }
 
 }
+

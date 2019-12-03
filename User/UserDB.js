@@ -1,3 +1,15 @@
+/* class User {
+    constructor(username, password, name, phone, city, zip, address, email) {
+        this.username = username;
+        this.password = password;
+        this.name = name;
+        this.phone = phone;
+        this.city = city;
+        this.zip = zip;
+        this.address = address;
+        this.email = email;
+    }
+}
 
 // EMDL: Objekterne hentes fra ClassUser.js så man vil kunne se information hos de forskellige bruger under UserProfilde
 var userList = []; // EMDL: den vil automatisk tage informationen i rækkefølgen som i klassen
@@ -8,4 +20,4 @@ var userList = []; // EMDL: den vil automatisk tage informationen i rækkefølge
 
     // EMDL: jeg laver mit array til en string med JSON.stringify og gemmer det i Local Storage
     var userListString = JSON.stringify(userList);
-    localStorage.setItem("User", userListString)
+    localStorage.setItem("User", userListString); */
