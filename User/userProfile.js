@@ -1,5 +1,6 @@
 // EMDL: laver en variabel og gemmer det i den variabel
 var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+console.log(currentUser);
 
 //EMDL: henter info fra USERDB, hvor oplysninger på name, phone osv.. er givet
 // EMDL: Koden skal opnå, at når man logger ind med en af vores tre test-users, vil den vise forskellige brugeroplysninger til de forskellige brugere
@@ -18,8 +19,8 @@ showOrders();
 function demoGenerateData(){
  var orderList = []; // EMDL: den vil automatisk tage informationen i rækkefølgen som i klassen
 
- // EMDL: laver en liste med vores 4 produkter, og bruger produkt 1 og 2
- var productList = [];
+ // EMDL: laver en liste med vores 4 produkter - denne bruges ikke
+ /* var productList = [];
  var product1 = new Product(1, "Black Hoodie",
      "This hoodie is made from 100% cotton. Can used for formal or daily wear. Featuring the unique 50NE logo. Limited edition",
      800, "Black", "Hoodie", 1,
@@ -39,12 +40,16 @@ function demoGenerateData(){
      "This t-shirt is made from 100% cotton. Can used for formal or daily wear. Featuring the unique 50NE logo. Limited edition",
      399, "White", "T-shirt", 1,
      "whitetshirt.jpg","In Stock", ["Small", "Medium", "Large"]);
- // productList.push(product1, product2);
+ productList.push(product1, product2); */
 
  var order1 = new Order("test1", "9876490", "08/11/19 15.27", "Black Hoodie", "800 DKK");
  orderList.push(order1);
- var order2 = new Order("test2", "1234567", "26/11/19 17.13", "White Hoodie",  "800 DKK");
+ var order2 = new Order("test1", "1234567", "09/11/19 17.13", "White Hoodie",  "800 DKK");
  orderList.push(order2);
+ var order3 = new Order("test2", "1567892", "03/11/19 18.30", "White T-shirt", "399 DKK");
+ orderList.push(order3);
+ var order4 = new Order("test3", "3456712", "04/12/19 12.05", "Black T-shirt", "399 DKK")
+ orderList.push(order4);
 
  // EMDL: Jeg sætter dataen i Local Storage - orderListString betyder at den laver det om til en string
  var orderListString = JSON.stringify(orderList);
@@ -58,10 +63,11 @@ function showOrders() {
  // EMDL: Henter mine HTML elementer
  var orderHistory = document.getElementById("orderHistory");
 
- // EMDL: laver et loop for at løbe alle ordrer igennem - Filter tager en funktion som parameter
- // EMDL: laver en filterfunktion, som laver et nyt loop(array?) - med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+ /* EMDL: laver en filterfunktion, som løber alle ordrer igennem og gemmer en ordre som o, så jeg kan kalde o.username på den.
+ sammenligner username string fra ordren med username strung fra currentUser på linje 66, så ordren kun vises ved den bruger, der står i objektet
+lavet med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter */
  let fOrders = orders.filter((o) => {
-  return o.username == currentUser;
+  return o.username == currentUser.username;
  })
 
  for (var i=0; i < fOrders.length; i++){
