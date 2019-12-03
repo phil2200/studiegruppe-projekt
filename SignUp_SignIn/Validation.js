@@ -1,4 +1,4 @@
-/// tager klassen fra userDB og bruger her til at sætte 
+/// tager klassen fra userDB og bruger her til at sætte
 class User {
     constructor(username, password, name, phone, city, zip, address, email) {
         this.username = username;
