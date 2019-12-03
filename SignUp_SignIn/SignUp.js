@@ -1,3 +1,7 @@
+
+
+//indholdet i denne fil er blevet delt op og rykket til bl.a. validation
+
 // lav variables nednfor, remove else null, seperate sign up and sign in javascript.
 
 //laver usernameInput som kan bruges i functionen storeDetails til at gemme i lpocal storage og yderligere validering.
