@@ -193,7 +193,7 @@ function validationForm() {
             "Password: We won't show this to anyone :)";
 
         // laver ny variable og parser det fra localstorage
-        let createdUser = JSON.parse(localStorage.getItem("User"));
+        var createdUser = JSON.parse(localStorage.getItem("User"));
         console.log(createdUser);
 
         //createdUser.push(username, password, phone, city, zip, address, email);
@@ -204,7 +204,7 @@ function validationForm() {
         console.log(createdUser);
 
         // her laver vi den til en string
-        let newUserAdded = JSON.stringify(createdUser);
+        var newUserAdded = JSON.stringify(createdUser);
 
         //tilføjer den til localstorage
         localStorage.setItem("User", newUserAdded);
