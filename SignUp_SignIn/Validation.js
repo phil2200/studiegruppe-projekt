@@ -112,6 +112,8 @@ function validationForm() {
     }
 
 
+
+
 //Validering af city, bruger tegn fra username
     if (city == "") {
         printError("cityErr", "Please enter a city");
