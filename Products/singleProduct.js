@@ -93,7 +93,6 @@ function addToShoppingCart() {
     //Philip slut
 }
 
-
 function findProduct(productId) {
     for (var i = 0; i < products.length; i++) {
         if (products[i]._productId == productId) {
