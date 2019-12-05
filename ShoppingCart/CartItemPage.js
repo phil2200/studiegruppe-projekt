@@ -11,6 +11,7 @@ var listFromLocalStorage = JSON.parse(localStorage.getItem("productList"));
 
 
 
+/
 
 if (listFromLocalStorage.length > 0) {
     listFromLocalStorage.forEach(function (key) {

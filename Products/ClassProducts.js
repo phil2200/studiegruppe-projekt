@@ -9,9 +9,16 @@ class Product {
         this._productPrice= productPrice;
         this._colors = colors;
         this._productType = productType;
+        this._quantity = 1;
         this._productImage = productImage;
         this._stockStatus = stockStatus;
         this._productSize = productSize;
+
+        this.changeQuantity = function(value) {
+             this._quantity = value;
+        };
+
+
 
     }
 

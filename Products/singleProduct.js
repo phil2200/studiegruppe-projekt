@@ -68,9 +68,29 @@ function addToShoppingCart() {
         cart = JSON.parse(cart);
     }
 
-    cart.push(productToCart);
+// Philip begynd
+    var chosenProducts = JSON.parse(localStorage.getItem("cart"));
+    var i;
+    var  itemAlreadySelected = false;
+    for (i = 0; i < cart.length; i++) {
+        if (cart[i]._productName === productToCart._productName && cart[i]._productSize ===  productToCart._productSize ){
+            alert('This item has already been added to the cart');
+            itemAlreadySelected = true;
+            break
+        }
 
-    localStorage.setItem('cart', JSON.stringify(cart));
+
+    }
+    if (itemAlreadySelected===false) {
+        alert('An item has been added to the cart');
+        cart.push(productToCart);
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+
+  //  cart.push(productToCart);
+  //  localStorage.setItem('cart', JSON.stringify(cart));
+    //Philip slut
 }
 
 
