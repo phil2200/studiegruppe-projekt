@@ -6,13 +6,27 @@ class Order {
     orderProducts;
     orderTotal;
 
-    constructor(username, orderNumber, orderTimeStamp, orderProducts, orderTotal) {
+    constructor(username, orderNumber, orderTimeStamp, orderProducts) {
         this.username = username;
         this.orderNumber = orderNumber;
         this.orderTimeStamp = orderTimeStamp;
         this.orderProducts = orderProducts;
-        this.orderTotal = orderTotal;
+        this.orderTotal = this.calculateOrderTotal();
     }
+
+    //EMDL: Laver en metode til at udregne den totale sum af ordren
+    //EMDL: punktum kalder enten en metode på et objekt eller et felt - for at kalde en metode, bruger man paranteser
+    calculateOrderTotal(){
+        var total=0;
+        for (var i=0; i < this.orderProducts.length; i++) {
+            var product = this.orderProducts[i];
+            var productPrice = product._productPrice;
+            total = total+productPrice;
+        }
+        return total;
+
+    }
+
 
     get username() {
         return this._username;

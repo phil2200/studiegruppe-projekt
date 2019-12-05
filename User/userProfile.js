@@ -19,8 +19,9 @@ showOrders();
 function demoGenerateData(){
  var orderList = []; // EMDL: den vil automatisk tage informationen i rækkefølgen som i klassen
 
- // EMDL: laver en liste med vores 4 produkter - denne bruges ikke
- /* var productList = [];
+ // EMDL: laver en liste med vores 4 produkter
+ var productList = [];
+ var productList1 = [];
  var product1 = new Product(1, "Black Hoodie",
      "This hoodie is made from 100% cotton. Can used for formal or daily wear. Featuring the unique 50NE logo. Limited edition",
      800, "Black", "Hoodie", 1,
@@ -40,15 +41,17 @@ function demoGenerateData(){
      "This t-shirt is made from 100% cotton. Can used for formal or daily wear. Featuring the unique 50NE logo. Limited edition",
      399, "White", "T-shirt", 1,
      "whitetshirt.jpg","In Stock", ["Small", "Medium", "Large"]);
- productList.push(product1, product2); */
+ productList.push(product1, product2);
+ productList1.push(product3, product4);
 
- var order1 = new Order("test1", "9876490", "08/11/19 15.27", "Black Hoodie", "800 DKK");
+ //EMDL: Laver nogle nye ordrer på testbrugerne
+ var order1 = new Order("test1", "9876490", "08/11/19 15.27", productList);
  orderList.push(order1);
- var order2 = new Order("test1", "1234567", "09/11/19 17.13", "White Hoodie",  "800 DKK");
+ var order2 = new Order("test1", "1234567", "09/11/19 17.13", productList);
  orderList.push(order2);
- var order3 = new Order("test2", "1567892", "03/11/19 18.30", "White T-shirt", "399 DKK");
+ var order3 = new Order("test2", "1567892", "03/11/19 18.30", productList1);
  orderList.push(order3);
- var order4 = new Order("test3", "3456712", "04/12/19 12.05", "Black T-shirt", "399 DKK")
+ var order4 = new Order("test3", "3456712", "04/12/19 12.05", productList1);
  orderList.push(order4);
 
  // EMDL: Jeg sætter dataen i Local Storage - orderListString betyder at den laver det om til en string
@@ -71,32 +74,34 @@ lavet med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/JavaScri
  })
 // tester console.log(fOrders); for at teste, om mit array indeholder noget
 
- for (var i=0; i < fOrders.length; i++){
+ for (var i=0; i < fOrders.length; i++) {
 
   // EMDL: Lavet med inspiration fra: https://www.w3schools.com/jsref/met_document_createelement.asp
   //[ ] for at få fat i et element i en liste
   var order = fOrders[i];
 
-  //EMDL: H4 for at det bliver en header
-  var order1 = document.createElement("H4");
-  order1.innerHTML = "Order " + order.orderNumber;
-  document.getElementById("orderHistory").append(order1);
+      //EMDL: H4 for at det bliver en header
+      var orderh4 = document.createElement("H4");
+      orderh4.innerHTML = "Order " + order.orderNumber;
+      document.getElementById("orderHistory").append(orderh4);
 
-  //EMDL: Laver et <p> element, som er en paragraf
-  /*EMDL: Insætter tekst og appender det - orderTimeStamp er et felt - når jeg hiver værdien ud af mit felt, skriver jeg objekt.FeltNavn
-  Lavet med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
- createElement ....
-  */
-  var para = document.createElement("P");
-  para.innerHTML = "Order Time Stamp: " + order.orderTimeStamp;
-  document.getElementById("orderHistory").appendChild(para);
+      //EMDL: Laver et <p> element, som er en paragraf
+      /*EMDL: Insætter tekst og appender det - orderTimeStamp er et felt - når jeg hiver værdien ud af mit felt, skriver jeg objekt.FeltNavn
+      Lavet med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement  */
+      var ordertimestamp = document.createElement("P");
+      ordertimestamp.innerHTML = "Order Time Stamp: " + order.orderTimeStamp;
+      document.getElementById("orderHistory").appendChild(ordertimestamp);
 
-  var para = document.createElement("P");
-  para.innerHTML = "Product: " + order.orderProducts;
-  document.getElementById("orderHistory").appendChild(para);
+      for (var j=0; j < order.orderProducts.length; j++) {
+       var product = order.orderProducts[j];
+       var orderproducts = document.createElement("P");
+       orderproducts.innerHTML = "Product: " + product._productName;
+       document.getElementById("orderHistory").appendChild(orderproducts);
+      }
 
-  var para = document.createElement("P");
-  para.innerHTML = "Total amount of order: " + order.orderTotal;
-  document.getElementById("orderHistory").appendChild(para);
- }
+      //ændre para
+      var para = document.createElement("P");
+      para.innerHTML = "Total amount of order: " + order.orderTotal;
+      document.getElementById("orderHistory").appendChild(para);
+  }
 }
