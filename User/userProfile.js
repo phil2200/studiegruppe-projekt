@@ -67,7 +67,7 @@ function showOrders() {
  var orderHistory = document.getElementById("orderHistory");
 
  /* EMDL: laver en filterfunktion, som løber alle ordrer igennem og gemmer en ordre som o, så jeg kan kalde o.username på den.
- sammenligner username string fra ordren med username string fra currentUser på linje 66, så ordren kun vises ved den bruger, der står i objektet
+ sammenligner username string fra ordren med username string fra currentUser på linje 73, så ordren kun vises ved den bruger, der står i objektet
 lavet med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter */
  let fOrders = orders.filter((o) => {
   return o.username == currentUser.username;
