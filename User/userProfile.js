@@ -76,7 +76,7 @@ lavet med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/JavaScri
 
  for (var i=0; i < fOrders.length; i++) {
 
-  // EMDL: Lavet med inspiration fra: https://www.w3schools.com/jsref/met_document_createelement.asp
+  // EMDL: Lavet med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
   //[ ] for at få fat i et element i en liste
   var order = fOrders[i];
 
@@ -87,11 +87,12 @@ lavet med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/JavaScri
 
       //EMDL: Laver et <p> element, som er en paragraf
       /*EMDL: Insætter tekst og appender det - orderTimeStamp er et felt - når jeg hiver værdien ud af mit felt, skriver jeg objekt.FeltNavn
-      Lavet med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement  */
+      Lavet med inspiration fra: https://www.w3schools.com/jsref/met_node_appendchild.asp  */
       var ordertimestamp = document.createElement("P");
       ordertimestamp.innerHTML = "Order Time Stamp: " + order.orderTimeStamp;
       document.getElementById("orderHistory").appendChild(ordertimestamp);
 
+      //EMDL: laver et loop, som kører produkterne igennem
       for (var j=0; j < order.orderProducts.length; j++) {
        var product = order.orderProducts[j];
        var orderproducts = document.createElement("P");
@@ -99,9 +100,8 @@ lavet med inspiration fra: https://developer.mozilla.org/en-US/docs/Web/JavaScri
        document.getElementById("orderHistory").appendChild(orderproducts);
       }
 
-      //ændre para
-      var para = document.createElement("P");
-      para.innerHTML = "Total amount of order: " + order.orderTotal;
-      document.getElementById("orderHistory").appendChild(para);
+      var totalamount = document.createElement("P");
+      totalamount.innerHTML = "Total amount of order: " + order.orderTotal;
+      document.getElementById("orderHistory").appendChild(totalamount);
   }
 }
