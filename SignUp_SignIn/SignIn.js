@@ -24,7 +24,7 @@ function login() {
             return true;
         }
     }
-    alert("Wrong username or password")
+    alert("Wrong username or password. If you don't have an account, please sign up")
 }
 
 
