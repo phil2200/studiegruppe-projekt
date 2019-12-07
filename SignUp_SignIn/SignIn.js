@@ -1,12 +1,11 @@
 //henter detaljerne fra html
-var signIn = document.getElementById('signIn');
-var createdUser = JSON.parse(localStorage.getItem('User'));
-
+//var signIn = document.getElementById('signIn');
 
 
 // when clicking submit, retrieve input from username and password box.
 
 function login() {
+    var createdUser = JSON.parse(localStorage.getItem('User'));
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
