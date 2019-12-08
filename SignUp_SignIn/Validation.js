@@ -135,9 +135,16 @@ function validationForm() {
     if (zip == "") {
         printError("zipErr", "you have to enter a ZIP code");
     } else {
-        printError("zipErr", "");
-        zipErr = false;
+        var regexZip = /^[0-9]{4}$/;
+        if (regexZip.test(zip) === false) {
+        printError("zipErr","Please enter a valid ZIP-Code, it should be exactly 4-digits") ;
+        }
+        else {
+            printError("zipErr", "");
+            zipErr = false;
+        }
     }
+
 //indsætter bare "maxlength" property i <input> tag i html fremfor at overkomplicere det
 
 
