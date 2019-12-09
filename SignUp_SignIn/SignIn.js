@@ -26,8 +26,8 @@ function login() {
     alert("Wrong username or password. If you don't have an account, please sign up")
 }
 
-<!-- EMDL: klik enter for at logge ind, henter signin ID'et og bruger en EventListener til at indikere eventet ved klik -->
-<!-- EMDL: laver en default for at den ikke står og refresher, men den kommer videre og til sidst kaldes funktionen -->
+// EMDL: klik enter for at logge ind, henter signin ID'et og bruger en EventListener til at indikere eventet ved klik
+// EMDL: laver en default for at den ikke står og refresher, men den kommer videre og til sidst kaldes funktionen
 document.getElementById('signIn').addEventListener('click', function (event) {
     event.preventDefault();
     login();

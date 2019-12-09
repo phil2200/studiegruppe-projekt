@@ -1,4 +1,4 @@
-// alt nedenstående er rykket til validation.js fordi alexander bruger det til hans sign-up funktion.
+// Alt nedenstående er rykket til validation.js fordi Alexander bruger det til hans sign-up funktion.
 
 /*let username = document.getElementById("username");
 let password = document.getElementById("password");*/

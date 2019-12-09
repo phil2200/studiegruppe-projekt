@@ -1,4 +1,4 @@
-// alt nedenstående er rykket til validation.js fordi alexander bruger det til hans sign-up funktion.
+// alt nedenstående er rykket til validation.js fordi Alexander bruger det til hans sign-up funktion.
 
 /* class User {
     constructor(username, password, name, phone, city, zip, address, email) {

@@ -1,3 +1,4 @@
+// Lavet af EMDL
 // EMDL constructor angiver properties
 class Order {
     username;
