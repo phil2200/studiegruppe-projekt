@@ -3,7 +3,7 @@
 
 
 // when clicking submit, retrieve input from username and password box.
-
+// EJJ - Code Review: Her mangler en brugerprofil-knap, således man ikke SKAL logge ind hver gang for at se sin profil.
 function login() {
     var createdUser = JSON.parse(localStorage.getItem('User'));
     var username = document.getElementById("username").value;
@@ -26,7 +26,12 @@ function login() {
     alert("Wrong username or password. If you don't have an account, please sign up")
 }
 
-
+<!-- EMDL: klik enter for at logge ind, henter signin ID'et og bruger en EventListener til at indikere eventet ved klik -->
+<!-- EMDL: laver en default for at den ikke står og refresher, men den kommer videre og til sidst kaldes funktionen -->
+document.getElementById('signIn').addEventListener('click', function (event) {
+    event.preventDefault();
+    login();
+});
 
 /*
 
