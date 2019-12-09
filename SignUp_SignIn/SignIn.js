@@ -3,6 +3,10 @@
 
 // denne fil er lavet af Alexander med biddrag fra Emma ved createduser, localstorage og eventlistener (der hvor hun har kommenteret).
 
+/* PMRJ – code review: Der kunne evt. bruges ternary operator til optimering af if/else statement.
+Yderligere kunne der havde været oprettet en change password og/eller change details funktion så
+ brugeren kunne have mulighed for at ændre de indtastede detaljer. Evt. kunne der tilføjes en ”glemt kodeord” funktion
+  så man kan komme ind på sin profil ved glemte login detaljer. Dette kræver dog en database. */
 
 
 // when clicking submit, retrieve input from username and password box.

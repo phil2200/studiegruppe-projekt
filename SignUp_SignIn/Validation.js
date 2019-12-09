@@ -1,5 +1,7 @@
 // Denne fil er lavet af Alexander, dog er klassen og userList (l.4-l.26) udarbejdet i samarbejde med Emma
 
+// PMRJ – code review: class user kunne have fået sin egen fil for at gøre det mere overskueligt, samt mere objekt orienteret.
+
 // tager klassen fra userDB og bruger her til at sætte
 class User {
     constructor(username, password, phone, city, zip, address, email) {
@@ -183,7 +185,7 @@ function validationForm() {
             passwordErr = false;
         }
     }
-
+// PMRJ – code review: igennem validerings formen kunne der være gjort brug af switch eller ternary operators.
 
 //forhindrer formen og storeDetails funktion i at blive kørt hvis der er en fejl i en af de førnævnte errors
 
