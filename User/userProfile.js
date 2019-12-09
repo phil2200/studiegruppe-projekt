@@ -20,6 +20,9 @@ function demoGenerateData(){
     var orderList = []; // EMDL: den vil automatisk tage informationen i rækkefølgen som i klassen
 
     // EMDL: laver en liste med vores 4 produkter
+    /* EJJ: Code Review: Her er instanserne af classProduct kopieret ind, hvilket er unødvendigt. productList kunne med fordel være
+    oprettet inde i classProduct, for en mere optimal filstruktur */
+
     var productList = [];
     var productList1 = [];
     var product1 = new Product(1, "Black Hoodie",
