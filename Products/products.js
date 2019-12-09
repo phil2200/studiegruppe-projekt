@@ -20,6 +20,7 @@ for(var i=0; i<products.length; i++){
    productsContainer.appendChild(product);
 }
 
+//Her laves en funktion som bliver kaldt onclick ved at trykke på billedet. Funktionen skifter URL.
 function interProduct (productId) {
    window.location.replace('interProduct.html?productId='+productId);
 }

@@ -1,10 +1,13 @@
 //URL SearchParams. Dette er den måde hvorpå når der trykkes på et billede i shopsiden bliver man sendt til det pågældende produktsside
+//Vi bruger en indbygget klasse der hedder URLSearchParams, som giver muligheden for at hente query-parameteren 'productId'.
 var urlParams = new URLSearchParams(location.search);
-var productId = urlParams.get("productId")
+var productId = urlParams.get("productId");
 
+//Fundamentet for at finde det rigtige produkt, som der er klikket på. Her er der forekommet en refakturering. Således at den går fra at benytte products[i]
+// overalt, til at benytte den funktion istedet. nedsat kompleksitet, øget læsbarhed, rykket en logik som stod flere steder til et(centralisering)
 var product = findProduct(productId);
 
-
+// DOM - kommenter på valget af måde for udførsel af DOM. Dynamisk.
 /* variabel som indhenter productsContainer i HTMLfilen */
 var productContainer = document.getElementById('product');
 // der laves enn container , hvori det valgte produkt bliver vist med tilhørende information
@@ -26,6 +29,7 @@ container.innerHTML += '<div class="productColor"> Color: ' + product._colors + 
 // Valg af størrelse, her gøres der brug af en selector, samt bliver de forskellige sizes loopet
 var select = '<select class="productSizeSelect"> Select a size';
 
+//same metode, som i funktionen findproduct - hvor der loopes igennem arrayet for produktstørrelse denne gang.
 var sizes = product._productSize;
 for (var i = 0; i < sizes.length; i++) {
     select += '<option value="' + i + '">' + sizes[i] + '</option>';
@@ -39,7 +43,6 @@ container.innerHTML += '</div>';
 var addToCart = '<button type="button" class ="addToCartBtn" onclick="addToShoppingCart()">Add item to cart';
 container.innerHTML += addToCart;
 
-
 /*displayer Status*/
 container.innerHTML += '<div class="stockStatus"> Status: ' + product._stockStatus + '</div>';
 
@@ -49,7 +52,7 @@ container.innerHTML += '<div class="productDesc"> Description: ' + product._prod
 /* tager Child af productsContainer */
 productContainer.appendChild(container);
 
-
+//
 function addToShoppingCart() {
     var productToCart = product;
 
@@ -61,6 +64,7 @@ function addToShoppingCart() {
     productToCart._productSize = selectedSize;
 
     //Hent vores nuværende cart fra localstorage
+    //Hvis der ikke er nogen cart, så sikrer den at det er et tomt array.
     var cart = localStorage.getItem('cart');
     if (cart == null) {
         cart = [];
@@ -69,6 +73,8 @@ function addToShoppingCart() {
     }
 
 // Philip begynd
+    //tjekker om identitisk produkt er tilføjet, således den ikke popper op dobbelt. Da der ikke er modificeret i shopping carten til
+    //at kunne tage i imod flere af samme og stacke.
     var chosenProducts = JSON.parse(localStorage.getItem("cart"));
     var i;
     var  itemAlreadySelected = false;
@@ -78,10 +84,8 @@ function addToShoppingCart() {
             itemAlreadySelected = true;
             break
         }
-
-
     }
-    if (itemAlreadySelected===false) {
+    if (itemAlreadySelected === false) {
         alert('An item has been added to the cart');
         cart.push(productToCart);
         localStorage.setItem('cart', JSON.stringify(cart));
