@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-
-
-
-// denne fil er lavet af Alexander med biddrag fra Emma ved createduser, localstorage og eventlistener (der hvor hun har kommenteret).
+// Denne fil er lavet af Alexander og Emma, der hvor hun har kommenteret med EMDL
 
 /* PMRJ – code review: Der kunne evt. bruges ternary operator til optimering af if/else statement.
 Yderligere kunne der havde været oprettet en change password og/eller change details funktion så
  brugeren kunne have mulighed for at ændre de indtastede detaljer. Evt. kunne der tilføjes en ”glemt kodeord” funktion
   så man kan komme ind på sin profil ved glemte login detaljer. Dette kræver dog en database. */
-=======
-// Denne fil er lavet af Alexander og Emma, der hvor hun har kommenteret.
->>>>>>> 55da6ba8069ab0df4df655c9544d7e6afbb39b5a
-
 
 // when clicking submit, retrieve input from username and password box.
 // EJJ - Code Review: Her mangler en brugerprofil-knap, således man ikke SKAL logge ind hver gang for at se sin profil.
