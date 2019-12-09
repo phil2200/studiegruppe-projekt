@@ -29,7 +29,7 @@ container.innerHTML += '<div class="productColor"> Color: ' + product._colors + 
 // Valg af størrelse, her gøres der brug af en selector, samt bliver de forskellige sizes loopet
 var select = '<select class="productSizeSelect"> Select a size';
 
-//same metode, som i funktionen findproduct - hvor der loopes igennem arrayet for produktstørrelse denne gang.
+//samme metode, som i funktionen findproduct - hvor der loopes igennem arrayet for produktstørrelse denne gang.
 var sizes = product._productSize;
 for (var i = 0; i < sizes.length; i++) {
     select += '<option value="' + i + '">' + sizes[i] + '</option>';
