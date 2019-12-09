@@ -1,5 +1,8 @@
-//henter detaljerne fra html
-//var signIn = document.getElementById('signIn');
+
+
+
+// denne fil er lavet af Alexander med biddrag fra Emma ved createduser, localstorage og eventlistener (der hvor hun har kommenteret).
+
 
 
 // when clicking submit, retrieve input from username and password box.
@@ -18,7 +21,7 @@ function login() {
             localStorage.setItem('currentUser', JSON.stringify(createdUser[i]));
             location.href = "loggedIn.html";
 
-            // EMDL: alert "you are logged in", hvis oplysninger er korrekte og allers aleret "Wrong username or password"
+            // alert "you are logged in", hvis oplysninger er korrekte og allers aleret "Wrong username or password"
             alert("You are logged in");
             return true;
         }

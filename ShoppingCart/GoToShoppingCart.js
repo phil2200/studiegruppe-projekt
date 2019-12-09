@@ -7,6 +7,7 @@ ikke vente på noget (else delen) og kalder direkte funktionen ready
 */
 
 
+
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)  //Here ready is a callback function. It’s common to wrap all your client code '
     // in a load event listener on the window object, which runs the callback function only when the page is ready:
@@ -37,6 +38,11 @@ function ready() {
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseInfo)
 
 }
+
+/* AGMH – code review: nedenfor kunne man tilføje localStorage.clear(cart), til else statementet, så produkterne slettes.
+ På denne måde tømmes indkøbskurven, når burgeren trykker purchase.
+ I stedet vil det give bedre mening, at informationerne fra shopping cart, videreføres til en payment sektion.
+ Så kan man nemlig shoppe på ny, og tilføje nye produkter, hvis brugeren vil købe mere efterfølgende */
 
 function purchaseInfo() {
     var userID = JSON.parse(localStorage.getItem("currentUser"));
@@ -83,6 +89,11 @@ function addItemToCart(title, price, imageSrc, size, quantity) {
             //return
         }
     }*/
+
+    /* AGMH – code review: Når man opretter en række for produktet, kunne det være smart
+     at tilføje ${stockStaus}til HTML cartRowContents.
+     Dette vil være en fed optimering, at man kan få et overblik over, hvorvidt produktet er på lager.
+     Dette kræver dog også, at vi har inkorporeret et overblik over lagerstatus på produkterne.  */
 
 //Generer html-indholdet til en linje med det valgte produkt (skal indeholde billede, navn på produkt, størrelse og pris)
     // lav også en knap hvor man kan vælge styk-tallet, samt en knap til at fjerne produktet fra indkøbslisten
@@ -175,3 +186,7 @@ function updateShoppingAmount() {
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = 'Dkr. ' + total
 }
+
+/* AGMH – code review: Praktisk set vil det være smart, hvis metoderne der bruges i shoppingCart.js hørte til en klasse.
+ Dette vil være nyttigt, da den resterende del af programmet af opdelt i units via klasser.
+ Derfor vil det ogå giv god mening, at etablerer en klasse for shopping cart. */

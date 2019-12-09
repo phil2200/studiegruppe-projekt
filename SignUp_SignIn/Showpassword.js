@@ -1,5 +1,7 @@
 
+// denne fil er lavet af Alexander
 //function der skjuler kodeord eller viser det.
+
 
 function showPassword() {
     var x = document.getElementById("password");
