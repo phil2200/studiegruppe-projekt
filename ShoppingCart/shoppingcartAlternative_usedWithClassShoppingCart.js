@@ -1,3 +1,5 @@
+//Udarbejdet af PMRJ
+
 /* Sørg for at html siden er loadet, så de html elementer, som javascript koden benytter faktisk eksisterer.
 Sålænge document.readystate er "loading", så venter vi på at det er færdigt med at loade,
 og når eventen DOMContentLoaded indtræffer, så udfør funktionen ready. Såfremt siden allerede er loadet skal vi
@@ -18,7 +20,8 @@ function ready() {
 
     // document.getElementById('list').onclick =function () {
 
-    //Check i localStorage om der er gemt "valgte" produkter, og hvis det er tilfældet så indlæses de i chosenProducts arrayet. Hvert element er et object af typen ClassProduct
+    /* Check i localStorage om der er gemt "valgte" produkter, og hvis det er tilfældet så
+    indlæses de i chosenProducts arrayet. Hvert element er et object af typen ClassProduct */
 
    /* var chosenProducts = JSON.parse(localStorage.getItem("cart"));
 

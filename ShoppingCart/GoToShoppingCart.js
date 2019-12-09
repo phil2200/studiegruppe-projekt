@@ -1,4 +1,6 @@
-/* Sørg for at html siden er loadet, så de html elementer, som javascript koden benytter faktisk eksisterer.
+//Udarbejdet af PMRJ
+
+/* Sørger for at html siden er loadet, så de html elementer, som javascript koden benytter faktisk eksisterer.
 Sålænge document.readystate er "loading", så venter vi på at det er færdigt med at loade,
 og når eventen DOMContentLoaded indtræffer, så udfør funktionen ready. Såfremt siden allerede er loadet skal vi
 ikke vente på noget (else delen) og kalder direkte funktionen ready
