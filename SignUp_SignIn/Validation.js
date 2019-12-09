@@ -1,4 +1,6 @@
-/// tager klassen fra userDB og bruger her til at sætte
+// Denne fil er lavet af Alexander, dog er klassen og userList (l.4-l.26) udarbejdet i samarbejde med Emma
+
+// tager klassen fra userDB og bruger her til at sætte
 class User {
     constructor(username, password, phone, city, zip, address, email) {
         this.username = username;
