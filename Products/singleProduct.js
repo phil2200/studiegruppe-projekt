@@ -72,9 +72,12 @@ function addToShoppingCart() {
         cart = JSON.parse(cart);
     }
 
-// Philip begynd
+// Philip begyndt
     //tjekker om identitisk produkt er tilføjet, således den ikke popper op dobbelt. Da der ikke er modificeret i shopping carten til
     //at kunne tage i imod flere af samme og stacke.
+    /* EMDL - code review: Man kan ikke tilføje et produkt flere gange, hvilket ikke er helt optimalt, da man skal have mulighed
+    for at tilføje flere identiske produkter til kurven, således de stacker */
+
     var chosenProducts = JSON.parse(localStorage.getItem("cart"));
     var i;
     var  itemAlreadySelected = false;
@@ -96,6 +99,7 @@ function addToShoppingCart() {
   //  localStorage.setItem('cart', JSON.stringify(cart));
     //Philip slut
 }
+// EMDL - code review: Ifølge objektorienteret programmering, kunne denne funktion have sin egen fil
 
 function findProduct(productId) {
     for (var i = 0; i < products.length; i++) {

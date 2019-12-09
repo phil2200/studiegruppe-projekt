@@ -21,6 +21,8 @@ for(var i=0; i<products.length; i++){
 }
 
 //Her laves en funktion som bliver kaldt onclick ved at trykke på billedet. Funktionen skifter URL.
+/* EMDL - code review: lige nu, når man går klikker tilbage fra et single product, bliver man ført til shopping cart
+Kunne optimeres til, at man bliver ført rigtigt tilbage til products */
 function interProduct (productId) {
    window.location.replace('interProduct.html?productId='+productId);
 }
