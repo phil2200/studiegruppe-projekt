@@ -1,3 +1,5 @@
+//Udarbejdet af PMRJ
+
 class shoppingCart {
     // constructor properties
     constructor() {
