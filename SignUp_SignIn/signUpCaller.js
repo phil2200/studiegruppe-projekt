@@ -6,9 +6,6 @@
         validationForm();
 
         //storeDetails();
-
-
-
-      //  storeLogin();
+        //  storeLogin();
 
     }
