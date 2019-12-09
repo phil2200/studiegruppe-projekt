@@ -19,7 +19,8 @@ function ready() {
     // document.getElementById('list').onclick =function () {
 
     //Check i localStorage om der er gemt "valgte" produkter, og hvis det er tilfældet så indlæses de i chosenProducts arrayet. Hvert element er et object af typen ClassProduct
-    var chosenProducts = JSON.parse(localStorage.getItem("cart"));
+
+   /* var chosenProducts = JSON.parse(localStorage.getItem("cart"));
 
     if(chosenProducts != null) {  //Tjek om der er gemt et products array object i localStorage
         //For hvert produkt i chosenProducts arrayet tilføjer vi det i indkøbslisten ved kald til addItemToCart
@@ -30,7 +31,12 @@ function ready() {
             //console.log(key.price);
             //console.log(key.imgName);
         })
-    }
+     }
+*/
+    myShoppingList = new shoppingCart();
+    myShoppingList.readProductListFromLocalStorage();
+    myShoppingList.addCartToHTML();
+
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseInfo)
 
 }
@@ -54,7 +60,7 @@ function purchaseInfo() {
         for (var i = 0; i < currentCart.length; i++) {
             currentProduct = currentCart[i];
             numberOfItemsBought += currentProduct._quantity
-            }
+        }
         if(numberOfItemsBought === 0) {
             alert("You have no products on your shopping cart")
         }

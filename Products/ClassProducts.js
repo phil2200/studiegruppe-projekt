@@ -13,11 +13,11 @@ class Product {
         this._productImage = productImage;
         this._stockStatus = stockStatus;
         this._productSize = productSize;
-
+/*
         this.changeQuantity = function(value) {
              this._quantity = value;
         };
-
+*/
 
 
     }
