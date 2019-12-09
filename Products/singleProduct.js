@@ -1,6 +1,5 @@
 //Kodet af EJJ
 
-
 //URL SearchParams. Dette er den måde hvorpå når der trykkes på et billede i shopsiden bliver man sendt til det pågældende produktsside
 //Vi bruger en indbygget klasse der hedder URLSearchParams, som giver muligheden for at hente query-parameteren 'productId'.
 var urlParams = new URLSearchParams(location.search);
@@ -27,7 +26,6 @@ container.innerHTML += '<div class="productName">' + product._productName + '</d
 container.innerHTML += '<div class="productPrice"> Price: ' + product._productPrice + ' kr </div>';
 /* displayer farven */
 container.innerHTML += '<div class="productColor"> Color: ' + product._colors + '</div>';
-
 
 // Valg af størrelse, her gøres der brug af en selector, samt bliver de forskellige sizes loopet
 var select = '<select class="productSizeSelect"> Select a size';

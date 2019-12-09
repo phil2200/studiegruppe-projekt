@@ -89,9 +89,8 @@ function showOrders() {
         orderh4.innerHTML = "Order " + order.orderNumber;
         document.getElementById("orderHistory").append(orderh4);
 
-        //EMDL: Laver et <p> element, som er en paragraf
-        /*EMDL: Insætter tekst og appender det - orderTimeStamp er et felt - når jeg hiver værdien ud af mit felt, skriver jeg objekt.FeltNavn
-        Lavet med inspiration fra: https://www.w3schools.com/jsref/met_node_appendchild.asp  */
+        /*EMDL: Laver et <p> element, som er en paragraf - Indsætter tekst og appender det - orderTimeStamp er et felt - når jeg hiver værdien
+        ud af mit felt, skriver jeg objekt.FeltNavn. Lavet med inspiration fra: https://www.w3schools.com/jsref/met_node_appendchild.asp */
         var ordertimestamp = document.createElement("P");
         ordertimestamp.innerHTML = "Order Time Stamp: " + order.orderTimeStamp;
         document.getElementById("orderHistory").appendChild(ordertimestamp);

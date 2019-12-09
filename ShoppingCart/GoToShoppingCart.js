@@ -21,7 +21,8 @@ function ready() {
 
     // document.getElementById('list').onclick =function () {
 
-    //Check i localStorage om der er gemt "valgte" produkter, og hvis det er tilfældet så indlæses de i chosenProducts arrayet. Hvert element er et object af typen ClassProduct
+    /*Check i localStorage om der er gemt "valgte" produkter, og hvis det er tilfældet så indlæses de i chosenProducts arrayet.
+    Hvert element er et object af typen ClassProduct */
     var chosenProducts = JSON.parse(localStorage.getItem("cart"));
 
     if(chosenProducts != null) {  //Tjek om der er gemt et products array object i localStorage
@@ -33,7 +34,6 @@ function ready() {
             //console.log(key.price);
             //console.log(key.imgName);
         })
-
     }
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseInfo)
 
@@ -179,7 +179,8 @@ function updateShoppingAmount() {
         var cartRow = cartRows[i]
         var priceElement = cartRow.getElementsByClassName('cart-price')[0]
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
-        var price = (priceElement.innerText.replace('$', '')) //parsefloat kunne indsættes før (priceELement...) - The parseFloat() function parses a string and returns a floating point number.
+        var price = (priceElement.innerText.replace('$', ''))
+        //parsefloat kunne indsættes før (priceELement...) - The parseFloat() function parses a string and returns a floating point number.
         var quantity = quantityElement.value
         total = total + (price * quantity)
     }
