@@ -1,5 +1,8 @@
-//henter detaljerne fra html
-//var signIn = document.getElementById('signIn');
+
+
+
+// denne fil er lavet af Alexander med biddrag fra Emma ved createduser, localstorage og eventlistener (der hvor hun har kommenteret).
+
 
 
 // when clicking submit, retrieve input from username and password box.
