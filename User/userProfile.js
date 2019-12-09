@@ -1,3 +1,4 @@
+// Lavet af EMDL
 // EMDL: laver en variabel og gemmer det i den variabel
 var currentUser = JSON.parse(localStorage.getItem("currentUser"));
 // console.log(currentUser);

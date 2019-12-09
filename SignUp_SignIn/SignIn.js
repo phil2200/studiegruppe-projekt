@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -7,6 +8,9 @@
 Yderligere kunne der havde været oprettet en change password og/eller change details funktion så
  brugeren kunne have mulighed for at ændre de indtastede detaljer. Evt. kunne der tilføjes en ”glemt kodeord” funktion
   så man kan komme ind på sin profil ved glemte login detaljer. Dette kræver dog en database. */
+=======
+// Denne fil er lavet af Alexander og Emma, der hvor hun har kommenteret.
+>>>>>>> 55da6ba8069ab0df4df655c9544d7e6afbb39b5a
 
 
 // when clicking submit, retrieve input from username and password box.
@@ -33,8 +37,8 @@ function login() {
     alert("Wrong username or password. If you don't have an account, please sign up")
 }
 
-<!-- EMDL: klik enter for at logge ind, henter signin ID'et og bruger en EventListener til at indikere eventet ved klik -->
-<!-- EMDL: laver en default for at den ikke står og refresher, men den kommer videre og til sidst kaldes funktionen -->
+// EMDL: klik enter for at logge ind, henter signin ID'et og bruger en EventListener til at indikere eventet ved klik
+// EMDL: laver en default for at den ikke står og refresher, men den kommer videre og til sidst kaldes funktionen
 document.getElementById('signIn').addEventListener('click', function (event) {
     event.preventDefault();
     login();
