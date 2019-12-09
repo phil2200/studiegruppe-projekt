@@ -1,3 +1,6 @@
+//Kodet af EJJ
+
+
 //URL SearchParams. Dette er den måde hvorpå når der trykkes på et billede i shopsiden bliver man sendt til det pågældende produktsside
 //Vi bruger en indbygget klasse der hedder URLSearchParams, som giver muligheden for at hente query-parameteren 'productId'.
 var urlParams = new URLSearchParams(location.search);

@@ -1,3 +1,4 @@
+//Kodet af EJJ
 
 class Product {
     constructor(productId, productName, productDesc, productPrice, colors, productType,

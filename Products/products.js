@@ -1,3 +1,4 @@
+//Kodet af EJJ
 
 /* variabel som indhenter productsContainer i HTMLfilen */
 var productsContainer = document.getElementById('productsContainer');
