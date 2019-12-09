@@ -18,7 +18,7 @@ function login() {
             localStorage.setItem('currentUser', JSON.stringify(createdUser[i]));
             location.href = "loggedIn.html";
 
-            // EMDL: alert "you are logged in", hvis oplysninger er korrekte og allers aleret "Wrong username or password"
+            // alert "you are logged in", hvis oplysninger er korrekte og allers aleret "Wrong username or password"
             alert("You are logged in");
             return true;
         }

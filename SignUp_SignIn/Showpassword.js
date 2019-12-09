@@ -1,4 +1,5 @@
 
+// denne fil er lavet af Alexander
 //function der skjuler kodeord eller viser det.
 
 
