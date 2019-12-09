@@ -1,4 +1,4 @@
-// Denne fil er lavet af Alexander, dog er klassen og userList (l.4-l.26) udarbejdet i samarbejde med Emma
+// Denne fil er lavet af Alexander, dog er klassen og userList (l.4-l.26) lavet af Emma
 
 // tager klassen fra userDB og bruger her til at sætte
 class User {
