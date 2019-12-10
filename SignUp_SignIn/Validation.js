@@ -32,7 +32,7 @@ if(!localStorage.getItem("User")) {
     localStorage.setItem("User", userListString);
 }
 
-// validering af samtlige felter ved sign up - inspiration fra tutorialrepublic.com
+// validering af samtlige felter ved sign up - inspiration fra https://www.tutorialrepublic.com/javascript-tutorial/javascript-form-validation.php
 
 // definerer fejl/ error besked
 
