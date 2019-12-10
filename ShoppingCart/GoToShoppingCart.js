@@ -29,7 +29,6 @@ function ready() {
             //console.log(key.price);
             //console.log(key.imgName);
         })
-
     }
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseInfo)
 
@@ -135,7 +134,6 @@ function removeCartItem(event) {
     updateShoppingAmount()
 }
 
-
 function quantityChanged(event) {
 
     var buttonClicked = event.target;
@@ -172,6 +170,11 @@ function updateShoppingAmount() {
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
         var price = priceElement.innerText.replace('$', '')
         var quantity = quantityElement.value;
+        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+        var price = (priceElement.innerText.replace('$', ''))
+        //parsefloat kunne indsættes før (priceELement...) - The parseFloat() function parses a string and returns a floating point number.
+        var quantity = quantityElement.value
         total = total + (price * quantity)
     }
     total = Math.round(total * 100) / 100;

@@ -15,7 +15,6 @@ if (document.readyState == 'loading') {
 }
 
 
-
 function ready() {
 
     // document.getElementById('list').onclick =function () {
@@ -79,12 +78,12 @@ function purchaseInfo() {
 
 }
 
-
 //addItemToCart sørger for at tiløje produktet med tilhørende info til shopping-listen
 function addItemToCart(title, price, imageSrc, size, quantity) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row') //vi bruger CSS stilen 'cart-row'for div elementet cartRow
-    var cartItems = document.getElementsByClassName('cart-items')[0] //vi vil senere tilføje en række til  div sektionen 'cart-items' hvor de valgte produkter listes
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    //vi vil senere tilføje en række til  div sektionen 'cart-items' hvor de valgte produkter listes
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for (var i = 0; i < cartItemNames.length; i++) {
         if (cartItemNames[i].innerText == title) {

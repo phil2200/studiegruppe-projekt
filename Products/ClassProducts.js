@@ -1,5 +1,4 @@
 //Kodet af EJJ
-
 class Product {
     constructor(productId, productName, productDesc, productPrice, colors, productType,
                 quantity, productImage, stockStatus, productSize) {
@@ -24,7 +23,6 @@ class Product {
     }
 
 }
-
 /* Her oprettes de forskellige produkter med deres properties, som derefter kan hentes inde i HTML og CSS-filerne*/
 
 var product1 = new Product(1, "Black Hoodie",

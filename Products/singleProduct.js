@@ -1,6 +1,5 @@
 //Kodet af EJJ
 
-
 //URL SearchParams. Dette er den måde hvorpå når der trykkes på et billede i shopsiden bliver man sendt til det pågældende produktsside
 //Vi bruger en indbygget klasse der hedder URLSearchParams, som giver muligheden for at hente query-parameteren 'productId'.
 var urlParams = new URLSearchParams(location.search);
@@ -27,7 +26,6 @@ container.innerHTML += '<div class="productName">' + product._productName + '</d
 container.innerHTML += '<div class="productPrice"> Price: ' + product._productPrice + ' kr </div>';
 /* displayer farven */
 container.innerHTML += '<div class="productColor"> Color: ' + product._colors + '</div>';
-
 
 // Valg af størrelse, her gøres der brug af en selector, samt bliver de forskellige sizes loopet
 var select = '<select class="productSizeSelect"> Select a size';
@@ -75,7 +73,6 @@ function addToShoppingCart() {
         cart = JSON.parse(cart);
     }
 
-// Philip begyndt
     //tjekker om identitisk produkt er tilføjet, således den ikke popper op dobbelt. Da der ikke er modificeret i shopping carten til
     //at kunne tage i imod flere af samme og stacke.
     /* EMDL - code review: Man kan ikke tilføje et produkt flere gange, hvilket ikke er helt optimalt, da man skal have mulighed
@@ -97,10 +94,8 @@ function addToShoppingCart() {
         localStorage.setItem('cart', JSON.stringify(cart));
     }
 
-
   //  cart.push(productToCart);
   //  localStorage.setItem('cart', JSON.stringify(cart));
-    //Philip slut
 }
 // EMDL - code review: Ifølge objektorienteret programmering, kunne denne funktion have sin egen fil
 
