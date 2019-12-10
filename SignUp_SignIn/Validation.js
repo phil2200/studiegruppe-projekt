@@ -1,4 +1,4 @@
-// Denne fil er lavet af Alexander, dog er klassen og userList (l.4-l.26) lavet af Emma
+// Denne fil er oprettet og lavet af Alexander, dog er klassen og userList (l.4-l.26) lavet af Emma
 
 /* PMRJ – code review: class user kunne have fået sin egen fil for at gøre det mere overskueligt, samt mere
 objektorienteret. */
