@@ -32,8 +32,8 @@ function ready() {
 
     }
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseInfo)
-
 }
+
 
 /* AGMH – code review: nedenfor kunne man tilføje localStorage.clear(cart), til else statementet, så produkterne slettes.
  På denne måde tømmes indkøbskurven, når burgeren trykker purchase.
@@ -45,6 +45,7 @@ function ready() {
 function purchaseInfo() {
     var userID = JSON.parse(localStorage.getItem("currentUser"));
     var currentCart = JSON.parse(localStorage.getItem("cart"));
+
     if (userID === null)
     {
         alert("Please login to be able to make a purchase")
@@ -172,22 +173,29 @@ function quantityChanged(event) {
 }
 //Prisen i shopping cart summeres, (Web Dev Simplified - youtube, 2018)
 function updateShoppingAmount() {
+    /* Med getElementsByClassName får vi fat i alle elementer med classname ‘cart-items’
+så i variablen cartItemsContainer returneres alle elementer i et NodeListObject, hvor
+ de  enkelte elementer (hvis flere) kan tilgås via index som begynder med 0: */
     var cartItemContainer = document.getElementsByClassName('cart-items')[0];
+    /*I elementet cartItemContainer finder får vi igen i et NodeListObject alle elementer,
+     som har ClassName ’cart-row’, så vi kan loope over alle rækker med index i */
     var cartRows = cartItemContainer.getElementsByClassName('cart-row');
+    /* I for løkken bruger vi igen getElementsByClassName til for hver række at få fat i
+    elemnterne, som indeholder pris og det valgte antal af det givne produkt hørende til
+    en række. */
     var total = 0
     for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i]
         var priceElement = cartRow.getElementsByClassName('cart-price')[0];
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
+        //Såfremt priselementet udover prisen indeholder $ fjerner vi $ teksten
         var price = priceElement.innerText.replace('$', '')
         var quantity = quantityElement.value;
         total = total + (price * quantity)
     }
-    total = Math.round(total * 100) / 100;
+    total = Math.round(total * 100) / 100; //med denne formel tillader vi to decimaler //	på det endelige beløb
     document.getElementsByClassName('cart-total-price')[0].innerText = 'Dkr. ' + total
 }
-//når siden genindlæses bliver tallene rundt af, hvis det er tale om kommatal.
-
 /* AGMH – code review: Praktisk set vil det være smart, hvis metoderne der bruges i shoppingCart.js hørte til en klasse.
  Dette vil være nyttigt, da den resterende del af programmet af opdelt i units via klasser.
  Derfor vil det ogå giv god mening, at etablerer en klasse for shopping cart. */
