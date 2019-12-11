@@ -45,7 +45,6 @@ function ready() {
 function purchaseInfo() {
     var userID = JSON.parse(localStorage.getItem("currentUser"));
     var currentCart = JSON.parse(localStorage.getItem("cart"));
-
     if (userID === null)
     {
         alert("Please login to be able to make a purchase")
@@ -103,23 +102,30 @@ function addItemToCart(title, price, imageSrc, size, quantity) {
         </div>`
     cartRow.innerHTML = cartRowContents; //html koden indeholdt i cartRowContents variablen indøres i elementet cartRow
     cartItems.append(cartRow) //cartRow tilføjes til sektionen cartItems på html siden
-    //Sørg for at henholdsvis removeCartItem og quantityChanged funktionerne kaldes når der trykkes på de to knapper
+    //De næst eto linjer Sørger for at henholdsvis removeCartItem og quantityChanged funktionerne kaldes når der trykkes på de to knapper
     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem);
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged);
+    //Sørg for at ’change’ knappen initialiseres til den sidst valge quantity værdi
     var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
     quantityElement.value = quantity;
 }
 
 function removeCartItem(event) {
     var buttonClicked = event.target; //ved button.clicked refereres der til den aktuelle element, som skal fjernes
+    //Få fat i den aktuelle række, hvor ”remove” knappen er blevet aktiveret
     var pickedCartRow = buttonClicked.parentElement.parentElement;
+    //De næste to linjer udtrækker produkt navnet (titleElement.innerText) fra den aktuelle række
     var titleElement = pickedCartRow.getElementsByClassName('cart-item')[0];
     var title = titleElement.innerText;
+    //De næste to linjer udtrækker produkt-størrelsen (sizeElement.innerText) fra den aktuelle række
     var sizeElement = pickedCartRow.getElementsByClassName('cart-size')[0];
     var size = sizeElement.innerText;
-    buttonClicked.parentElement.parentElement.remove(); // fjerner html teksten for det pågældende element.
+    buttonClicked.parentElement.parentElement.remove(); // fjerner den aktuelle html række, for det produkt, som brugeren ønskede fjernet.
 
 
+    /*Udover at fjerne produktet på html siden skal vi også fjerne produktet fra shopping listen,
+    som er gemt som ”cart” på localStorage. Vi finder det object, som svarer til produktnavn og størrelse
+     og fjerner det fra localstorage ved at udskifte arrayed i localStorage med et nyt array, hvor produktet er fjernet */
     var chosenProducts = JSON.parse(localStorage.getItem("cart"));
     var i;
     for (i = 0; i < chosenProducts.length; i++) {
@@ -131,11 +137,11 @@ function removeCartItem(event) {
         }
 
     }
-
+//Efter at vi har fjernet et produktemne, må vi genberegne total-prisen
     updateShoppingAmount()
 }
 
-
+//quantityChanged funktionen sørger for at brugeren kan ændre quantity værdien for det enkelte produkt hørende til en given html række.
 function quantityChanged(event) {
 
     var buttonClicked = event.target;
@@ -145,12 +151,15 @@ function quantityChanged(event) {
     var sizeElement = pickedCartRow.getElementsByClassName('cart-size')[0];
     var size = sizeElement.innerText;
 
+    //Hvis brugeren skriver en ikke numerisk værdi eller værdien er mindre end 1, sættet stk. antallet til 1
     if (isNaN(buttonClicked.value) || buttonClicked.value <= 0) {
         buttonClicked.value = 1 // quantity kan ikke blive mindre end 1
     }
 
+    //Vi skal sørge for at quantity-værdien gemt i local storage modsvarer “change” værdien på html siden.
     var chosenProducts = JSON.parse(localStorage.getItem("cart"));
     var i;
+    //Indlæst shoppingliste fra ‘cart’ på localStorage og find det aktuelle produkt og størrelse. Opdater quantity værdien for produktet
     for (i = 0; i < chosenProducts.length; i++) {
         if (chosenProducts[i]._productName === title && chosenProducts[i]._productSize === size ){
             chosenProducts[i]._quantity = parseInt(buttonClicked.value);//the buttonClickedValue er en string, som konverteres til integer pga. parseINT
